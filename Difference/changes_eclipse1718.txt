@@ -1,0 +1,586 @@
+diff --git a/F:/demo/intellij-community/data/eclipse.platform.ui-I20170501-2000/bundles/org.eclipse.ui/.settings/.api_filters b/F:/demo/intellij-community/data/eclipse.platform.ui-I20180601-0915/bundles/org.eclipse.ui/.settings/.api_filters
+index 3679afdf47ab..f3b5203a59d0 100644
+--- a/F:/demo/intellij-community/data/eclipse.platform.ui-I20170501-2000/bundles/org.eclipse.ui/.settings/.api_filters
++++ b/F:/demo/intellij-community/data/eclipse.platform.ui-I20180601-0915/bundles/org.eclipse.ui/.settings/.api_filters
+@@ -1,10 +1,34 @@
+ <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+ <component id="org.eclipse.ui" version="2">
+-    <resource path="META-INF/MANIFEST.MF" type="org.eclipse.jface.util.ListenerList">
+-        <filter comment="Bug 436448 - Adds API filter as our standard for the scheduled API removals" id="305422471">
++    <resource path="META-INF/MANIFEST.MF" type="org.eclipse.ui.help.DialogPageContextComputer">
++        <filter comment="Planned API removal see Bug 531133" id="305422471">
+             <message_arguments>
+-                <message_argument value="org.eclipse.jface.util.ListenerList"/>
+-                <message_argument value="org.eclipse.ui_3.108.1"/>
++                <message_argument value="org.eclipse.ui.help.DialogPageContextComputer"/>
++                <message_argument value="org.eclipse.ui_3.109.0"/>
++            </message_arguments>
++        </filter>
++    </resource>
++    <resource path="META-INF/MANIFEST.MF" type="org.eclipse.ui.help.IContextComputer">
++        <filter comment="Planned API removal see Bug 531133" id="305422471">
++            <message_arguments>
++                <message_argument value="org.eclipse.ui.help.IContextComputer"/>
++                <message_argument value="org.eclipse.ui_3.109.0"/>
++            </message_arguments>
++        </filter>
++    </resource>
++    <resource path="META-INF/MANIFEST.MF" type="org.eclipse.ui.help.ViewContextComputer">
++        <filter comment="Planned API removal see Bug 531133" id="305422471">
++            <message_arguments>
++                <message_argument value="org.eclipse.ui.help.ViewContextComputer"/>
++                <message_argument value="org.eclipse.ui_3.109.0"/>
++            </message_arguments>
++        </filter>
++    </resource>
++    <resource path="META-INF/MANIFEST.MF" type="org.eclipse.ui.help.WorkbenchHelp">
++        <filter comment="Planned API removal see Bug 531133" id="305422471">
++            <message_arguments>
++                <message_argument value="org.eclipse.ui.help.WorkbenchHelp"/>
++                <message_argument value="org.eclipse.ui_3.109.0"/>
+             </message_arguments>
+         </filter>
+     </resource>
+diff --git a/F:/demo/intellij-community/data/eclipse.platform.ui-I20170501-2000/bundles/org.eclipse.ui/.settings/org.eclipse.jdt.core.prefs b/F:/demo/intellij-community/data/eclipse.platform.ui-I20180601-0915/bundles/org.eclipse.ui/.settings/org.eclipse.jdt.core.prefs
+index 64d4e5a353d7..6bfaf202855a 100644
+--- a/F:/demo/intellij-community/data/eclipse.platform.ui-I20170501-2000/bundles/org.eclipse.ui/.settings/org.eclipse.jdt.core.prefs
++++ b/F:/demo/intellij-community/data/eclipse.platform.ui-I20180601-0915/bundles/org.eclipse.ui/.settings/org.eclipse.jdt.core.prefs
+@@ -68,6 +68,7 @@ org.eclipse.jdt.core.compiler.problem.unusedParameterWhenOverridingConcrete=disa
+ org.eclipse.jdt.core.compiler.problem.unusedPrivateMember=error
+ org.eclipse.jdt.core.compiler.problem.varargsArgumentNeedCast=warning
+ org.eclipse.jdt.core.compiler.source=1.8
++org.eclipse.jdt.core.formatter.align_fields_grouping_blank_lines=2147483647
+ org.eclipse.jdt.core.formatter.align_type_members_on_columns=false
+ org.eclipse.jdt.core.formatter.alignment_for_arguments_in_allocation_expression=16
+ org.eclipse.jdt.core.formatter.alignment_for_arguments_in_annotation=0
+@@ -79,10 +80,13 @@ org.eclipse.jdt.core.formatter.alignment_for_assignment=0
+ org.eclipse.jdt.core.formatter.alignment_for_binary_expression=16
+ org.eclipse.jdt.core.formatter.alignment_for_compact_if=16
+ org.eclipse.jdt.core.formatter.alignment_for_conditional_expression=80
+-org.eclipse.jdt.core.formatter.alignment_for_enum_constants=0
++org.eclipse.jdt.core.formatter.alignment_for_enum_constants=16
+ org.eclipse.jdt.core.formatter.alignment_for_expressions_in_array_initializer=16
++org.eclipse.jdt.core.formatter.alignment_for_expressions_in_for_loop_header=0
+ org.eclipse.jdt.core.formatter.alignment_for_method_declaration=0
++org.eclipse.jdt.core.formatter.alignment_for_module_statements=16
+ org.eclipse.jdt.core.formatter.alignment_for_multiple_fields=16
++org.eclipse.jdt.core.formatter.alignment_for_parameterized_type_references=0
+ org.eclipse.jdt.core.formatter.alignment_for_parameters_in_constructor_declaration=16
+ org.eclipse.jdt.core.formatter.alignment_for_parameters_in_method_declaration=16
+ org.eclipse.jdt.core.formatter.alignment_for_resources_in_try=80
+@@ -92,6 +96,8 @@ org.eclipse.jdt.core.formatter.alignment_for_superinterfaces_in_enum_declaration
+ org.eclipse.jdt.core.formatter.alignment_for_superinterfaces_in_type_declaration=16
+ org.eclipse.jdt.core.formatter.alignment_for_throws_clause_in_constructor_declaration=16
+ org.eclipse.jdt.core.formatter.alignment_for_throws_clause_in_method_declaration=16
++org.eclipse.jdt.core.formatter.alignment_for_type_arguments=0
++org.eclipse.jdt.core.formatter.alignment_for_type_parameters=0
+ org.eclipse.jdt.core.formatter.alignment_for_union_type_in_multicatch=16
+ org.eclipse.jdt.core.formatter.blank_lines_after_imports=1
+ org.eclipse.jdt.core.formatter.blank_lines_after_package=1
+@@ -116,18 +122,21 @@ org.eclipse.jdt.core.formatter.brace_position_for_lambda_body=end_of_line
+ org.eclipse.jdt.core.formatter.brace_position_for_method_declaration=end_of_line
+ org.eclipse.jdt.core.formatter.brace_position_for_switch=end_of_line
+ org.eclipse.jdt.core.formatter.brace_position_for_type_declaration=end_of_line
++org.eclipse.jdt.core.formatter.comment.align_tags_descriptions_grouped=true
++org.eclipse.jdt.core.formatter.comment.align_tags_names_descriptions=false
+ org.eclipse.jdt.core.formatter.comment.clear_blank_lines_in_block_comment=false
+ org.eclipse.jdt.core.formatter.comment.clear_blank_lines_in_javadoc_comment=false
++org.eclipse.jdt.core.formatter.comment.count_line_length_from_starting_position=true
+ org.eclipse.jdt.core.formatter.comment.format_block_comments=true
+ org.eclipse.jdt.core.formatter.comment.format_header=false
+ org.eclipse.jdt.core.formatter.comment.format_html=true
+ org.eclipse.jdt.core.formatter.comment.format_javadoc_comments=true
+ org.eclipse.jdt.core.formatter.comment.format_line_comments=true
+ org.eclipse.jdt.core.formatter.comment.format_source_code=true
+-org.eclipse.jdt.core.formatter.comment.indent_parameter_description=true
+-org.eclipse.jdt.core.formatter.comment.indent_root_tags=true
++org.eclipse.jdt.core.formatter.comment.indent_parameter_description=false
++org.eclipse.jdt.core.formatter.comment.indent_root_tags=false
+ org.eclipse.jdt.core.formatter.comment.insert_new_line_before_root_tags=insert
+-org.eclipse.jdt.core.formatter.comment.insert_new_line_for_parameter=insert
++org.eclipse.jdt.core.formatter.comment.insert_new_line_for_parameter=do not insert
+ org.eclipse.jdt.core.formatter.comment.line_length=80
+ org.eclipse.jdt.core.formatter.comment.new_lines_at_block_boundaries=true
+ org.eclipse.jdt.core.formatter.comment.new_lines_at_javadoc_boundaries=true
+@@ -138,7 +147,7 @@ org.eclipse.jdt.core.formatter.continuation_indentation_for_array_initializer=2
+ org.eclipse.jdt.core.formatter.disabling_tag=@formatter\:off
+ org.eclipse.jdt.core.formatter.enabling_tag=@formatter\:on
+ org.eclipse.jdt.core.formatter.format_guardian_clause_on_one_line=false
+-org.eclipse.jdt.core.formatter.format_line_comment_starting_on_first_column=true
++org.eclipse.jdt.core.formatter.format_line_comment_starting_on_first_column=false
+ org.eclipse.jdt.core.formatter.indent_body_declarations_compare_to_annotation_declaration_header=true
+ org.eclipse.jdt.core.formatter.indent_body_declarations_compare_to_enum_constant_header=true
+ org.eclipse.jdt.core.formatter.indent_body_declarations_compare_to_enum_declaration_header=true
+@@ -150,6 +159,7 @@ org.eclipse.jdt.core.formatter.indent_statements_compare_to_body=true
+ org.eclipse.jdt.core.formatter.indent_switchstatements_compare_to_cases=true
+ org.eclipse.jdt.core.formatter.indent_switchstatements_compare_to_switch=false
+ org.eclipse.jdt.core.formatter.indentation.size=4
++org.eclipse.jdt.core.formatter.insert_new_line_after_annotation_on_enum_constant=insert
+ org.eclipse.jdt.core.formatter.insert_new_line_after_annotation_on_field=insert
+ org.eclipse.jdt.core.formatter.insert_new_line_after_annotation_on_local_variable=insert
+ org.eclipse.jdt.core.formatter.insert_new_line_after_annotation_on_method=insert
+@@ -177,7 +187,7 @@ org.eclipse.jdt.core.formatter.insert_space_after_assignment_operator=insert
+ org.eclipse.jdt.core.formatter.insert_space_after_at_in_annotation=do not insert
+ org.eclipse.jdt.core.formatter.insert_space_after_at_in_annotation_type_declaration=do not insert
+ org.eclipse.jdt.core.formatter.insert_space_after_binary_operator=insert
+-org.eclipse.jdt.core.formatter.insert_space_after_closing_angle_bracket_in_type_arguments=insert
++org.eclipse.jdt.core.formatter.insert_space_after_closing_angle_bracket_in_type_arguments=do not insert
+ org.eclipse.jdt.core.formatter.insert_space_after_closing_angle_bracket_in_type_parameters=insert
+ org.eclipse.jdt.core.formatter.insert_space_after_closing_brace_in_block=insert
+ org.eclipse.jdt.core.formatter.insert_space_after_closing_paren_in_cast=insert
+@@ -344,12 +354,24 @@ org.eclipse.jdt.core.formatter.never_indent_block_comments_on_first_column=false
+ org.eclipse.jdt.core.formatter.never_indent_line_comments_on_first_column=false
+ org.eclipse.jdt.core.formatter.number_of_blank_lines_at_beginning_of_method_body=0
+ org.eclipse.jdt.core.formatter.number_of_empty_lines_to_preserve=1
++org.eclipse.jdt.core.formatter.parentheses_positions_in_annotation=common_lines
++org.eclipse.jdt.core.formatter.parentheses_positions_in_catch_clause=common_lines
++org.eclipse.jdt.core.formatter.parentheses_positions_in_enum_constant_declaration=common_lines
++org.eclipse.jdt.core.formatter.parentheses_positions_in_for_statment=common_lines
++org.eclipse.jdt.core.formatter.parentheses_positions_in_if_while_statement=common_lines
++org.eclipse.jdt.core.formatter.parentheses_positions_in_lambda_declaration=common_lines
++org.eclipse.jdt.core.formatter.parentheses_positions_in_method_delcaration=common_lines
++org.eclipse.jdt.core.formatter.parentheses_positions_in_method_invocation=common_lines
++org.eclipse.jdt.core.formatter.parentheses_positions_in_switch_statement=common_lines
++org.eclipse.jdt.core.formatter.parentheses_positions_in_try_clause=common_lines
+ org.eclipse.jdt.core.formatter.put_empty_statement_on_new_line=true
+ org.eclipse.jdt.core.formatter.tabulation.char=tab
+ org.eclipse.jdt.core.formatter.tabulation.size=4
+ org.eclipse.jdt.core.formatter.use_on_off_tags=false
+ org.eclipse.jdt.core.formatter.use_tabs_only_for_leading_indentations=false
++org.eclipse.jdt.core.formatter.wrap_before_assignment_operator=false
+ org.eclipse.jdt.core.formatter.wrap_before_binary_operator=true
++org.eclipse.jdt.core.formatter.wrap_before_conditional_operator=true
+ org.eclipse.jdt.core.formatter.wrap_before_or_operator_multicatch=true
+ org.eclipse.jdt.core.formatter.wrap_outer_expressions_when_nested=true
+ org.eclipse.jdt.core.incompatibleJDKLevel=ignore
+diff --git a/F:/demo/intellij-community/data/eclipse.platform.ui-I20170501-2000/bundles/org.eclipse.ui/.settings/org.eclipse.jdt.ui.prefs b/F:/demo/intellij-community/data/eclipse.platform.ui-I20180601-0915/bundles/org.eclipse.ui/.settings/org.eclipse.jdt.ui.prefs
+index bf9908867c2f..347e97c124f0 100644
+--- a/F:/demo/intellij-community/data/eclipse.platform.ui-I20170501-2000/bundles/org.eclipse.ui/.settings/org.eclipse.jdt.ui.prefs
++++ b/F:/demo/intellij-community/data/eclipse.platform.ui-I20180601-0915/bundles/org.eclipse.ui/.settings/org.eclipse.jdt.ui.prefs
+@@ -1,7 +1,7 @@
+ eclipse.preferences.version=1
+ editor_save_participant_org.eclipse.jdt.ui.postsavelistener.cleanup=true
+ formatter_profile=org.eclipse.jdt.ui.default.eclipse_profile
+-formatter_settings_version=12
++formatter_settings_version=14
+ internal.default.compliance=user
+ org.eclipse.jdt.ui.javadoc=true
+ org.eclipse.jdt.ui.text.custom_code_templates=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><templates><template autoinsert\="true" context\="gettercomment_context" deleted\="false" description\="Comment for getter method" enabled\="true" id\="org.eclipse.jdt.ui.text.codetemplates.gettercomment" name\="gettercomment">/**\n * @return Returns the ${bare_field_name}.\n */</template><template autoinsert\="true" context\="settercomment_context" deleted\="false" description\="Comment for setter method" enabled\="true" id\="org.eclipse.jdt.ui.text.codetemplates.settercomment" name\="settercomment">/**\n * @param ${param} The ${bare_field_name} to set.\n */</template><template autoinsert\="true" context\="constructorcomment_context" deleted\="false" description\="Comment for created constructors" enabled\="true" id\="org.eclipse.jdt.ui.text.codetemplates.constructorcomment" name\="constructorcomment">/**\n * ${tags}\n */</template><template autoinsert\="false" context\="filecomment_context" deleted\="false" description\="Comment for created Java files" enabled\="true" id\="org.eclipse.jdt.ui.text.codetemplates.filecomment" name\="filecomment"/><template autoinsert\="false" context\="typecomment_context" deleted\="false" description\="Comment for created types" enabled\="true" id\="org.eclipse.jdt.ui.text.codetemplates.typecomment" name\="typecomment">/**\n * @since 3.3\n *\n * ${tags}\n */</template><template autoinsert\="true" context\="fieldcomment_context" deleted\="false" description\="Comment for fields" enabled\="true" id\="org.eclipse.jdt.ui.text.codetemplates.fieldcomment" name\="fieldcomment">/**\n * \n */</template><template autoinsert\="true" context\="methodcomment_context" deleted\="false" description\="Comment for non-overriding methods" enabled\="true" id\="org.eclipse.jdt.ui.text.codetemplates.methodcomment" name\="methodcomment">/**\n * ${tags}\n */</template><template autoinsert\="true" context\="overridecomment_context" deleted\="false" description\="Comment for overriding methods" enabled\="true" id\="org.eclipse.jdt.ui.text.codetemplates.overridecomment" name\="overridecomment">/* (non-Javadoc)\n * ${see_to_overridden}\n */</template><template autoinsert\="true" context\="newtype_context" deleted\="false" description\="Newly created files" enabled\="true" id\="org.eclipse.jdt.ui.text.codetemplates.newtype" name\="newtype">${filecomment}\n${package_declaration}\n\n${typecomment}\n${type_declaration}</template><template autoinsert\="true" context\="catchblock_context" deleted\="false" description\="Code in new catch blocks" enabled\="true" id\="org.eclipse.jdt.ui.text.codetemplates.catchblock" name\="catchblock">// ${todo} Auto-generated catch block\n${exception_var}.printStackTrace();</template><template autoinsert\="true" context\="methodbody_context" deleted\="false" description\="Code in created method stubs" enabled\="true" id\="org.eclipse.jdt.ui.text.codetemplates.methodbody" name\="methodbody">// ${todo} Auto-generated method stub\n${body_statement}</template><template autoinsert\="true" context\="constructorbody_context" deleted\="false" description\="Code in created constructor stubs" enabled\="true" id\="org.eclipse.jdt.ui.text.codetemplates.constructorbody" name\="constructorbody">${body_statement}\n// ${todo} Auto-generated constructor stub</template><template autoinsert\="true" context\="getterbody_context" deleted\="false" description\="Code in created getters" enabled\="true" id\="org.eclipse.jdt.ui.text.codetemplates.getterbody" name\="getterbody">return ${field};</template><template autoinsert\="true" context\="setterbody_context" deleted\="false" description\="Code in created setters" enabled\="true" id\="org.eclipse.jdt.ui.text.codetemplates.setterbody" name\="setterbody">${field} \= ${param};</template><template autoinsert\="true" context\="classbody_context" deleted\="false" description\="Code in new class type bodies" enabled\="true" id\="org.eclipse.jdt.ui.text.codetemplates.classbody" name\="classbody">\n</template><template autoinsert\="true" context\="interfacebody_context" deleted\="false" description\="Code in new interface type bodies" enabled\="true" id\="org.eclipse.jdt.ui.text.codetemplates.interfacebody" name\="interfacebody">\n</template><template autoinsert\="true" context\="enumbody_context" deleted\="false" description\="Code in new enum type bodies" enabled\="true" id\="org.eclipse.jdt.ui.text.codetemplates.enumbody" name\="enumbody">\n</template><template autoinsert\="true" context\="annotationbody_context" deleted\="false" description\="Code in new annotation type bodies" enabled\="true" id\="org.eclipse.jdt.ui.text.codetemplates.annotationbody" name\="annotationbody">\n</template><template autoinsert\="true" context\="delegatecomment_context" deleted\="false" description\="Comment for delegate methods" enabled\="true" id\="org.eclipse.jdt.ui.text.codetemplates.delegatecomment" name\="delegatecomment">/**\n * ${tags}\n * ${see_to_target}\n */</template></templates>
+diff --git a/F:/demo/intellij-community/data/eclipse.platform.ui-I20170501-2000/bundles/org.eclipse.ui/META-INF/MANIFEST.MF b/F:/demo/intellij-community/data/eclipse.platform.ui-I20180601-0915/bundles/org.eclipse.ui/META-INF/MANIFEST.MF
+index 5f5015a88fb9..055877874be0 100644
+--- a/F:/demo/intellij-community/data/eclipse.platform.ui-I20170501-2000/bundles/org.eclipse.ui/META-INF/MANIFEST.MF
++++ b/F:/demo/intellij-community/data/eclipse.platform.ui-I20180601-0915/bundles/org.eclipse.ui/META-INF/MANIFEST.MF
+@@ -2,7 +2,7 @@ Manifest-Version: 1.0
+ Bundle-ManifestVersion: 2
+ Bundle-Name: %Plugin.name
+ Bundle-SymbolicName: org.eclipse.ui; singleton:=true
+-Bundle-Version: 3.109.0.qualifier
++Bundle-Version: 3.109.200.qualifier
+ Bundle-ClassPath: .
+ Bundle-Activator: org.eclipse.ui.internal.UIPlugin
+ Bundle-ActivationPolicy: lazy
+@@ -15,3 +15,4 @@ Require-Bundle: org.eclipse.core.runtime;bundle-version="[3.2.0,4.0.0)",
+  org.eclipse.ui.workbench;bundle-version="[3.105.0,4.0.0)";visibility:=reexport,
+  org.eclipse.core.expressions;bundle-version="[3.4.0,4.0.0)"
+ Bundle-RequiredExecutionEnvironment: JavaSE-1.8
++Automatic-Module-Name: org.eclipse.ui
+diff --git a/F:/demo/intellij-community/data/eclipse.platform.ui-I20170501-2000/bundles/org.eclipse.ui/forceQualifierUpdate.txt b/F:/demo/intellij-community/data/eclipse.platform.ui-I20180601-0915/bundles/org.eclipse.ui/forceQualifierUpdate.txt
+index d38cb93643a1..1b0f9bd974c9 100644
+--- a/F:/demo/intellij-community/data/eclipse.platform.ui-I20170501-2000/bundles/org.eclipse.ui/forceQualifierUpdate.txt
++++ b/F:/demo/intellij-community/data/eclipse.platform.ui-I20180601-0915/bundles/org.eclipse.ui/forceQualifierUpdate.txt
+@@ -1,3 +1,4 @@
+ # To force a version qualifier update add the bug here
+ Bug 403352 - Update all parent versions to match our build stream
+ Bug 416898 - Some Platform UI bundles need to be touched to get API descriptions back
++Pick up new signing certificate
+diff --git a/F:/demo/intellij-community/data/eclipse.platform.ui-I20170501-2000/bundles/org.eclipse.ui/icons/full/dlcl16/trash.png b/F:/demo/intellij-community/data/eclipse.platform.ui-I20180601-0915/bundles/org.eclipse.ui/icons/full/dlcl16/trash.png
+index 7493ed105e06..44d003aaee41 100644
+Binary files a/F:/demo/intellij-community/data/eclipse.platform.ui-I20170501-2000/bundles/org.eclipse.ui/icons/full/dlcl16/trash.png and b/F:/demo/intellij-community/data/eclipse.platform.ui-I20180601-0915/bundles/org.eclipse.ui/icons/full/dlcl16/trash.png differ
+diff --git a/F:/demo/intellij-community/data/eclipse.platform.ui-I20170501-2000/bundles/org.eclipse.ui/icons/full/dlcl16/trash@2x.png b/F:/demo/intellij-community/data/eclipse.platform.ui-I20180601-0915/bundles/org.eclipse.ui/icons/full/dlcl16/trash@2x.png
+index 7bf91b6d5de6..6cc54576a720 100644
+Binary files a/F:/demo/intellij-community/data/eclipse.platform.ui-I20170501-2000/bundles/org.eclipse.ui/icons/full/dlcl16/trash@2x.png and b/F:/demo/intellij-community/data/eclipse.platform.ui-I20180601-0915/bundles/org.eclipse.ui/icons/full/dlcl16/trash@2x.png differ
+diff --git a/F:/demo/intellij-community/data/eclipse.platform.ui-I20170501-2000/bundles/org.eclipse.ui/icons/full/elcl16/trash.png b/F:/demo/intellij-community/data/eclipse.platform.ui-I20180601-0915/bundles/org.eclipse.ui/icons/full/elcl16/trash.png
+index a84ea6b4528b..53b1a9954b60 100644
+Binary files a/F:/demo/intellij-community/data/eclipse.platform.ui-I20170501-2000/bundles/org.eclipse.ui/icons/full/elcl16/trash.png and b/F:/demo/intellij-community/data/eclipse.platform.ui-I20180601-0915/bundles/org.eclipse.ui/icons/full/elcl16/trash.png differ
+diff --git a/F:/demo/intellij-community/data/eclipse.platform.ui-I20170501-2000/bundles/org.eclipse.ui/icons/full/elcl16/trash@2x.png b/F:/demo/intellij-community/data/eclipse.platform.ui-I20180601-0915/bundles/org.eclipse.ui/icons/full/elcl16/trash@2x.png
+index e32e2ef12597..29f293424bde 100644
+Binary files a/F:/demo/intellij-community/data/eclipse.platform.ui-I20170501-2000/bundles/org.eclipse.ui/icons/full/elcl16/trash@2x.png and b/F:/demo/intellij-community/data/eclipse.platform.ui-I20180601-0915/bundles/org.eclipse.ui/icons/full/elcl16/trash@2x.png differ
+diff --git a/F:/demo/intellij-community/data/eclipse.platform.ui-I20180601-0915/bundles/org.eclipse.ui/icons/full/etool16/tricks.png b/F:/demo/intellij-community/data/eclipse.platform.ui-I20180601-0915/bundles/org.eclipse.ui/icons/full/etool16/tricks.png
+new file mode 100644
+index 000000000000..1eb9d652e4ec
+Binary files /dev/null and b/F:/demo/intellij-community/data/eclipse.platform.ui-I20180601-0915/bundles/org.eclipse.ui/icons/full/etool16/tricks.png differ
+diff --git a/F:/demo/intellij-community/data/eclipse.platform.ui-I20180601-0915/bundles/org.eclipse.ui/icons/full/etool16/tricks@2x.png b/F:/demo/intellij-community/data/eclipse.platform.ui-I20180601-0915/bundles/org.eclipse.ui/icons/full/etool16/tricks@2x.png
+new file mode 100644
+index 000000000000..9bcd745a790c
+Binary files /dev/null and b/F:/demo/intellij-community/data/eclipse.platform.ui-I20180601-0915/bundles/org.eclipse.ui/icons/full/etool16/tricks@2x.png differ
+diff --git a/F:/demo/intellij-community/data/eclipse.platform.ui-I20180601-0915/bundles/org.eclipse.ui/icons/full/pref/export_wiz.png b/F:/demo/intellij-community/data/eclipse.platform.ui-I20180601-0915/bundles/org.eclipse.ui/icons/full/pref/export_wiz.png
+new file mode 100644
+index 000000000000..99d8514c682a
+Binary files /dev/null and b/F:/demo/intellij-community/data/eclipse.platform.ui-I20180601-0915/bundles/org.eclipse.ui/icons/full/pref/export_wiz.png differ
+diff --git a/F:/demo/intellij-community/data/eclipse.platform.ui-I20180601-0915/bundles/org.eclipse.ui/icons/full/pref/export_wiz@2x.png b/F:/demo/intellij-community/data/eclipse.platform.ui-I20180601-0915/bundles/org.eclipse.ui/icons/full/pref/export_wiz@2x.png
+new file mode 100644
+index 000000000000..352d6a28ac5c
+Binary files /dev/null and b/F:/demo/intellij-community/data/eclipse.platform.ui-I20180601-0915/bundles/org.eclipse.ui/icons/full/pref/export_wiz@2x.png differ
+diff --git a/F:/demo/intellij-community/data/eclipse.platform.ui-I20180601-0915/bundles/org.eclipse.ui/icons/full/pref/import_wiz.png b/F:/demo/intellij-community/data/eclipse.platform.ui-I20180601-0915/bundles/org.eclipse.ui/icons/full/pref/import_wiz.png
+new file mode 100644
+index 000000000000..f689993cb011
+Binary files /dev/null and b/F:/demo/intellij-community/data/eclipse.platform.ui-I20180601-0915/bundles/org.eclipse.ui/icons/full/pref/import_wiz.png differ
+diff --git a/F:/demo/intellij-community/data/eclipse.platform.ui-I20180601-0915/bundles/org.eclipse.ui/icons/full/pref/import_wiz@2x.png b/F:/demo/intellij-community/data/eclipse.platform.ui-I20180601-0915/bundles/org.eclipse.ui/icons/full/pref/import_wiz@2x.png
+new file mode 100644
+index 000000000000..33217e14db15
+Binary files /dev/null and b/F:/demo/intellij-community/data/eclipse.platform.ui-I20180601-0915/bundles/org.eclipse.ui/icons/full/pref/import_wiz@2x.png differ
+diff --git a/F:/demo/intellij-community/data/eclipse.platform.ui-I20170501-2000/bundles/org.eclipse.ui/plugin.properties b/F:/demo/intellij-community/data/eclipse.platform.ui-I20180601-0915/bundles/org.eclipse.ui/plugin.properties
+index bf53fe8fec6b..85272bd72ede 100644
+--- a/F:/demo/intellij-community/data/eclipse.platform.ui-I20170501-2000/bundles/org.eclipse.ui/plugin.properties
++++ b/F:/demo/intellij-community/data/eclipse.platform.ui-I20180601-0915/bundles/org.eclipse.ui/plugin.properties
+@@ -1,5 +1,5 @@
+ ###############################################################################
+-# Copyright (c) 2000, 2016 IBM Corporation and others.
++# Copyright (c) 2000, 2018 IBM Corporation and others.
+ # All rights reserved. This program and the accompanying materials
+ # are made available under the terms of the Eclipse Public License v1.0
+ # which accompanies this distribution, and is available at
+@@ -179,7 +179,7 @@ command.minimizePart.description = Minimizes the active view or editor
+ command.move.description = Move the selected item
+ command.move.name = Move...
+ command.newEditor.description = Open another editor on the active editor's input
+-command.newEditor.name = New Editor
++command.newEditor.name = Clone Editor
+ command.splitEditor.description = Split or join the currently active editor.
+ command.splitEditor.name = Toggle Split Editor
+ command.splitEditor.orientation.name = Orientation
+@@ -323,8 +323,15 @@ Color.inactiveTabBGEnd=Inactive part background end
+ Color.inactiveTabBGStartDesc=The first color used for inactive view and editor title gradients.  This color is also used for active editors that do not have focus.
+ Color.inactiveTabBGEndDesc=The second color used for inactive view and editor title gradients.  This color is also used for the view menu background.
+ 
+-Color.infoBackground=Information background color
+-Color.infoForeground=Information text color
++Color.informationBackground=Information background color
++Color.informationBackgroundDesc=The color used for background of controls that provide information
++Color.informationForeground=Information text color
++Color.informationForegroundDesc=The color used for text of controls that provide information
++Color.hoverBackgroundDeprecated=Hoverbox background color
++Color.hoverBackgroundDeprecatedDesc=Hover background Color is deprecated. Use org.eclipse.ui.workbench.INFORMATION_BACKGROUND instead.
++Color.hoverForegroundDeprecated=Hoverbox text Color
++Color.hoverForegroundDeprecatedDesc=Hover foreground Color is deprecated. Use org.eclipse.ui.workbench.INFORMATION_FOREGROUND instead.
++
+ Color.errorText=Error text color
+ Color.errorTextDesc=Color used to show error messages.
+ Color.hyperlinkText=Hyperlink text color
+diff --git a/F:/demo/intellij-community/data/eclipse.platform.ui-I20170501-2000/bundles/org.eclipse.ui/plugin.xml b/F:/demo/intellij-community/data/eclipse.platform.ui-I20180601-0915/bundles/org.eclipse.ui/plugin.xml
+index 78e1bb171a6a..406e910aa6cc 100644
+--- a/F:/demo/intellij-community/data/eclipse.platform.ui-I20170501-2000/bundles/org.eclipse.ui/plugin.xml
++++ b/F:/demo/intellij-community/data/eclipse.platform.ui-I20180601-0915/bundles/org.eclipse.ui/plugin.xml
+@@ -1900,30 +1900,43 @@
+       		name="org.eclipse.ui.workbench.ACTIVE_TAB_HIGHLIGHT" value="false">
+ 		 </data>
+       </theme>
++
+       <colorDefinition
+             categoryId="org.eclipse.ui.workbenchMisc"
+-            id="org.eclipse.ui.workbench.HOVER_BACKGROUND"
+-            label="%Color.infoBackground">
+-            <colorFactory
+-               class="org.eclipse.ui.internal.themes.RGBInfoColorFactory"
+-               plugin="org.eclipse.ui">
+-               <parameter
+-                      name="color"
+-                      value="background">
+-                </parameter>
++            id="org.eclipse.ui.workbench.INFORMATION_BACKGROUND"
++            label="%Color.informationBackground">
++            <description> %Color.informationBackgroundDesc</description>
++            <colorFactory class="org.eclipse.ui.internal.themes.RGBInfoColorFactory" plugin="org.eclipse.ui">
++               <parameter name="color" value="background"> </parameter>
+             </colorFactory>
+       </colorDefinition>
+       <colorDefinition
++            categoryId="org.eclipse.ui.workbenchMisc"
++            id="org.eclipse.ui.workbench.INFORMATION_FOREGROUND"
++            label="%Color.informationForeground">
++            <description> %Color.informationForegroundDesc</description>
++            <colorFactory class="org.eclipse.ui.internal.themes.RGBInfoColorFactory" plugin="org.eclipse.ui">
++               <parameter name="color" value="foreground"></parameter>
++            </colorFactory>
++      </colorDefinition>
++     <colorDefinition
++            categoryId="org.eclipse.ui.workbenchMisc"
++            id="org.eclipse.ui.workbench.HOVER_BACKGROUND"
++            isEditable="false"
++            label="%Color.hoverBackgroundDeprecated">
++            <description> %Color.hoverBackgroundDeprecatedDesc</description>
++            <colorFactory class="org.eclipse.ui.internal.themes.RGBInfoColorFactory" plugin="org.eclipse.ui">
++               <parameter name="color" value="background"></parameter>
++            </colorFactory>
++      </colorDefinition>
++	 <colorDefinition
+             categoryId="org.eclipse.ui.workbenchMisc"
+             id="org.eclipse.ui.workbench.HOVER_FOREGROUND"
+-            label="%Color.infoForeground">
+-            <colorFactory
+-               class="org.eclipse.ui.internal.themes.RGBInfoColorFactory"
+-               plugin="org.eclipse.ui">
+-               <parameter
+-                      name="color"
+-                      value="foreground">
+-                </parameter>
++            isEditable="false"
++            label="%Color.hoverForegroundDeprecated">
++            <description> %Color.hoverForegroundDeprecatedDesc</description>
++            <colorFactory class="org.eclipse.ui.internal.themes.RGBInfoColorFactory" plugin="org.eclipse.ui">
++               <parameter name="color" value="foreground"></parameter>
+             </colorFactory>
+       </colorDefinition>
+       <theme
+@@ -2056,6 +2069,26 @@
+               type="org.eclipse.ui.IWorkbenchWindow">
+         </propertyTester>
+      </extension>
++   <extension
++         point="org.eclipse.core.expressions.definitions">
++      <definition id="org.eclipse.ui.workbenchWindow.isPerspectiveOpen.enabledWhen">
++         <and>
++            <with
++                  variable="activeWorkbenchWindow">
++               <test
++                     property="org.eclipse.ui.workbenchWindow.isPerspectiveOpen">
++               </test>
++            </with>
++            <!-- this is a workaround to evaluate the expression -->
++            <with
++                  variable="activePart">
++               <instanceof
++                     value="org.eclipse.ui.IWorkbenchPart">
++               </instanceof>
++            </with>
++         </and>
++      </definition>
++   </extension>
+    <extension
+          point="org.eclipse.ui.handlers">
+       <handler
+@@ -2210,86 +2243,45 @@
+             class="org.eclipse.ui.internal.CyclePerspectiveHandler:true"
+             commandId="org.eclipse.ui.window.nextPerspective">
+          <enabledWhen>
+-            <with
+-                  variable="activeWorkbenchWindow">
+-               <test
+-                     property="org.eclipse.ui.workbenchWindow.isPerspectiveOpen">
+-               </test>
+-            </with>
++            <reference
++                  definitionId="org.eclipse.ui.workbenchWindow.isPerspectiveOpen.enabledWhen">
++            </reference>
+          </enabledWhen>
+       </handler>
+       <handler
+             class="org.eclipse.ui.internal.CyclePerspectiveHandler:false"
+             commandId="org.eclipse.ui.window.previousPerspective">
+          <enabledWhen>
+-            <with
+-                  variable="activeWorkbenchWindow">
+-               <test
+-                     property="org.eclipse.ui.workbenchWindow.isPerspectiveOpen">
+-               </test>
+-            </with>
++            <reference
++                  definitionId="org.eclipse.ui.workbenchWindow.isPerspectiveOpen.enabledWhen">
++            </reference>
+          </enabledWhen>
+       </handler>
+       <handler
+             class="org.eclipse.ui.internal.handlers.CloseAllPerspectivesHandler"
+             commandId="org.eclipse.ui.window.closeAllPerspectives">
+          <enabledWhen>
+-            <or>
+-               <with
+-                     variable="activeWorkbenchWindow">
+-                  <test
+-                        property="org.eclipse.ui.workbenchWindow.isPerspectiveOpen">
+-                  </test>
+-               </with>
+-               <!-- this is a workaround to evaluate the expression -->
+-               <with
+-                     variable="activePart">
+-                  <instanceof
+-                        value="org.eclipse.ui.IWorkbenchPart">
+-                  </instanceof>
+-               </with>
+-            </or>
++            <reference
++                  definitionId="org.eclipse.ui.workbenchWindow.isPerspectiveOpen.enabledWhen">
++            </reference>
+          </enabledWhen>
+       </handler>
+       <handler
+             class="org.eclipse.ui.internal.handlers.EditActionSetsHandler"
+             commandId="org.eclipse.ui.window.customizePerspective">
+          <enabledWhen>
+-            <or>
+-               <with
+-                     variable="activePart">
+-                  <instanceof
+-                        value="org.eclipse.ui.IWorkbenchPart">
+-                  </instanceof>
+-               </with>
+-               <with
+-                     variable="activeWorkbenchWindow">
+-                  <test
+-                        property="org.eclipse.ui.workbenchWindow.isPerspectiveOpen">
+-                  </test>
+-               </with>
+-            </or>
++            <reference
++                  definitionId="org.eclipse.ui.workbenchWindow.isPerspectiveOpen.enabledWhen">
++            </reference>
+          </enabledWhen>
+       </handler>
+       <handler
+             class="org.eclipse.ui.internal.handlers.ClosePerspectiveHandler"
+             commandId="org.eclipse.ui.window.closePerspective">
+          <enabledWhen>
+-            <or>
+-               <with
+-                     variable="activeWorkbenchWindow">
+-                  <test
+-                        property="org.eclipse.ui.workbenchWindow.isPerspectiveOpen">
+-                  </test>
+-               </with>
+-               <!-- this is a workaround to evaluate the expression -->
+-               <with
+-                     variable="activePart">
+-                  <instanceof
+-                        value="org.eclipse.ui.IWorkbenchPart">
+-                  </instanceof>
+-               </with>
+-            </or>
++            <reference
++                  definitionId="org.eclipse.ui.workbenchWindow.isPerspectiveOpen.enabledWhen">
++            </reference>
+          </enabledWhen>
+       </handler>
+       <handler
+@@ -2361,65 +2353,27 @@
+             class="org.eclipse.ui.internal.handlers.ResetPerspectiveHandler"
+             commandId="org.eclipse.ui.window.resetPerspective">
+          <enabledWhen>
+-            <or>
+-               <with
+-                     variable="activeWorkbenchWindow">
+-                  <test
+-                        property="org.eclipse.ui.workbenchWindow.isPerspectiveOpen">
+-                  </test>
+-               </with>
+-               <!-- this is a workaround to evaluate the expression -->
+-               <with
+-                     variable="activePart">
+-                  <instanceof
+-                        value="org.eclipse.ui.IWorkbenchPart">
+-                  </instanceof>
+-               </with>
+-               
+-            </or>
++            <reference
++                  definitionId="org.eclipse.ui.workbenchWindow.isPerspectiveOpen.enabledWhen">
++            </reference>
+          </enabledWhen>
+       </handler>
+       <handler
+             class="org.eclipse.ui.internal.handlers.SavePerspectiveHandler"
+             commandId="org.eclipse.ui.window.savePerspective">
+          <enabledWhen>
+-            <or>
+-               <with
+-                     variable="activeWorkbenchWindow">
+-                  <test
+-                        property="org.eclipse.ui.workbenchWindow.isPerspectiveOpen">
+-                  </test>
+-               </with>
+-               <!-- this is a workaround to evaluate the expression -->
+-               <with
+-                     variable="activePart">
+-                  <instanceof
+-                        value="org.eclipse.ui.IWorkbenchPart">
+-                  </instanceof>
+-               </with>
+-               
+-            </or>
++            <reference
++                  definitionId="org.eclipse.ui.workbenchWindow.isPerspectiveOpen.enabledWhen">
++            </reference>
+          </enabledWhen>
+       </handler>
+       <handler
+             class="org.eclipse.ui.internal.handlers.IntroHandler"
+             commandId="org.eclipse.ui.help.quickStartAction">
+          <enabledWhen>
+-            <or>
+-               <with
+-                     variable="activeWorkbenchWindow">
+-                  <test
+-                        property="org.eclipse.ui.workbenchWindow.isPerspectiveOpen">
+-                  </test>
+-               </with>
+-               <!-- this is a workaround to evaluate the expression -->
+-               <with
+-                     variable="activePart">
+-                  <instanceof
+-                        value="org.eclipse.ui.IWorkbenchPart">
+-                  </instanceof>
+-               </with>
+-            </or>
++            <reference
++                  definitionId="org.eclipse.ui.workbenchWindow.isPerspectiveOpen.enabledWhen">
++            </reference>
+          </enabledWhen>
+       </handler>
+    </extension>
+diff --git a/F:/demo/intellij-community/data/eclipse.platform.ui-I20170501-2000/bundles/org.eclipse.ui/pom.xml b/F:/demo/intellij-community/data/eclipse.platform.ui-I20180601-0915/bundles/org.eclipse.ui/pom.xml
+index 082efe1fa781..bd5fd34ef9e9 100644
+--- a/F:/demo/intellij-community/data/eclipse.platform.ui-I20170501-2000/bundles/org.eclipse.ui/pom.xml
++++ b/F:/demo/intellij-community/data/eclipse.platform.ui-I20180601-0915/bundles/org.eclipse.ui/pom.xml
+@@ -1,6 +1,6 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <!--
+-  Copyright (c) 2012, 2014 Eclipse Foundation and others.
++  Copyright (c) 2012, 2017 Eclipse Foundation and others.
+   All rights reserved. This program and the accompanying materials
+   are made available under the terms of the Eclipse Distribution License v1.0
+   which accompanies this distribution, and is available at
+@@ -14,11 +14,11 @@
+   <parent>
+     <artifactId>eclipse.platform.ui</artifactId>
+     <groupId>eclipse.platform.ui</groupId>
+-    <version>4.7.0-SNAPSHOT</version>
++    <version>4.9.0-SNAPSHOT</version>
+     <relativePath>../../</relativePath>
+   </parent>
+   <groupId>org.eclipse.ui</groupId>
+   <artifactId>org.eclipse.ui</artifactId>
+-  <version>3.109.0-SNAPSHOT</version>
++  <version>3.109.200-SNAPSHOT</version>
+   <packaging>eclipse-plugin</packaging>
+ </project>
+diff --git a/F:/demo/intellij-community/data/eclipse.platform.ui-I20170501-2000/bundles/org.eclipse.ui/schema/commands.exsd b/F:/demo/intellij-community/data/eclipse.platform.ui-I20180601-0915/bundles/org.eclipse.ui/schema/commands.exsd
+index cce623a022b7..bddf5bd8d889 100644
+--- a/F:/demo/intellij-community/data/eclipse.platform.ui-I20170501-2000/bundles/org.eclipse.ui/schema/commands.exsd
++++ b/F:/demo/intellij-community/data/eclipse.platform.ui-I20180601-0915/bundles/org.eclipse.ui/schema/commands.exsd
+@@ -106,7 +106,7 @@ This element is used to define commands. A command represents an request from th
+             <annotation>
+                <documentation>
+                   &lt;p&gt;
+-The unique id of the category for this command. If this command does not specify a category it will be placed in an global &quot;Uncategorized&quot; category.
++The unique id of the category for this command. If this command does not specify a category it will be placed in an global &quot;Uncategorized&quot; category and will be filtered by default on the Keys preference page, meaning users cannot assign a key binding unless they disable the filter for &quot;Uncategorized&quot; commands.
+ &lt;/p&gt;
+ &lt;p&gt;&lt;em&gt;Since: 3.0&lt;/em&gt;&lt;/p&gt;
+                </documentation>
+@@ -851,7 +851,7 @@ There are a few default implementations of handler states that may be useful to
+          <meta.section type="copyright"/>
+       </appinfo>
+       <documentation>
+-         Copyright (c) 2000, 2011 IBM Corporation and others.&lt;br&gt;
++         Copyright (c) 2000, 2018 IBM Corporation and others.&lt;br&gt;
+ All rights reserved. This program and the accompanying materials are made
+ available under the terms of the Eclipse Public License v1.0 which accompanies
+ this distribution, and is available at &lt;a 

@@ -1,0 +1,1364 @@
+diff --git a/F:/demo/intellij-community/data/eclipse.platform.ui-I20180601-0915/bundles/org.eclipse.ui/.settings/.api_filters b/F:/demo/intellij-community/data/eclipse.platform.ui-master/bundles/org.eclipse.ui/.settings/.api_filters
+index f3b5203a59d0..fa788e30c0b6 100644
+--- a/F:/demo/intellij-community/data/eclipse.platform.ui-I20180601-0915/bundles/org.eclipse.ui/.settings/.api_filters
++++ b/F:/demo/intellij-community/data/eclipse.platform.ui-master/bundles/org.eclipse.ui/.settings/.api_filters
+@@ -1,34 +1,10 @@
+ <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+ <component id="org.eclipse.ui" version="2">
+-    <resource path="META-INF/MANIFEST.MF" type="org.eclipse.ui.help.DialogPageContextComputer">
+-        <filter comment="Planned API removal see Bug 531133" id="305422471">
++    <resource path="META-INF/MANIFEST.MF" type="org.eclipse.jface.dialogs.ImageAndMessageArea">
++        <filter comment="Bug 540482" id="305422471">
+             <message_arguments>
+-                <message_argument value="org.eclipse.ui.help.DialogPageContextComputer"/>
+-                <message_argument value="org.eclipse.ui_3.109.0"/>
+-            </message_arguments>
+-        </filter>
+-    </resource>
+-    <resource path="META-INF/MANIFEST.MF" type="org.eclipse.ui.help.IContextComputer">
+-        <filter comment="Planned API removal see Bug 531133" id="305422471">
+-            <message_arguments>
+-                <message_argument value="org.eclipse.ui.help.IContextComputer"/>
+-                <message_argument value="org.eclipse.ui_3.109.0"/>
+-            </message_arguments>
+-        </filter>
+-    </resource>
+-    <resource path="META-INF/MANIFEST.MF" type="org.eclipse.ui.help.ViewContextComputer">
+-        <filter comment="Planned API removal see Bug 531133" id="305422471">
+-            <message_arguments>
+-                <message_argument value="org.eclipse.ui.help.ViewContextComputer"/>
+-                <message_argument value="org.eclipse.ui_3.109.0"/>
+-            </message_arguments>
+-        </filter>
+-    </resource>
+-    <resource path="META-INF/MANIFEST.MF" type="org.eclipse.ui.help.WorkbenchHelp">
+-        <filter comment="Planned API removal see Bug 531133" id="305422471">
+-            <message_arguments>
+-                <message_argument value="org.eclipse.ui.help.WorkbenchHelp"/>
+-                <message_argument value="org.eclipse.ui_3.109.0"/>
++                <message_argument value="org.eclipse.jface.dialogs.ImageAndMessageArea"/>
++                <message_argument value="org.eclipse.ui_3.111.0"/>
+             </message_arguments>
+         </filter>
+     </resource>
+diff --git a/F:/demo/intellij-community/data/eclipse.platform.ui-I20180601-0915/bundles/org.eclipse.ui/.settings/org.eclipse.jdt.ui.prefs b/F:/demo/intellij-community/data/eclipse.platform.ui-master/bundles/org.eclipse.ui/.settings/org.eclipse.jdt.ui.prefs
+index 347e97c124f0..4e55c71a4241 100644
+--- a/F:/demo/intellij-community/data/eclipse.platform.ui-I20180601-0915/bundles/org.eclipse.ui/.settings/org.eclipse.jdt.ui.prefs
++++ b/F:/demo/intellij-community/data/eclipse.platform.ui-master/bundles/org.eclipse.ui/.settings/org.eclipse.jdt.ui.prefs
+@@ -4,7 +4,7 @@ formatter_profile=org.eclipse.jdt.ui.default.eclipse_profile
+ formatter_settings_version=14
+ internal.default.compliance=user
+ org.eclipse.jdt.ui.javadoc=true
+-org.eclipse.jdt.ui.text.custom_code_templates=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><templates><template autoinsert\="true" context\="gettercomment_context" deleted\="false" description\="Comment for getter method" enabled\="true" id\="org.eclipse.jdt.ui.text.codetemplates.gettercomment" name\="gettercomment">/**\n * @return Returns the ${bare_field_name}.\n */</template><template autoinsert\="true" context\="settercomment_context" deleted\="false" description\="Comment for setter method" enabled\="true" id\="org.eclipse.jdt.ui.text.codetemplates.settercomment" name\="settercomment">/**\n * @param ${param} The ${bare_field_name} to set.\n */</template><template autoinsert\="true" context\="constructorcomment_context" deleted\="false" description\="Comment for created constructors" enabled\="true" id\="org.eclipse.jdt.ui.text.codetemplates.constructorcomment" name\="constructorcomment">/**\n * ${tags}\n */</template><template autoinsert\="false" context\="filecomment_context" deleted\="false" description\="Comment for created Java files" enabled\="true" id\="org.eclipse.jdt.ui.text.codetemplates.filecomment" name\="filecomment"/><template autoinsert\="false" context\="typecomment_context" deleted\="false" description\="Comment for created types" enabled\="true" id\="org.eclipse.jdt.ui.text.codetemplates.typecomment" name\="typecomment">/**\n * @since 3.3\n *\n * ${tags}\n */</template><template autoinsert\="true" context\="fieldcomment_context" deleted\="false" description\="Comment for fields" enabled\="true" id\="org.eclipse.jdt.ui.text.codetemplates.fieldcomment" name\="fieldcomment">/**\n * \n */</template><template autoinsert\="true" context\="methodcomment_context" deleted\="false" description\="Comment for non-overriding methods" enabled\="true" id\="org.eclipse.jdt.ui.text.codetemplates.methodcomment" name\="methodcomment">/**\n * ${tags}\n */</template><template autoinsert\="true" context\="overridecomment_context" deleted\="false" description\="Comment for overriding methods" enabled\="true" id\="org.eclipse.jdt.ui.text.codetemplates.overridecomment" name\="overridecomment">/* (non-Javadoc)\n * ${see_to_overridden}\n */</template><template autoinsert\="true" context\="newtype_context" deleted\="false" description\="Newly created files" enabled\="true" id\="org.eclipse.jdt.ui.text.codetemplates.newtype" name\="newtype">${filecomment}\n${package_declaration}\n\n${typecomment}\n${type_declaration}</template><template autoinsert\="true" context\="catchblock_context" deleted\="false" description\="Code in new catch blocks" enabled\="true" id\="org.eclipse.jdt.ui.text.codetemplates.catchblock" name\="catchblock">// ${todo} Auto-generated catch block\n${exception_var}.printStackTrace();</template><template autoinsert\="true" context\="methodbody_context" deleted\="false" description\="Code in created method stubs" enabled\="true" id\="org.eclipse.jdt.ui.text.codetemplates.methodbody" name\="methodbody">// ${todo} Auto-generated method stub\n${body_statement}</template><template autoinsert\="true" context\="constructorbody_context" deleted\="false" description\="Code in created constructor stubs" enabled\="true" id\="org.eclipse.jdt.ui.text.codetemplates.constructorbody" name\="constructorbody">${body_statement}\n// ${todo} Auto-generated constructor stub</template><template autoinsert\="true" context\="getterbody_context" deleted\="false" description\="Code in created getters" enabled\="true" id\="org.eclipse.jdt.ui.text.codetemplates.getterbody" name\="getterbody">return ${field};</template><template autoinsert\="true" context\="setterbody_context" deleted\="false" description\="Code in created setters" enabled\="true" id\="org.eclipse.jdt.ui.text.codetemplates.setterbody" name\="setterbody">${field} \= ${param};</template><template autoinsert\="true" context\="classbody_context" deleted\="false" description\="Code in new class type bodies" enabled\="true" id\="org.eclipse.jdt.ui.text.codetemplates.classbody" name\="classbody">\n</template><template autoinsert\="true" context\="interfacebody_context" deleted\="false" description\="Code in new interface type bodies" enabled\="true" id\="org.eclipse.jdt.ui.text.codetemplates.interfacebody" name\="interfacebody">\n</template><template autoinsert\="true" context\="enumbody_context" deleted\="false" description\="Code in new enum type bodies" enabled\="true" id\="org.eclipse.jdt.ui.text.codetemplates.enumbody" name\="enumbody">\n</template><template autoinsert\="true" context\="annotationbody_context" deleted\="false" description\="Code in new annotation type bodies" enabled\="true" id\="org.eclipse.jdt.ui.text.codetemplates.annotationbody" name\="annotationbody">\n</template><template autoinsert\="true" context\="delegatecomment_context" deleted\="false" description\="Comment for delegate methods" enabled\="true" id\="org.eclipse.jdt.ui.text.codetemplates.delegatecomment" name\="delegatecomment">/**\n * ${tags}\n * ${see_to_target}\n */</template></templates>
++org.eclipse.jdt.ui.text.custom_code_templates=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><templates><template autoinsert\="true" context\="gettercomment_context" deleted\="false" description\="Comment for getter method" enabled\="true" id\="org.eclipse.jdt.ui.text.codetemplates.gettercomment" name\="gettercomment">/**\n * @return Returns the ${bare_field_name}.\n */</template><template autoinsert\="true" context\="settercomment_context" deleted\="false" description\="Comment for setter method" enabled\="true" id\="org.eclipse.jdt.ui.text.codetemplates.settercomment" name\="settercomment">/**\n * @param ${param} The ${bare_field_name} to set.\n */</template><template autoinsert\="true" context\="constructorcomment_context" deleted\="false" description\="Comment for created constructors" enabled\="true" id\="org.eclipse.jdt.ui.text.codetemplates.constructorcomment" name\="constructorcomment">/**\n * ${tags}\n */</template><template autoinsert\="false" context\="filecomment_context" deleted\="false" description\="Comment for created Java files" enabled\="true" id\="org.eclipse.jdt.ui.text.codetemplates.filecomment" name\="filecomment"/><template autoinsert\="false" context\="typecomment_context" deleted\="false" description\="Comment for created types" enabled\="true" id\="org.eclipse.jdt.ui.text.codetemplates.typecomment" name\="typecomment">/**\n * @since 3.3\n *\n * ${tags}\n */</template><template autoinsert\="true" context\="fieldcomment_context" deleted\="false" description\="Comment for fields" enabled\="true" id\="org.eclipse.jdt.ui.text.codetemplates.fieldcomment" name\="fieldcomment">/**\n * \n */</template><template autoinsert\="true" context\="methodcomment_context" deleted\="false" description\="Comment for non-overriding methods" enabled\="true" id\="org.eclipse.jdt.ui.text.codetemplates.methodcomment" name\="methodcomment">/**\n * ${tags}\n */</template><template autoinsert\="false" context\="overridecomment_context" deleted\="false" description\="Comment for overriding methods" enabled\="true" id\="org.eclipse.jdt.ui.text.codetemplates.overridecomment" name\="overridecomment"/><template autoinsert\="true" context\="newtype_context" deleted\="false" description\="Newly created files" enabled\="true" id\="org.eclipse.jdt.ui.text.codetemplates.newtype" name\="newtype">${filecomment}\n${package_declaration}\n\n${typecomment}\n${type_declaration}</template><template autoinsert\="true" context\="catchblock_context" deleted\="false" description\="Code in new catch blocks" enabled\="true" id\="org.eclipse.jdt.ui.text.codetemplates.catchblock" name\="catchblock">// ${todo} Auto-generated catch block\n${exception_var}.printStackTrace();</template><template autoinsert\="true" context\="methodbody_context" deleted\="false" description\="Code in created method stubs" enabled\="true" id\="org.eclipse.jdt.ui.text.codetemplates.methodbody" name\="methodbody">// ${todo} Auto-generated method stub\n${body_statement}</template><template autoinsert\="true" context\="constructorbody_context" deleted\="false" description\="Code in created constructor stubs" enabled\="true" id\="org.eclipse.jdt.ui.text.codetemplates.constructorbody" name\="constructorbody">${body_statement}\n// ${todo} Auto-generated constructor stub</template><template autoinsert\="true" context\="getterbody_context" deleted\="false" description\="Code in created getters" enabled\="true" id\="org.eclipse.jdt.ui.text.codetemplates.getterbody" name\="getterbody">return ${field};</template><template autoinsert\="true" context\="setterbody_context" deleted\="false" description\="Code in created setters" enabled\="true" id\="org.eclipse.jdt.ui.text.codetemplates.setterbody" name\="setterbody">${field} \= ${param};</template><template autoinsert\="true" context\="classbody_context" deleted\="false" description\="Code in new class type bodies" enabled\="true" id\="org.eclipse.jdt.ui.text.codetemplates.classbody" name\="classbody">\n</template><template autoinsert\="true" context\="interfacebody_context" deleted\="false" description\="Code in new interface type bodies" enabled\="true" id\="org.eclipse.jdt.ui.text.codetemplates.interfacebody" name\="interfacebody">\n</template><template autoinsert\="true" context\="enumbody_context" deleted\="false" description\="Code in new enum type bodies" enabled\="true" id\="org.eclipse.jdt.ui.text.codetemplates.enumbody" name\="enumbody">\n</template><template autoinsert\="true" context\="annotationbody_context" deleted\="false" description\="Code in new annotation type bodies" enabled\="true" id\="org.eclipse.jdt.ui.text.codetemplates.annotationbody" name\="annotationbody">\n</template><template autoinsert\="true" context\="delegatecomment_context" deleted\="false" description\="Comment for delegate methods" enabled\="true" id\="org.eclipse.jdt.ui.text.codetemplates.delegatecomment" name\="delegatecomment">/**\n * ${tags}\n * ${see_to_target}\n */</template></templates>
+ sp_cleanup.add_default_serial_version_id=false
+ sp_cleanup.add_generated_serial_version_id=false
+ sp_cleanup.add_missing_annotations=false
+diff --git a/F:/demo/intellij-community/data/eclipse.platform.ui-I20180601-0915/bundles/org.eclipse.ui/META-INF/MANIFEST.MF b/F:/demo/intellij-community/data/eclipse.platform.ui-master/bundles/org.eclipse.ui/META-INF/MANIFEST.MF
+index 055877874be0..732ab09576d5 100644
+--- a/F:/demo/intellij-community/data/eclipse.platform.ui-I20180601-0915/bundles/org.eclipse.ui/META-INF/MANIFEST.MF
++++ b/F:/demo/intellij-community/data/eclipse.platform.ui-master/bundles/org.eclipse.ui/META-INF/MANIFEST.MF
+@@ -2,7 +2,7 @@ Manifest-Version: 1.0
+ Bundle-ManifestVersion: 2
+ Bundle-Name: %Plugin.name
+ Bundle-SymbolicName: org.eclipse.ui; singleton:=true
+-Bundle-Version: 3.109.200.qualifier
++Bundle-Version: 3.112.0.qualifier
+ Bundle-ClassPath: .
+ Bundle-Activator: org.eclipse.ui.internal.UIPlugin
+ Bundle-ActivationPolicy: lazy
+@@ -11,8 +11,8 @@ Bundle-Localization: plugin
+ Export-Package: org.eclipse.ui.internal;x-internal:=true
+ Require-Bundle: org.eclipse.core.runtime;bundle-version="[3.2.0,4.0.0)",
+  org.eclipse.swt;bundle-version="[3.103.0,4.0.0)";visibility:=reexport,
+- org.eclipse.jface;bundle-version="[3.13.0,4.0.0)";visibility:=reexport,
+- org.eclipse.ui.workbench;bundle-version="[3.105.0,4.0.0)";visibility:=reexport,
++ org.eclipse.jface;bundle-version="[3.15.0,4.0.0)";visibility:=reexport,
++ org.eclipse.ui.workbench;bundle-version="[3.113.0,4.0.0)";visibility:=reexport,
+  org.eclipse.core.expressions;bundle-version="[3.4.0,4.0.0)"
+ Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+ Automatic-Module-Name: org.eclipse.ui
+diff --git a/F:/demo/intellij-community/data/eclipse.platform.ui-I20180601-0915/bundles/org.eclipse.ui/about.html b/F:/demo/intellij-community/data/eclipse.platform.ui-master/bundles/org.eclipse.ui/about.html
+index 460233046ee3..164f781a8fd2 100644
+--- a/F:/demo/intellij-community/data/eclipse.platform.ui-I20180601-0915/bundles/org.eclipse.ui/about.html
++++ b/F:/demo/intellij-community/data/eclipse.platform.ui-master/bundles/org.eclipse.ui/about.html
+@@ -2,27 +2,35 @@
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+ <html xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+-<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"/>
++<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+ <title>About</title>
+ </head>
+ <body lang="EN-US">
+-<h2>About This Content</h2>
+- 
+-<p>June 2, 2006</p>	
+-<h3>License</h3>
++	<h2>About This Content</h2>
+ 
+-<p>The Eclipse Foundation makes available all content in this plug-in (&quot;Content&quot;).  Unless otherwise 
+-indicated below, the Content is provided to you under the terms and conditions of the
+-Eclipse Public License Version 1.0 (&quot;EPL&quot;).  A copy of the EPL is available 
+-at <a href="http://www.eclipse.org/legal/epl-v10.html">http://www.eclipse.org/legal/epl-v10.html</a>.
+-For purposes of the EPL, &quot;Program&quot; will mean the Content.</p>
++	<p>November 30, 2017</p>
++	<h3>License</h3>
+ 
+-<p>If you did not receive this Content directly from the Eclipse Foundation, the Content is 
+-being redistributed by another party (&quot;Redistributor&quot;) and different terms and conditions may
+-apply to your use of any object code in the Content.  Check the Redistributor's license that was 
+-provided with the Content.  If no such license exists, contact the Redistributor.  Unless otherwise
+-indicated below, the terms and conditions of the EPL still apply to any source code in the Content
+-and such source code may be obtained at <a href="http://www.eclipse.org">http://www.eclipse.org</a>.</p>
++	<p>
++		The Eclipse Foundation makes available all content in this plug-in
++		(&quot;Content&quot;). Unless otherwise indicated below, the Content
++		is provided to you under the terms and conditions of the Eclipse
++		Public License Version 2.0 (&quot;EPL&quot;). A copy of the EPL is
++		available at <a href="http://www.eclipse.org/legal/epl-2.0">http://www.eclipse.org/legal/epl-2.0</a>.
++		For purposes of the EPL, &quot;Program&quot; will mean the Content.
++	</p>
++
++	<p>
++		If you did not receive this Content directly from the Eclipse
++		Foundation, the Content is being redistributed by another party
++		(&quot;Redistributor&quot;) and different terms and conditions may
++		apply to your use of any object code in the Content. Check the
++		Redistributor's license that was provided with the Content. If no such
++		license exists, contact the Redistributor. Unless otherwise indicated
++		below, the terms and conditions of the EPL still apply to any source
++		code in the Content and such source code may be obtained at <a
++			href="http://www.eclipse.org/">http://www.eclipse.org</a>.
++	</p>
+ 
+ </body>
+ </html>
+\ No newline at end of file
+diff --git a/F:/demo/intellij-community/data/eclipse.platform.ui-I20180601-0915/bundles/org.eclipse.ui/build.properties b/F:/demo/intellij-community/data/eclipse.platform.ui-master/bundles/org.eclipse.ui/build.properties
+index e86fc1e332e4..f413498a6793 100644
+--- a/F:/demo/intellij-community/data/eclipse.platform.ui-I20180601-0915/bundles/org.eclipse.ui/build.properties
++++ b/F:/demo/intellij-community/data/eclipse.platform.ui-master/bundles/org.eclipse.ui/build.properties
+@@ -1,9 +1,12 @@
+ ###############################################################################
+ # Copyright (c) 2000, 2005 IBM Corporation and others.
+-# All rights reserved. This program and the accompanying materials
+-# are made available under the terms of the Eclipse Public License v1.0
++#
++# This program and the accompanying materials
++# are made available under the terms of the Eclipse Public License 2.0
+ # which accompanies this distribution, and is available at
+-# http://www.eclipse.org/legal/epl-v10.html
++# https://www.eclipse.org/legal/epl-2.0/
++#
++# SPDX-License-Identifier: EPL-2.0
+ #
+ # Contributors:
+ #     IBM Corporation - initial API and implementation
+diff --git a/F:/demo/intellij-community/data/eclipse.platform.ui-I20180601-0915/bundles/org.eclipse.ui/plugin.properties b/F:/demo/intellij-community/data/eclipse.platform.ui-master/bundles/org.eclipse.ui/plugin.properties
+index 85272bd72ede..c77977a720cd 100644
+--- a/F:/demo/intellij-community/data/eclipse.platform.ui-I20180601-0915/bundles/org.eclipse.ui/plugin.properties
++++ b/F:/demo/intellij-community/data/eclipse.platform.ui-master/bundles/org.eclipse.ui/plugin.properties
+@@ -1,9 +1,12 @@
+ ###############################################################################
+ # Copyright (c) 2000, 2018 IBM Corporation and others.
+-# All rights reserved. This program and the accompanying materials
+-# are made available under the terms of the Eclipse Public License v1.0
++#
++# This program and the accompanying materials
++# are made available under the terms of the Eclipse Public License 2.0
+ # which accompanies this distribution, and is available at
+-# http://www.eclipse.org/legal/epl-v10.html
++# https://www.eclipse.org/legal/epl-2.0/
++#
++# SPDX-License-Identifier: EPL-2.0
+ #
+ # Contributors:
+ #     IBM Corporation - initial API and implementation
+diff --git a/F:/demo/intellij-community/data/eclipse.platform.ui-I20180601-0915/bundles/org.eclipse.ui/plugin.xml b/F:/demo/intellij-community/data/eclipse.platform.ui-master/bundles/org.eclipse.ui/plugin.xml
+index 406e910aa6cc..9bf6fe4914c2 100644
+--- a/F:/demo/intellij-community/data/eclipse.platform.ui-I20180601-0915/bundles/org.eclipse.ui/plugin.xml
++++ b/F:/demo/intellij-community/data/eclipse.platform.ui-master/bundles/org.eclipse.ui/plugin.xml
+@@ -776,6 +776,17 @@
+                value="false">
+          </parameter>
+       </key>
++      <key
++            locale="fr"
++            commandId="org.eclipse.ui.window.splitEditor"
++            contextId="org.eclipse.ui.contexts.window"
++            sequence="M1+È"
++            schemeId="org.eclipse.ui.defaultAcceleratorConfiguration">
++         <parameter
++               id="Splitter.isHorizontal"
++               value="false">
++         </parameter>
++      </key>
+       <key
+             platform="carbon"
+             commandId=""
+@@ -794,7 +805,70 @@
+                value="false">
+          </parameter>
+       </key>
+-
++     <key
++            commandId="org.eclipse.ui.navigate.nextTab"
++            contextId="org.eclipse.ui.contexts.dialogAndWindow"
++            schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"
++            sequence="M1+PAGE_DOWN">
++      </key>
++      <key
++            contextId="org.eclipse.ui.contexts.dialogAndWindow"
++            platform="carbon"
++            schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"
++            sequence="M1+PAGE_DOWN">
++      </key>
++      <key
++            contextId="org.eclipse.ui.contexts.dialogAndWindow"
++            platform="cocoa"
++            schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"
++            sequence="M1+PAGE_DOWN">
++      </key>
++      <key
++            commandId="org.eclipse.ui.navigate.nextTab"
++            contextId="org.eclipse.ui.contexts.dialogAndWindow"
++            platform="carbon"
++            schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"
++            sequence="M4+PAGE_DOWN">
++      </key>
++      <key
++            commandId="org.eclipse.ui.navigate.nextTab"
++            contextId="org.eclipse.ui.contexts.dialogAndWindow"
++            platform="cocoa"
++            schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"
++            sequence="M4+PAGE_DOWN">
++      </key>
++      <key
++            commandId="org.eclipse.ui.navigate.previousTab"
++            contextId="org.eclipse.ui.contexts.dialogAndWindow"
++            schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"
++            sequence="M1+PAGE_UP">
++      </key>
++      <key
++            contextId="org.eclipse.ui.contexts.dialogAndWindow"
++            platform="carbon"
++            schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"
++            sequence="M1+PAGE_UP">
++      </key>
++      <key
++            contextId="org.eclipse.ui.contexts.dialogAndWindow"
++            platform="cocoa"
++            schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"
++            sequence="M1+PAGE_UP">
++      </key>
++      <key
++            commandId="org.eclipse.ui.navigate.previousTab"
++            contextId="org.eclipse.ui.contexts.dialogAndWindow"
++            platform="carbon"
++            schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"
++            sequence="M4+PAGE_UP">
++      </key>
++      <key
++            commandId="org.eclipse.ui.navigate.previousTab"
++            contextId="org.eclipse.ui.contexts.dialogAndWindow"
++            platform="cocoa"
++            schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"
++            sequence="M4+PAGE_UP">
++      </key>
+    </extension>
+    
+    <extension
+diff --git a/F:/demo/intellij-community/data/eclipse.platform.ui-I20180601-0915/bundles/org.eclipse.ui/pom.xml b/F:/demo/intellij-community/data/eclipse.platform.ui-master/bundles/org.eclipse.ui/pom.xml
+index bd5fd34ef9e9..241e5ffc725e 100644
+--- a/F:/demo/intellij-community/data/eclipse.platform.ui-I20180601-0915/bundles/org.eclipse.ui/pom.xml
++++ b/F:/demo/intellij-community/data/eclipse.platform.ui-master/bundles/org.eclipse.ui/pom.xml
+@@ -14,11 +14,11 @@
+   <parent>
+     <artifactId>eclipse.platform.ui</artifactId>
+     <groupId>eclipse.platform.ui</groupId>
+-    <version>4.9.0-SNAPSHOT</version>
++    <version>4.12.0-SNAPSHOT</version>
+     <relativePath>../../</relativePath>
+   </parent>
+   <groupId>org.eclipse.ui</groupId>
+   <artifactId>org.eclipse.ui</artifactId>
+-  <version>3.109.200-SNAPSHOT</version>
++  <version>3.112.0-SNAPSHOT</version>
+   <packaging>eclipse-plugin</packaging>
+ </project>
+diff --git a/F:/demo/intellij-community/data/eclipse.platform.ui-I20180601-0915/bundles/org.eclipse.ui/schema/acceleratorConfigurations.exsd b/F:/demo/intellij-community/data/eclipse.platform.ui-master/bundles/org.eclipse.ui/schema/acceleratorConfigurations.exsd
+index 2b6b0a003c1c..385275b49d0c 100644
+--- a/F:/demo/intellij-community/data/eclipse.platform.ui-I20180601-0915/bundles/org.eclipse.ui/schema/acceleratorConfigurations.exsd
++++ b/F:/demo/intellij-community/data/eclipse.platform.ui-master/bundles/org.eclipse.ui/schema/acceleratorConfigurations.exsd
+@@ -153,10 +153,13 @@ Note the accelerator configuration name presented to the user is the same as the
+       </appInfo>
+       <documentation>
+          Copyright (c) 2002, 2007 IBM Corporation and others.&lt;br&gt;
+-All rights reserved. This program and the accompanying materials are made
+-available under the terms of the Eclipse Public License v1.0 which accompanies
++
++This program and the accompanying materials are made
++available under the terms of the Eclipse Public License 2.0 which accompanies
+ this distribution, and is available at &lt;a 
+-href=&quot;http://www.eclipse.org/legal/epl-v10.html&quot;&gt;http://www.eclipse.org/legal/epl-v10.html&lt;/a&gt;
++href=&quot;https://www.eclipse.org/legal/epl-2.0&quot;&gt;https://www.eclipse.org/legal/epl-v20.html&lt;/a&gt;/
++
++SPDX-License-Identifier: EPL-2.0
+       </documentation>
+    </annotation>
+ 
+diff --git a/F:/demo/intellij-community/data/eclipse.platform.ui-I20180601-0915/bundles/org.eclipse.ui/schema/acceleratorScopes.exsd b/F:/demo/intellij-community/data/eclipse.platform.ui-master/bundles/org.eclipse.ui/schema/acceleratorScopes.exsd
+index f387b16d9bcb..bbbe7837759f 100644
+--- a/F:/demo/intellij-community/data/eclipse.platform.ui-I20180601-0915/bundles/org.eclipse.ui/schema/acceleratorScopes.exsd
++++ b/F:/demo/intellij-community/data/eclipse.platform.ui-master/bundles/org.eclipse.ui/schema/acceleratorScopes.exsd
+@@ -157,10 +157,13 @@ An accelerator set declares what scope it is applicable for by listing the scope
+       </appInfo>
+       <documentation>
+          Copyright (c) 2002, 2007 IBM Corporation and others.&lt;br&gt;
+-All rights reserved. This program and the accompanying materials are made
+-available under the terms of the Eclipse Public License v1.0 which accompanies
++
++This program and the accompanying materials are made
++available under the terms of the Eclipse Public License 2.0 which accompanies
+ this distribution, and is available at &lt;a 
+-href=&quot;http://www.eclipse.org/legal/epl-v10.html&quot;&gt;http://www.eclipse.org/legal/epl-v10.html&lt;/a&gt;
++href=&quot;https://www.eclipse.org/legal/epl-2.0&quot;&gt;https://www.eclipse.org/legal/epl-v20.html&lt;/a&gt;/
++
++SPDX-License-Identifier: EPL-2.0
+       </documentation>
+    </annotation>
+ 
+diff --git a/F:/demo/intellij-community/data/eclipse.platform.ui-I20180601-0915/bundles/org.eclipse.ui/schema/acceleratorSets.exsd b/F:/demo/intellij-community/data/eclipse.platform.ui-master/bundles/org.eclipse.ui/schema/acceleratorSets.exsd
+index 3522fe848444..d23e223edb58 100644
+--- a/F:/demo/intellij-community/data/eclipse.platform.ui-I20180601-0915/bundles/org.eclipse.ui/schema/acceleratorSets.exsd
++++ b/F:/demo/intellij-community/data/eclipse.platform.ui-master/bundles/org.eclipse.ui/schema/acceleratorSets.exsd
+@@ -196,10 +196,13 @@ If two accelerators are defined in different scopes, the accelerator defined in
+       </appInfo>
+       <documentation>
+          Copyright (c) 2002, 2007 IBM Corporation and others.&lt;br&gt;
+-All rights reserved. This program and the accompanying materials are made
+-available under the terms of the Eclipse Public License v1.0 which accompanies
++
++This program and the accompanying materials are made
++available under the terms of the Eclipse Public License 2.0 which accompanies
+ this distribution, and is available at &lt;a 
+-href=&quot;http://www.eclipse.org/legal/epl-v10.html&quot;&gt;http://www.eclipse.org/legal/epl-v10.html&lt;/a&gt;
++href=&quot;https://www.eclipse.org/legal/epl-2.0&quot;&gt;https://www.eclipse.org/legal/epl-v20.html&lt;/a&gt;/
++
++SPDX-License-Identifier: EPL-2.0
+       </documentation>
+    </annotation>
+ 
+diff --git a/F:/demo/intellij-community/data/eclipse.platform.ui-I20180601-0915/bundles/org.eclipse.ui/schema/actionDefinitions.exsd b/F:/demo/intellij-community/data/eclipse.platform.ui-master/bundles/org.eclipse.ui/schema/actionDefinitions.exsd
+index 2cc086435270..8d3bb3984246 100644
+--- a/F:/demo/intellij-community/data/eclipse.platform.ui-I20180601-0915/bundles/org.eclipse.ui/schema/actionDefinitions.exsd
++++ b/F:/demo/intellij-community/data/eclipse.platform.ui-master/bundles/org.eclipse.ui/schema/actionDefinitions.exsd
+@@ -154,10 +154,13 @@ This extension point is used to register action definitions. Accelerators (see t
+       </appInfo>
+       <documentation>
+          Copyright (c) 2002, 2007 IBM Corporation and others.&lt;br&gt;
+-All rights reserved. This program and the accompanying materials are made
+-available under the terms of the Eclipse Public License v1.0 which accompanies
++
++This program and the accompanying materials are made
++available under the terms of the Eclipse Public License 2.0 which accompanies
+ this distribution, and is available at &lt;a 
+-href=&quot;http://www.eclipse.org/legal/epl-v10.html&quot;&gt;http://www.eclipse.org/legal/epl-v10.html&lt;/a&gt;
++href=&quot;https://www.eclipse.org/legal/epl-2.0&quot;&gt;https://www.eclipse.org/legal/epl-v20.html&lt;/a&gt;/
++
++SPDX-License-Identifier: EPL-2.0
+       </documentation>
+    </annotation>
+ 
+diff --git a/F:/demo/intellij-community/data/eclipse.platform.ui-I20180601-0915/bundles/org.eclipse.ui/schema/actionSetPartAssociations.exsd b/F:/demo/intellij-community/data/eclipse.platform.ui-master/bundles/org.eclipse.ui/schema/actionSetPartAssociations.exsd
+index dd435473ae31..cba4ef01653e 100644
+--- a/F:/demo/intellij-community/data/eclipse.platform.ui-I20180601-0915/bundles/org.eclipse.ui/schema/actionSetPartAssociations.exsd
++++ b/F:/demo/intellij-community/data/eclipse.platform.ui-master/bundles/org.eclipse.ui/schema/actionSetPartAssociations.exsd
+@@ -136,10 +136,13 @@ In the example above, a view or editor are associated with the refactoring actio
+       </appInfo>
+       <documentation>
+          Copyright (c) 2002, 2007 IBM Corporation and others.&lt;br&gt;
+-All rights reserved. This program and the accompanying materials are made
+-available under the terms of the Eclipse Public License v1.0 which accompanies
++
++This program and the accompanying materials are made
++available under the terms of the Eclipse Public License 2.0 which accompanies
+ this distribution, and is available at &lt;a 
+-href=&quot;http://www.eclipse.org/legal/epl-v10.html&quot;&gt;http://www.eclipse.org/legal/epl-v10.html&lt;/a&gt;
++href=&quot;https://www.eclipse.org/legal/epl-2.0&quot;&gt;https://www.eclipse.org/legal/epl-v20.html&lt;/a&gt;/
++
++SPDX-License-Identifier: EPL-2.0
+       </documentation>
+    </annotation>
+ 
+diff --git a/F:/demo/intellij-community/data/eclipse.platform.ui-I20180601-0915/bundles/org.eclipse.ui/schema/actionSets.exsd b/F:/demo/intellij-community/data/eclipse.platform.ui-master/bundles/org.eclipse.ui/schema/actionSets.exsd
+index db154e07d78a..f37989e081ce 100644
+--- a/F:/demo/intellij-community/data/eclipse.platform.ui-I20180601-0915/bundles/org.eclipse.ui/schema/actionSets.exsd
++++ b/F:/demo/intellij-community/data/eclipse.platform.ui-master/bundles/org.eclipse.ui/schema/actionSets.exsd
+@@ -578,10 +578,13 @@ extensions are also added automatically to the window.
+       </appInfo>
+       <documentation>
+          Copyright (c) 2000, 2011 IBM Corporation and others.&lt;br&gt;
+-All rights reserved. This program and the accompanying materials are made
+-available under the terms of the Eclipse Public License v1.0 which accompanies
++
++This program and the accompanying materials are made
++available under the terms of the Eclipse Public License 2.0 which accompanies
+ this distribution, and is available at &lt;a 
+-href=&quot;http://www.eclipse.org/legal/epl-v10.html&quot;&gt;http://www.eclipse.org/legal/epl-v10.html&lt;/a&gt;
++href=&quot;https://www.eclipse.org/legal/epl-2.0&quot;&gt;https://www.eclipse.org/legal/epl-v20.html&lt;/a&gt;/
++
++SPDX-License-Identifier: EPL-2.0
+       </documentation>
+    </annotation>
+ 
+diff --git a/F:/demo/intellij-community/data/eclipse.platform.ui-I20180601-0915/bundles/org.eclipse.ui/schema/activities.exsd b/F:/demo/intellij-community/data/eclipse.platform.ui-master/bundles/org.eclipse.ui/schema/activities.exsd
+index be1a72df460e..3789f9ca43d5 100644
+--- a/F:/demo/intellij-community/data/eclipse.platform.ui-I20180601-0915/bundles/org.eclipse.ui/schema/activities.exsd
++++ b/F:/demo/intellij-community/data/eclipse.platform.ui-master/bundles/org.eclipse.ui/schema/activities.exsd
+@@ -358,10 +358,13 @@ There is currently no public API for declaring activities or associated elements
+       </appinfo>
+       <documentation>
+          Copyright (c) 2000, 2005 IBM Corporation and others.&lt;br&gt;
+-All rights reserved. This program and the accompanying materials are made
+-available under the terms of the Eclipse Public License v1.0 which accompanies
++
++This program and the accompanying materials are made
++available under the terms of the Eclipse Public License 2.0 which accompanies
+ this distribution, and is available at &lt;a 
+-href=&quot;http://www.eclipse.org/legal/epl-v10.html&quot;&gt;http://www.eclipse.org/legal/epl-v10.html&lt;/a&gt;
++href=&quot;https://www.eclipse.org/legal/epl-2.0&quot;&gt;https://www.eclipse.org/legal/epl-v20.html&lt;/a&gt;/
++
++SPDX-License-Identifier: EPL-2.0
+       </documentation>
+    </annotation>
+ 
+diff --git a/F:/demo/intellij-community/data/eclipse.platform.ui-I20180601-0915/bundles/org.eclipse.ui/schema/activitySupport.exsd b/F:/demo/intellij-community/data/eclipse.platform.ui-master/bundles/org.eclipse.ui/schema/activitySupport.exsd
+index 4308d2976877..b5d7158a8955 100644
+--- a/F:/demo/intellij-community/data/eclipse.platform.ui-I20180601-0915/bundles/org.eclipse.ui/schema/activitySupport.exsd
++++ b/F:/demo/intellij-community/data/eclipse.platform.ui-master/bundles/org.eclipse.ui/schema/activitySupport.exsd
+@@ -292,10 +292,13 @@ The following is an example of binding images to activities and categories:
+       </appinfo>
+       <documentation>
+          Copyright (c) 2005 IBM Corporation and others.&lt;br&gt;
+-All rights reserved. This program and the accompanying materials are made
+-available under the terms of the Eclipse Public License v1.0 which accompanies
++
++This program and the accompanying materials are made
++available under the terms of the Eclipse Public License 2.0 which accompanies
+ this distribution, and is available at &lt;a 
+-href=&quot;http://www.eclipse.org/legal/epl-v10.html&quot;&gt;http://www.eclipse.org/legal/epl-v10.html&lt;/a&gt;
++href=&quot;https://www.eclipse.org/legal/epl-2.0&quot;&gt;https://www.eclipse.org/legal/epl-v20.html&lt;/a&gt;/
++
++SPDX-License-Identifier: EPL-2.0
+       </documentation>
+    </annotation>
+ 
+diff --git a/F:/demo/intellij-community/data/eclipse.platform.ui-I20180601-0915/bundles/org.eclipse.ui/schema/bindings.exsd b/F:/demo/intellij-community/data/eclipse.platform.ui-master/bundles/org.eclipse.ui/schema/bindings.exsd
+index d20b3fb965f7..0e77ebc79b7c 100644
+--- a/F:/demo/intellij-community/data/eclipse.platform.ui-I20180601-0915/bundles/org.eclipse.ui/schema/bindings.exsd
++++ b/F:/demo/intellij-community/data/eclipse.platform.ui-master/bundles/org.eclipse.ui/schema/bindings.exsd
+@@ -345,10 +345,13 @@ In this example, on win32 &lt;code&gt;another.example.commandId&lt;/code&gt; wou
+       </appInfo>
+       <documentation>
+          Copyright (c) 2005,2009 IBM Corporation and others.&lt;br&gt;
+-All rights reserved. This program and the accompanying materials are made
+-available under the terms of the Eclipse Public License v1.0 which accompanies
++
++This program and the accompanying materials are made
++available under the terms of the Eclipse Public License 2.0 which accompanies
+ this distribution, and is available at &lt;a 
+-href=&quot;http://www.eclipse.org/legal/epl-v10.html&quot;&gt;http://www.eclipse.org/legal/epl-v10.html&lt;/a&gt;
++href=&quot;https://www.eclipse.org/legal/epl-2.0&quot;&gt;https://www.eclipse.org/legal/epl-v20.html&lt;/a&gt;/
++
++SPDX-License-Identifier: EPL-2.0
+       </documentation>
+    </annotation>
+ 
+diff --git a/F:/demo/intellij-community/data/eclipse.platform.ui-I20180601-0915/bundles/org.eclipse.ui/schema/browserSupport.exsd b/F:/demo/intellij-community/data/eclipse.platform.ui-master/bundles/org.eclipse.ui/schema/browserSupport.exsd
+index d2a940d5b46b..385465e0c53c 100644
+--- a/F:/demo/intellij-community/data/eclipse.platform.ui-I20180601-0915/bundles/org.eclipse.ui/schema/browserSupport.exsd
++++ b/F:/demo/intellij-community/data/eclipse.platform.ui-master/bundles/org.eclipse.ui/schema/browserSupport.exsd
+@@ -117,10 +117,13 @@ Contributions that are meant to be shipped with the product as the standard supp
+       </appInfo>
+       <documentation>
+          Copyright (c) 2005 IBM Corporation and others.&lt;br&gt;
+-All rights reserved. This program and the accompanying materials are made
+-available under the terms of the Eclipse Public License v1.0 which accompanies
++
++This program and the accompanying materials are made
++available under the terms of the Eclipse Public License 2.0 which accompanies
+ this distribution, and is available at &lt;a 
+-href=&quot;http://www.eclipse.org/legal/epl-v10.html&quot;&gt;http://www.eclipse.org/legal/epl-v10.html&lt;/a&gt;
++href=&quot;https://www.eclipse.org/legal/epl-2.0&quot;&gt;https://www.eclipse.org/legal/epl-v20.html&lt;/a&gt;/
++
++SPDX-License-Identifier: EPL-2.0
+       </documentation>
+    </annotation>
+ 
+diff --git a/F:/demo/intellij-community/data/eclipse.platform.ui-I20180601-0915/bundles/org.eclipse.ui/schema/commandImages.exsd b/F:/demo/intellij-community/data/eclipse.platform.ui-master/bundles/org.eclipse.ui/schema/commandImages.exsd
+index 47cd8c96abf4..1d21408f9f37 100644
+--- a/F:/demo/intellij-community/data/eclipse.platform.ui-I20180601-0915/bundles/org.eclipse.ui/schema/commandImages.exsd
++++ b/F:/demo/intellij-community/data/eclipse.platform.ui-master/bundles/org.eclipse.ui/schema/commandImages.exsd
+@@ -163,10 +163,13 @@ Within the workbench, it is possible to get images for commands using the &lt;co
+       </appInfo>
+       <documentation>
+          Copyright (c) 2005,2007 IBM Corporation and others.&lt;br&gt;
+-All rights reserved. This program and the accompanying materials are made
+-available under the terms of the Eclipse Public License v1.0 which accompanies
++
++This program and the accompanying materials are made
++available under the terms of the Eclipse Public License 2.0 which accompanies
+ this distribution, and is available at &lt;a 
+-href=&quot;http://www.eclipse.org/legal/epl-v10.html&quot;&gt;http://www.eclipse.org/legal/epl-v10.html&lt;/a&gt;
++href=&quot;https://www.eclipse.org/legal/epl-2.0&quot;&gt;https://www.eclipse.org/legal/epl-v20.html&lt;/a&gt;/
++
++SPDX-License-Identifier: EPL-2.0
+       </documentation>
+    </annotation>
+ 
+diff --git a/F:/demo/intellij-community/data/eclipse.platform.ui-I20180601-0915/bundles/org.eclipse.ui/schema/commands.exsd b/F:/demo/intellij-community/data/eclipse.platform.ui-master/bundles/org.eclipse.ui/schema/commands.exsd
+index bddf5bd8d889..ca7cf540f0b1 100644
+--- a/F:/demo/intellij-community/data/eclipse.platform.ui-I20180601-0915/bundles/org.eclipse.ui/schema/commands.exsd
++++ b/F:/demo/intellij-community/data/eclipse.platform.ui-master/bundles/org.eclipse.ui/schema/commands.exsd
+@@ -852,10 +852,13 @@ There are a few default implementations of handler states that may be useful to
+       </appinfo>
+       <documentation>
+          Copyright (c) 2000, 2018 IBM Corporation and others.&lt;br&gt;
+-All rights reserved. This program and the accompanying materials are made
+-available under the terms of the Eclipse Public License v1.0 which accompanies
++
++This program and the accompanying materials are made
++available under the terms of the Eclipse Public License 2.0 which accompanies
+ this distribution, and is available at &lt;a 
+-href=&quot;http://www.eclipse.org/legal/epl-v10.html&quot;&gt;http://www.eclipse.org/legal/epl-v10.html&lt;/a&gt;
++href=&quot;https://www.eclipse.org/legal/epl-2.0&quot;&gt;https://www.eclipse.org/legal/epl-v20.html&lt;/a&gt;/
++
++SPDX-License-Identifier: EPL-2.0
+       </documentation>
+    </annotation>
+ 
+diff --git a/F:/demo/intellij-community/data/eclipse.platform.ui-I20180601-0915/bundles/org.eclipse.ui/schema/commonAction.exsd b/F:/demo/intellij-community/data/eclipse.platform.ui-master/bundles/org.eclipse.ui/schema/commonAction.exsd
+index 425a098eb516..53e5cea56a4f 100644
+--- a/F:/demo/intellij-community/data/eclipse.platform.ui-I20180601-0915/bundles/org.eclipse.ui/schema/commonAction.exsd
++++ b/F:/demo/intellij-community/data/eclipse.platform.ui-master/bundles/org.eclipse.ui/schema/commonAction.exsd
+@@ -142,10 +142,13 @@ The path is relative to the location of the plugin.xml file of the contributing
+       </appinfo>
+       <documentation>
+          Copyright (c) 2000, 2006 IBM Corporation and others.&lt;br&gt;
+-All rights reserved. This program and the accompanying materials are made
+-available under the terms of the Eclipse Public License v1.0 which accompanies
++
++This program and the accompanying materials are made
++available under the terms of the Eclipse Public License 2.0 which accompanies
+ this distribution, and is available at &lt;a 
+-href=&quot;http://www.eclipse.org/legal/epl-v10.html&quot;&gt;http://www.eclipse.org/legal/epl-v10.html&lt;/a&gt;
++href=&quot;https://www.eclipse.org/legal/epl-2.0&quot;&gt;https://www.eclipse.org/legal/epl-v20.html&lt;/a&gt;/
++
++SPDX-License-Identifier: EPL-2.0
+       </documentation>
+    </annotation>
+ 
+diff --git a/F:/demo/intellij-community/data/eclipse.platform.ui-I20180601-0915/bundles/org.eclipse.ui/schema/commonExpression.exsd b/F:/demo/intellij-community/data/eclipse.platform.ui-master/bundles/org.eclipse.ui/schema/commonExpression.exsd
+index fd05a267f47d..617dd7bdf6b4 100644
+--- a/F:/demo/intellij-community/data/eclipse.platform.ui-I20180601-0915/bundles/org.eclipse.ui/schema/commonExpression.exsd
++++ b/F:/demo/intellij-community/data/eclipse.platform.ui-master/bundles/org.eclipse.ui/schema/commonExpression.exsd
+@@ -240,10 +240,13 @@ The syntax is the same for the &lt;samp&gt;enablement&lt;/samp&gt; and &lt;samp&
+       </appInfo>
+       <documentation>
+          Copyright (c) 2002, 2006 IBM Corporation and others.&lt;br&gt;
+-All rights reserved. This program and the accompanying materials are made
+-available under the terms of the Eclipse Public License v1.0 which accompanies
++
++This program and the accompanying materials are made
++available under the terms of the Eclipse Public License 2.0 which accompanies
+ this distribution, and is available at &lt;a 
+-href=&quot;http://www.eclipse.org/legal/epl-v10.html&quot;&gt;http://www.eclipse.org/legal/epl-v10.html&lt;/a&gt;
++href=&quot;https://www.eclipse.org/legal/epl-2.0&quot;&gt;https://www.eclipse.org/legal/epl-v20.html&lt;/a&gt;/
++
++SPDX-License-Identifier: EPL-2.0
+       </documentation>
+    </annotation>
+ 
+diff --git a/F:/demo/intellij-community/data/eclipse.platform.ui-I20180601-0915/bundles/org.eclipse.ui/schema/contexts.exsd b/F:/demo/intellij-community/data/eclipse.platform.ui-master/bundles/org.eclipse.ui/schema/contexts.exsd
+index caf1daf01bb6..bf5a540b2e7e 100644
+--- a/F:/demo/intellij-community/data/eclipse.platform.ui-I20180601-0915/bundles/org.eclipse.ui/schema/contexts.exsd
++++ b/F:/demo/intellij-community/data/eclipse.platform.ui-master/bundles/org.eclipse.ui/schema/contexts.exsd
+@@ -131,10 +131,13 @@ Contexts defined programmatically must be cleaned up by the plugin if it is unlo
+       </appinfo>
+       <documentation>
+          Copyright (c) 2000, 2007 IBM Corporation and others.&lt;br&gt;
+-All rights reserved. This program and the accompanying materials are made
+-available under the terms of the Eclipse Public License v1.0 which accompanies
++
++This program and the accompanying materials are made
++available under the terms of the Eclipse Public License 2.0 which accompanies
+ this distribution, and is available at &lt;a 
+-href=&quot;http://www.eclipse.org/legal/epl-v10.html&quot;&gt;http://www.eclipse.org/legal/epl-v10.html&lt;/a&gt;
++href=&quot;https://www.eclipse.org/legal/epl-2.0&quot;&gt;https://www.eclipse.org/legal/epl-v20.html&lt;/a&gt;/
++
++SPDX-License-Identifier: EPL-2.0
+       </documentation>
+    </annotation>
+ 
+diff --git a/F:/demo/intellij-community/data/eclipse.platform.ui-I20180601-0915/bundles/org.eclipse.ui/schema/decorators.exsd b/F:/demo/intellij-community/data/eclipse.platform.ui-master/bundles/org.eclipse.ui/schema/decorators.exsd
+index 33b807ca5a3e..ef6e8ed6bfb8 100644
+--- a/F:/demo/intellij-community/data/eclipse.platform.ui-I20180601-0915/bundles/org.eclipse.ui/schema/decorators.exsd
++++ b/F:/demo/intellij-community/data/eclipse.platform.ui-master/bundles/org.eclipse.ui/schema/decorators.exsd
+@@ -276,10 +276,13 @@ This is currently in use by the Resource Navigator.
+       </appinfo>
+       <documentation>
+          Copyright (c) 2002, 2014 IBM Corporation and others.&lt;br&gt;
+-All rights reserved. This program and the accompanying materials are made
+-available under the terms of the Eclipse Public License v1.0 which accompanies
++
++This program and the accompanying materials are made
++available under the terms of the Eclipse Public License 2.0 which accompanies
+ this distribution, and is available at &lt;a 
+-href=&quot;http://www.eclipse.org/legal/epl-v10.html&quot;&gt;http://www.eclipse.org/legal/epl-v10.html&lt;/a&gt;
++href=&quot;https://www.eclipse.org/legal/epl-2.0&quot;&gt;https://www.eclipse.org/legal/epl-v20.html&lt;/a&gt;/
++
++SPDX-License-Identifier: EPL-2.0
+       </documentation>
+    </annotation>
+ 
+diff --git a/F:/demo/intellij-community/data/eclipse.platform.ui-I20180601-0915/bundles/org.eclipse.ui/schema/dropActions.exsd b/F:/demo/intellij-community/data/eclipse.platform.ui-master/bundles/org.eclipse.ui/schema/dropActions.exsd
+index b6d589dad5d4..0e4c60138994 100644
+--- a/F:/demo/intellij-community/data/eclipse.platform.ui-I20180601-0915/bundles/org.eclipse.ui/schema/dropActions.exsd
++++ b/F:/demo/intellij-community/data/eclipse.platform.ui-master/bundles/org.eclipse.ui/schema/dropActions.exsd
+@@ -157,10 +157,13 @@ by ReadmeContentOutlineDragListener.
+       </appInfo>
+       <documentation>
+          Copyright (c) 2002, 2005 IBM Corporation and others.&lt;br&gt;
+-All rights reserved. This program and the accompanying materials are made
+-available under the terms of the Eclipse Public License v1.0 which accompanies
++
++This program and the accompanying materials are made
++available under the terms of the Eclipse Public License 2.0 which accompanies
+ this distribution, and is available at &lt;a 
+-href=&quot;http://www.eclipse.org/legal/epl-v10.html&quot;&gt;http://www.eclipse.org/legal/epl-v10.html&lt;/a&gt;
++href=&quot;https://www.eclipse.org/legal/epl-2.0&quot;&gt;https://www.eclipse.org/legal/epl-v20.html&lt;/a&gt;/
++
++SPDX-License-Identifier: EPL-2.0
+       </documentation>
+    </annotation>
+ 
+diff --git a/F:/demo/intellij-community/data/eclipse.platform.ui-I20180601-0915/bundles/org.eclipse.ui/schema/editorActions.exsd b/F:/demo/intellij-community/data/eclipse.platform.ui-master/bundles/org.eclipse.ui/schema/editorActions.exsd
+index ce60b6bc5a25..77c3cd87867b 100644
+--- a/F:/demo/intellij-community/data/eclipse.platform.ui-I20180601-0915/bundles/org.eclipse.ui/schema/editorActions.exsd
++++ b/F:/demo/intellij-community/data/eclipse.platform.ui-master/bundles/org.eclipse.ui/schema/editorActions.exsd
+@@ -497,10 +497,13 @@ In the example above, the specified action will appear as a menu item in the sub
+       </appInfo>
+       <documentation>
+          Copyright (c) 2000, 2007 IBM Corporation and others.&lt;br&gt;
+-All rights reserved. This program and the accompanying materials are made
+-available under the terms of the Eclipse Public License v1.0 which accompanies
++
++This program and the accompanying materials are made
++available under the terms of the Eclipse Public License 2.0 which accompanies
+ this distribution, and is available at &lt;a 
+-href=&quot;http://www.eclipse.org/legal/epl-v10.html&quot;&gt;http://www.eclipse.org/legal/epl-v10.html&lt;/a&gt;
++href=&quot;https://www.eclipse.org/legal/epl-2.0&quot;&gt;https://www.eclipse.org/legal/epl-v20.html&lt;/a&gt;/
++
++SPDX-License-Identifier: EPL-2.0
+       </documentation>
+    </annotation>
+ 
+diff --git a/F:/demo/intellij-community/data/eclipse.platform.ui-I20180601-0915/bundles/org.eclipse.ui/schema/editors.exsd b/F:/demo/intellij-community/data/eclipse.platform.ui-master/bundles/org.eclipse.ui/schema/editors.exsd
+index 2559813a9366..b092ed1bb492 100644
+--- a/F:/demo/intellij-community/data/eclipse.platform.ui-I20180601-0915/bundles/org.eclipse.ui/schema/editors.exsd
++++ b/F:/demo/intellij-community/data/eclipse.platform.ui-master/bundles/org.eclipse.ui/schema/editors.exsd
+@@ -366,10 +366,13 @@ editor is closed, menus and actions will be removed.
+       </appInfo>
+       <documentation>
+          Copyright (c) 2002, 2007 IBM Corporation and others.&lt;br&gt;
+-All rights reserved. This program and the accompanying materials are made
+-available under the terms of the Eclipse Public License v1.0 which accompanies
++
++This program and the accompanying materials are made
++available under the terms of the Eclipse Public License 2.0 which accompanies
+ this distribution, and is available at &lt;a 
+-href=&quot;http://www.eclipse.org/legal/epl-v10.html&quot;&gt;http://www.eclipse.org/legal/epl-v10.html&lt;/a&gt;
++href=&quot;https://www.eclipse.org/legal/epl-2.0&quot;&gt;https://www.eclipse.org/legal/epl-v20.html&lt;/a&gt;/
++
++SPDX-License-Identifier: EPL-2.0
+       </documentation>
+    </annotation>
+ 
+diff --git a/F:/demo/intellij-community/data/eclipse.platform.ui-I20180601-0915/bundles/org.eclipse.ui/schema/elementFactories.exsd b/F:/demo/intellij-community/data/eclipse.platform.ui-master/bundles/org.eclipse.ui/schema/elementFactories.exsd
+index 78198d866fac..87b29c3f9237 100644
+--- a/F:/demo/intellij-community/data/eclipse.platform.ui-I20180601-0915/bundles/org.eclipse.ui/schema/elementFactories.exsd
++++ b/F:/demo/intellij-community/data/eclipse.platform.ui-master/bundles/org.eclipse.ui/schema/elementFactories.exsd
+@@ -157,10 +157,13 @@ object models, such as the Java Model.
+       </appInfo>
+       <documentation>
+          Copyright (c) 2002, 2005 IBM Corporation and others.&lt;br&gt;
+-All rights reserved. This program and the accompanying materials are made
+-available under the terms of the Eclipse Public License v1.0 which accompanies
++
++This program and the accompanying materials are made
++available under the terms of the Eclipse Public License 2.0 which accompanies
+ this distribution, and is available at &lt;a 
+-href=&quot;http://www.eclipse.org/legal/epl-v10.html&quot;&gt;http://www.eclipse.org/legal/epl-v10.html&lt;/a&gt;
++href=&quot;https://www.eclipse.org/legal/epl-2.0&quot;&gt;https://www.eclipse.org/legal/epl-v20.html&lt;/a&gt;/
++
++SPDX-License-Identifier: EPL-2.0
+       </documentation>
+    </annotation>
+ 
+diff --git a/F:/demo/intellij-community/data/eclipse.platform.ui-I20180601-0915/bundles/org.eclipse.ui/schema/encodings.exsd b/F:/demo/intellij-community/data/eclipse.platform.ui-master/bundles/org.eclipse.ui/schema/encodings.exsd
+index 093aaf4b07eb..e76f9e6b3dc7 100644
+--- a/F:/demo/intellij-community/data/eclipse.platform.ui-I20180601-0915/bundles/org.eclipse.ui/schema/encodings.exsd
++++ b/F:/demo/intellij-community/data/eclipse.platform.ui-master/bundles/org.eclipse.ui/schema/encodings.exsd
+@@ -115,10 +115,13 @@ Use method &lt;code&gt;org.eclipse.ui.WorkbenchEncoding.getWorkbenchDefaultEncod
+       </appInfo>
+       <documentation>
+          Copyright (c) 2004,2006 IBM Corporation and others.&lt;br&gt;
+-All rights reserved. This program and the accompanying materials are made
+-available under the terms of the Eclipse Public License v1.0 which accompanies
++
++This program and the accompanying materials are made
++available under the terms of the Eclipse Public License 2.0 which accompanies
+ this distribution, and is available at &lt;a 
+-href=&quot;http://www.eclipse.org/legal/epl-v10.html&quot;&gt;http://www.eclipse.org/legal/epl-v10.html&lt;/a&gt;
++href=&quot;https://www.eclipse.org/legal/epl-2.0&quot;&gt;https://www.eclipse.org/legal/epl-v20.html&lt;/a&gt;/
++
++SPDX-License-Identifier: EPL-2.0
+       </documentation>
+    </annotation>
+ 
+diff --git a/F:/demo/intellij-community/data/eclipse.platform.ui-I20180601-0915/bundles/org.eclipse.ui/schema/exportWizards.exsd b/F:/demo/intellij-community/data/eclipse.platform.ui-master/bundles/org.eclipse.ui/schema/exportWizards.exsd
+index 3d9cca346375..6222dcd38a73 100644
+--- a/F:/demo/intellij-community/data/eclipse.platform.ui-I20180601-0915/bundles/org.eclipse.ui/schema/exportWizards.exsd
++++ b/F:/demo/intellij-community/data/eclipse.platform.ui-master/bundles/org.eclipse.ui/schema/exportWizards.exsd
+@@ -269,10 +269,13 @@ for files and directories.
+       </appInfo>
+       <documentation>
+          Copyright (c) 2002, 2005 IBM Corporation and others.&lt;br&gt;
+-All rights reserved. This program and the accompanying materials are made
+-available under the terms of the Eclipse Public License v1.0 which accompanies
++
++This program and the accompanying materials are made
++available under the terms of the Eclipse Public License 2.0 which accompanies
+ this distribution, and is available at &lt;a 
+-href=&quot;http://www.eclipse.org/legal/epl-v10.html&quot;&gt;http://www.eclipse.org/legal/epl-v10.html&lt;/a&gt;
++href=&quot;https://www.eclipse.org/legal/epl-2.0&quot;&gt;https://www.eclipse.org/legal/epl-v20.html&lt;/a&gt;/
++
++SPDX-License-Identifier: EPL-2.0
+       </documentation>
+    </annotation>
+ 
+diff --git a/F:/demo/intellij-community/data/eclipse.platform.ui-I20180601-0915/bundles/org.eclipse.ui/schema/fontDefinitions.exsd b/F:/demo/intellij-community/data/eclipse.platform.ui-master/bundles/org.eclipse.ui/schema/fontDefinitions.exsd
+index 55e5f7e12d06..7917e75f1324 100644
+--- a/F:/demo/intellij-community/data/eclipse.platform.ui-I20180601-0915/bundles/org.eclipse.ui/schema/fontDefinitions.exsd
++++ b/F:/demo/intellij-community/data/eclipse.platform.ui-master/bundles/org.eclipse.ui/schema/fontDefinitions.exsd
+@@ -183,10 +183,13 @@ definitions for the text, dialog, banner and header fonts.
+       </appInfo>
+       <documentation>
+          Copyright (c) 2002, 2005 IBM Corporation and others.&lt;br&gt;
+-All rights reserved. This program and the accompanying materials are made
+-available under the terms of the Eclipse Public License v1.0 which accompanies
++
++This program and the accompanying materials are made
++available under the terms of the Eclipse Public License 2.0 which accompanies
+ this distribution, and is available at &lt;a 
+-href=&quot;http://www.eclipse.org/legal/epl-v10.html&quot;&gt;http://www.eclipse.org/legal/epl-v10.html&lt;/a&gt;
++href=&quot;https://www.eclipse.org/legal/epl-2.0&quot;&gt;https://www.eclipse.org/legal/epl-v20.html&lt;/a&gt;/
++
++SPDX-License-Identifier: EPL-2.0
+       </documentation>
+    </annotation>
+ 
+diff --git a/F:/demo/intellij-community/data/eclipse.platform.ui-I20180601-0915/bundles/org.eclipse.ui/schema/handlers.exsd b/F:/demo/intellij-community/data/eclipse.platform.ui-master/bundles/org.eclipse.ui/schema/handlers.exsd
+index 62a305f09edd..3e5fc03cf781 100644
+--- a/F:/demo/intellij-community/data/eclipse.platform.ui-I20180601-0915/bundles/org.eclipse.ui/schema/handlers.exsd
++++ b/F:/demo/intellij-community/data/eclipse.platform.ui-master/bundles/org.eclipse.ui/schema/handlers.exsd
+@@ -298,10 +298,13 @@ It is also possible to activate and deactive handlers using legacy code in the w
+       </appinfo>
+       <documentation>
+          Copyright (c) 2005, 2007 IBM Corporation and others.&lt;br&gt;
+-All rights reserved. This program and the accompanying materials are made
+-available under the terms of the Eclipse Public License v1.0 which accompanies
++
++This program and the accompanying materials are made
++available under the terms of the Eclipse Public License 2.0 which accompanies
+ this distribution, and is available at &lt;a 
+-href=&quot;http://www.eclipse.org/legal/epl-v10.html&quot;&gt;http://www.eclipse.org/legal/epl-v10.html&lt;/a&gt;
++href=&quot;https://www.eclipse.org/legal/epl-2.0&quot;&gt;https://www.eclipse.org/legal/epl-v20.html&lt;/a&gt;/
++
++SPDX-License-Identifier: EPL-2.0
+       </documentation>
+    </annotation>
+ 
+diff --git a/F:/demo/intellij-community/data/eclipse.platform.ui-I20180601-0915/bundles/org.eclipse.ui/schema/helpSupport.exsd b/F:/demo/intellij-community/data/eclipse.platform.ui-master/bundles/org.eclipse.ui/schema/helpSupport.exsd
+index da6a36f0444e..dd5e7f8aa281 100644
+--- a/F:/demo/intellij-community/data/eclipse.platform.ui-I20180601-0915/bundles/org.eclipse.ui/schema/helpSupport.exsd
++++ b/F:/demo/intellij-community/data/eclipse.platform.ui-master/bundles/org.eclipse.ui/schema/helpSupport.exsd
+@@ -111,10 +111,13 @@ determine what happens when a user asks for online help or context-sensitive hel
+       </appInfo>
+       <documentation>
+          Copyright (c) 2000, 2005 IBM Corporation and others.&lt;br&gt;
+-All rights reserved. This program and the accompanying materials are made
+-available under the terms of the Eclipse Public License v1.0 which accompanies
++
++This program and the accompanying materials are made
++available under the terms of the Eclipse Public License 2.0 which accompanies
+ this distribution, and is available at &lt;a 
+-href=&quot;http://www.eclipse.org/legal/epl-v10.html&quot;&gt;http://www.eclipse.org/legal/epl-v10.html&lt;/a&gt;
++href=&quot;https://www.eclipse.org/legal/epl-2.0&quot;&gt;https://www.eclipse.org/legal/epl-v20.html&lt;/a&gt;/
++
++SPDX-License-Identifier: EPL-2.0
+       </documentation>
+    </annotation>
+ 
+diff --git a/F:/demo/intellij-community/data/eclipse.platform.ui-I20180601-0915/bundles/org.eclipse.ui/schema/importWizards.exsd b/F:/demo/intellij-community/data/eclipse.platform.ui-master/bundles/org.eclipse.ui/schema/importWizards.exsd
+index e2ad59f89c98..0b7bf2f96305 100644
+--- a/F:/demo/intellij-community/data/eclipse.platform.ui-I20180601-0915/bundles/org.eclipse.ui/schema/importWizards.exsd
++++ b/F:/demo/intellij-community/data/eclipse.platform.ui-master/bundles/org.eclipse.ui/schema/importWizards.exsd
+@@ -263,10 +263,13 @@ added to the &quot;Other&quot; category.
+       </appInfo>
+       <documentation>
+          Copyright (c) 2002, 2005 IBM Corporation and others.&lt;br&gt;
+-All rights reserved. This program and the accompanying materials are made
+-available under the terms of the Eclipse Public License v1.0 which accompanies
++
++This program and the accompanying materials are made
++available under the terms of the Eclipse Public License 2.0 which accompanies
+ this distribution, and is available at &lt;a 
+-href=&quot;http://www.eclipse.org/legal/epl-v10.html&quot;&gt;http://www.eclipse.org/legal/epl-v10.html&lt;/a&gt;
++href=&quot;https://www.eclipse.org/legal/epl-2.0&quot;&gt;https://www.eclipse.org/legal/epl-v20.html&lt;/a&gt;/
++
++SPDX-License-Identifier: EPL-2.0
+       </documentation>
+    </annotation>
+ 
+diff --git a/F:/demo/intellij-community/data/eclipse.platform.ui-I20180601-0915/bundles/org.eclipse.ui/schema/installationPages.exsd b/F:/demo/intellij-community/data/eclipse.platform.ui-master/bundles/org.eclipse.ui/schema/installationPages.exsd
+index dd6a9f441e60..ca517d71bd28 100644
+--- a/F:/demo/intellij-community/data/eclipse.platform.ui-I20180601-0915/bundles/org.eclipse.ui/schema/installationPages.exsd
++++ b/F:/demo/intellij-community/data/eclipse.platform.ui-master/bundles/org.eclipse.ui/schema/installationPages.exsd
+@@ -141,10 +141,13 @@ pages to the installation details dialog.  When the installation details dialog
+       </appInfo>
+       <documentation>
+          Copyright (c) 2008, 2009 IBM Corporation and others.&lt;br&gt;
+-All rights reserved. This program and the accompanying materials are made
+-available under the terms of the Eclipse Public License v1.0 which accompanies
++
++This program and the accompanying materials are made
++available under the terms of the Eclipse Public License 2.0 which accompanies
+ this distribution, and is available at &lt;a 
+-href=&quot;http://www.eclipse.org/legal/epl-v10.html&quot;&gt;http://www.eclipse.org/legal/epl-v10.html&lt;/a&gt;
++href=&quot;https://www.eclipse.org/legal/epl-2.0&quot;&gt;https://www.eclipse.org/legal/epl-v20.html&lt;/a&gt;/
++
++SPDX-License-Identifier: EPL-2.0
+       </documentation>
+    </annotation>
+ 
+diff --git a/F:/demo/intellij-community/data/eclipse.platform.ui-I20180601-0915/bundles/org.eclipse.ui/schema/internalTweaklets.exsd b/F:/demo/intellij-community/data/eclipse.platform.ui-master/bundles/org.eclipse.ui/schema/internalTweaklets.exsd
+index 9a5b2f3240c4..eb772dff7f66 100644
+--- a/F:/demo/intellij-community/data/eclipse.platform.ui-I20180601-0915/bundles/org.eclipse.ui/schema/internalTweaklets.exsd
++++ b/F:/demo/intellij-community/data/eclipse.platform.ui-master/bundles/org.eclipse.ui/schema/internalTweaklets.exsd
+@@ -162,10 +162,13 @@ fully qualified name of a non-abstract class provided by the extending plug-in.
+       </appInfo>
+       <documentation>
+          Copyright (c) 2007 IBM Corporation and others.&lt;br&gt;
+-All rights reserved. This program and the accompanying materials are made
+-available under the terms of the Eclipse Public License v1.0 which accompanies
++
++This program and the accompanying materials are made
++available under the terms of the Eclipse Public License 2.0 which accompanies
+ this distribution, and is available at &lt;a 
+-href=&quot;http://www.eclipse.org/legal/epl-v10.html&quot;&gt;http://www.eclipse.org/legal/epl-v10.html&lt;/a&gt;
++href=&quot;https://www.eclipse.org/legal/epl-2.0&quot;&gt;https://www.eclipse.org/legal/epl-v20.html&lt;/a&gt;/
++
++SPDX-License-Identifier: EPL-2.0
+       </documentation>
+    </annotation>
+ 
+diff --git a/F:/demo/intellij-community/data/eclipse.platform.ui-I20180601-0915/bundles/org.eclipse.ui/schema/intro.exsd b/F:/demo/intellij-community/data/eclipse.platform.ui-master/bundles/org.eclipse.ui/schema/intro.exsd
+index e04257710bfa..dc25290cad98 100644
+--- a/F:/demo/intellij-community/data/eclipse.platform.ui-I20180601-0915/bundles/org.eclipse.ui/schema/intro.exsd
++++ b/F:/demo/intellij-community/data/eclipse.platform.ui-master/bundles/org.eclipse.ui/schema/intro.exsd
+@@ -205,10 +205,13 @@ Since 3.2
+       </appInfo>
+       <documentation>
+          Copyright (c) 2004, 2009 IBM Corporation and others.&lt;br&gt;
+-All rights reserved. This program and the accompanying materials are made
+-available under the terms of the Eclipse Public License v1.0 which accompanies
++
++This program and the accompanying materials are made
++available under the terms of the Eclipse Public License 2.0 which accompanies
+ this distribution, and is available at &lt;a 
+-href=&quot;http://www.eclipse.org/legal/epl-v10.html&quot;&gt;http://www.eclipse.org/legal/epl-v10.html&lt;/a&gt;
++href=&quot;https://www.eclipse.org/legal/epl-2.0&quot;&gt;https://www.eclipse.org/legal/epl-v20.html&lt;/a&gt;/
++
++SPDX-License-Identifier: EPL-2.0
+       </documentation>
+    </annotation>
+ 
+diff --git a/F:/demo/intellij-community/data/eclipse.platform.ui-I20180601-0915/bundles/org.eclipse.ui/schema/keywords.exsd b/F:/demo/intellij-community/data/eclipse.platform.ui-master/bundles/org.eclipse.ui/schema/keywords.exsd
+index 4f2d146a4a71..9cf41799427d 100644
+--- a/F:/demo/intellij-community/data/eclipse.platform.ui-I20180601-0915/bundles/org.eclipse.ui/schema/keywords.exsd
++++ b/F:/demo/intellij-community/data/eclipse.platform.ui-master/bundles/org.eclipse.ui/schema/keywords.exsd
+@@ -123,10 +123,13 @@ See propertyPages, newWizards, importWizards, exportWizards and preferencePages.
+       </appInfo>
+       <documentation>
+          Copyright (c) 2005, 2010 IBM Corporation and others.&lt;br&gt;
+-All rights reserved. This program and the accompanying materials are made
+-available under the terms of the Eclipse Public License v1.0 which accompanies
++
++This program and the accompanying materials are made
++available under the terms of the Eclipse Public License 2.0 which accompanies
+ this distribution, and is available at &lt;a 
+-href=&quot;http://www.eclipse.org/legal/epl-v10.html&quot;&gt;http://www.eclipse.org/legal/epl-v10.html&lt;/a&gt;
++href=&quot;https://www.eclipse.org/legal/epl-2.0&quot;&gt;https://www.eclipse.org/legal/epl-v20.html&lt;/a&gt;/
++
++SPDX-License-Identifier: EPL-2.0
+       </documentation>
+    </annotation>
+ 
+diff --git a/F:/demo/intellij-community/data/eclipse.platform.ui-I20180601-0915/bundles/org.eclipse.ui/schema/menus.exsd b/F:/demo/intellij-community/data/eclipse.platform.ui-master/bundles/org.eclipse.ui/schema/menus.exsd
+index 5bd9e11bdaad..294f2e35ede3 100644
+--- a/F:/demo/intellij-community/data/eclipse.platform.ui-I20180601-0915/bundles/org.eclipse.ui/schema/menus.exsd
++++ b/F:/demo/intellij-community/data/eclipse.platform.ui-master/bundles/org.eclipse.ui/schema/menus.exsd
+@@ -979,10 +979,13 @@ This is the simplest example; adding a command contribution after an existing me
+       </appInfo>
+       <documentation>
+          Copyright (c) 2005,2007 IBM Corporation and others.&lt;br&gt;
+-All rights reserved. This program and the accompanying materials are made
+-available under the terms of the Eclipse Public License v1.0 which accompanies
++
++This program and the accompanying materials are made
++available under the terms of the Eclipse Public License 2.0 which accompanies
+ this distribution, and is available at &lt;a 
+-href=&quot;http://www.eclipse.org/legal/epl-v10.html&quot;&gt;http://www.eclipse.org/legal/epl-v10.html&lt;/a&gt;
++href=&quot;https://www.eclipse.org/legal/epl-2.0&quot;&gt;https://www.eclipse.org/legal/epl-v20.html&lt;/a&gt;/
++
++SPDX-License-Identifier: EPL-2.0
+       </documentation>
+    </annotation>
+ 
+diff --git a/F:/demo/intellij-community/data/eclipse.platform.ui-I20180601-0915/bundles/org.eclipse.ui/schema/newWizards.exsd b/F:/demo/intellij-community/data/eclipse.platform.ui-master/bundles/org.eclipse.ui/schema/newWizards.exsd
+index dfa583ae9f80..3cac68f41c66 100644
+--- a/F:/demo/intellij-community/data/eclipse.platform.ui-I20180601-0915/bundles/org.eclipse.ui/schema/newWizards.exsd
++++ b/F:/demo/intellij-community/data/eclipse.platform.ui-master/bundles/org.eclipse.ui/schema/newWizards.exsd
+@@ -352,10 +352,13 @@ particular platform installation.
+       </appInfo>
+       <documentation>
+          Copyright (c) 2002, 2005 IBM Corporation and others.&lt;br&gt;
+-All rights reserved. This program and the accompanying materials are made
+-available under the terms of the Eclipse Public License v1.0 which accompanies
++
++This program and the accompanying materials are made
++available under the terms of the Eclipse Public License 2.0 which accompanies
+ this distribution, and is available at &lt;a 
+-href=&quot;http://www.eclipse.org/legal/epl-v10.html&quot;&gt;http://www.eclipse.org/legal/epl-v10.html&lt;/a&gt;
++href=&quot;https://www.eclipse.org/legal/epl-2.0&quot;&gt;https://www.eclipse.org/legal/epl-v20.html&lt;/a&gt;/
++
++SPDX-License-Identifier: EPL-2.0
+       </documentation>
+    </annotation>
+ 
+diff --git a/F:/demo/intellij-community/data/eclipse.platform.ui-I20180601-0915/bundles/org.eclipse.ui/schema/perspectiveExtensions.exsd b/F:/demo/intellij-community/data/eclipse.platform.ui-master/bundles/org.eclipse.ui/schema/perspectiveExtensions.exsd
+index 7c3e0f0dd600..105461227be1 100644
+--- a/F:/demo/intellij-community/data/eclipse.platform.ui-I20180601-0915/bundles/org.eclipse.ui/schema/perspectiveExtensions.exsd
++++ b/F:/demo/intellij-community/data/eclipse.platform.ui-master/bundles/org.eclipse.ui/schema/perspectiveExtensions.exsd
+@@ -363,10 +363,13 @@ added beside the Resource Navigator.
+       </appInfo>
+       <documentation>
+          Copyright (c) 2002, 2007 IBM Corporation and others.&lt;br&gt;
+-All rights reserved. This program and the accompanying materials are made
+-available under the terms of the Eclipse Public License v1.0 which accompanies
++
++This program and the accompanying materials are made
++available under the terms of the Eclipse Public License 2.0 which accompanies
+ this distribution, and is available at &lt;a 
+-href=&quot;http://www.eclipse.org/legal/epl-v10.html&quot;&gt;http://www.eclipse.org/legal/epl-v10.html&lt;/a&gt;
++href=&quot;https://www.eclipse.org/legal/epl-2.0&quot;&gt;https://www.eclipse.org/legal/epl-v20.html&lt;/a&gt;/
++
++SPDX-License-Identifier: EPL-2.0
+       </documentation>
+    </annotation>
+ 
+diff --git a/F:/demo/intellij-community/data/eclipse.platform.ui-I20180601-0915/bundles/org.eclipse.ui/schema/perspectives.exsd b/F:/demo/intellij-community/data/eclipse.platform.ui-master/bundles/org.eclipse.ui/schema/perspectives.exsd
+index 1217100668f1..f3b9a73ed243 100644
+--- a/F:/demo/intellij-community/data/eclipse.platform.ui-I20180601-0915/bundles/org.eclipse.ui/schema/perspectives.exsd
++++ b/F:/demo/intellij-community/data/eclipse.platform.ui-master/bundles/org.eclipse.ui/schema/perspectives.exsd
+@@ -170,10 +170,13 @@ They are selected using the &quot;Open Perspective&quot; submenu of the &quot;Wi
+       </appInfo>
+       <documentation>
+          Copyright (c) 2002, 2005 IBM Corporation and others.&lt;br&gt;
+-All rights reserved. This program and the accompanying materials are made
+-available under the terms of the Eclipse Public License v1.0 which accompanies
++
++This program and the accompanying materials are made
++available under the terms of the Eclipse Public License 2.0 which accompanies
+ this distribution, and is available at &lt;a 
+-href=&quot;http://www.eclipse.org/legal/epl-v10.html&quot;&gt;http://www.eclipse.org/legal/epl-v10.html&lt;/a&gt;
++href=&quot;https://www.eclipse.org/legal/epl-2.0&quot;&gt;https://www.eclipse.org/legal/epl-v20.html&lt;/a&gt;/
++
++SPDX-License-Identifier: EPL-2.0
+       </documentation>
+    </annotation>
+ 
+diff --git a/F:/demo/intellij-community/data/eclipse.platform.ui-I20180601-0915/bundles/org.eclipse.ui/schema/popupMenus.exsd b/F:/demo/intellij-community/data/eclipse.platform.ui-master/bundles/org.eclipse.ui/schema/popupMenus.exsd
+index fd7caaf8db85..ad8d8db99153 100644
+--- a/F:/demo/intellij-community/data/eclipse.platform.ui-I20180601-0915/bundles/org.eclipse.ui/schema/popupMenus.exsd
++++ b/F:/demo/intellij-community/data/eclipse.platform.ui-master/bundles/org.eclipse.ui/schema/popupMenus.exsd
+@@ -556,10 +556,13 @@ the end of the pop-up menu.
+       </appInfo>
+       <documentation>
+          Copyright (c) 2000, 2007 IBM Corporation and others.&lt;br&gt;
+-All rights reserved. This program and the accompanying materials are made
+-available under the terms of the Eclipse Public License v1.0 which accompanies
++
++This program and the accompanying materials are made
++available under the terms of the Eclipse Public License 2.0 which accompanies
+ this distribution, and is available at &lt;a 
+-href=&quot;http://www.eclipse.org/legal/epl-v10.html&quot;&gt;http://www.eclipse.org/legal/epl-v10.html&lt;/a&gt;
++href=&quot;https://www.eclipse.org/legal/epl-2.0&quot;&gt;https://www.eclipse.org/legal/epl-v20.html&lt;/a&gt;/
++
++SPDX-License-Identifier: EPL-2.0
+       </documentation>
+    </annotation>
+ 
+diff --git a/F:/demo/intellij-community/data/eclipse.platform.ui-I20180601-0915/bundles/org.eclipse.ui/schema/preferencePages.exsd b/F:/demo/intellij-community/data/eclipse.platform.ui-master/bundles/org.eclipse.ui/schema/preferencePages.exsd
+index 0603381f34a6..4693d3db99a7 100644
+--- a/F:/demo/intellij-community/data/eclipse.platform.ui-I20180601-0915/bundles/org.eclipse.ui/schema/preferencePages.exsd
++++ b/F:/demo/intellij-community/data/eclipse.platform.ui-master/bundles/org.eclipse.ui/schema/preferencePages.exsd
+@@ -185,10 +185,13 @@ through this extension will be added after them according to their category info
+       </appinfo>
+       <documentation>
+          Copyright (c) 2002, 2005 IBM Corporation and others.&lt;br&gt;
+-All rights reserved. This program and the accompanying materials are made
+-available under the terms of the Eclipse Public License v1.0 which accompanies
++
++This program and the accompanying materials are made
++available under the terms of the Eclipse Public License 2.0 which accompanies
+ this distribution, and is available at &lt;a 
+-href=&quot;http://www.eclipse.org/legal/epl-v10.html&quot;&gt;http://www.eclipse.org/legal/epl-v10.html&lt;/a&gt;
++href=&quot;https://www.eclipse.org/legal/epl-2.0&quot;&gt;https://www.eclipse.org/legal/epl-v20.html&lt;/a&gt;/
++
++SPDX-License-Identifier: EPL-2.0
+       </documentation>
+    </annotation>
+ 
+diff --git a/F:/demo/intellij-community/data/eclipse.platform.ui-I20180601-0915/bundles/org.eclipse.ui/schema/preferenceTransfer.exsd b/F:/demo/intellij-community/data/eclipse.platform.ui-master/bundles/org.eclipse.ui/schema/preferenceTransfer.exsd
+index 0fe38c05f947..39c39604ffb6 100644
+--- a/F:/demo/intellij-community/data/eclipse.platform.ui-I20180601-0915/bundles/org.eclipse.ui/schema/preferenceTransfer.exsd
++++ b/F:/demo/intellij-community/data/eclipse.platform.ui-master/bundles/org.eclipse.ui/schema/preferenceTransfer.exsd
+@@ -311,10 +311,13 @@ default (org.eclipse.core.resources.ProjectScope.SCOPE)
+       </appInfo>
+       <documentation>
+          Copyright (c) 2005, 2009 IBM Corporation and others.&lt;br&gt;
+-All rights reserved. This program and the accompanying materials are made
+-available under the terms of the Eclipse Public License v1.0 which accompanies
++
++This program and the accompanying materials are made
++available under the terms of the Eclipse Public License 2.0 which accompanies
+ this distribution, and is available at &lt;a 
+-href=&quot;http://www.eclipse.org/legal/epl-v10.html&quot;&gt;http://www.eclipse.org/legal/epl-v10.html&lt;/a&gt;
++href=&quot;https://www.eclipse.org/legal/epl-2.0&quot;&gt;https://www.eclipse.org/legal/epl-v20.html&lt;/a&gt;/
++
++SPDX-License-Identifier: EPL-2.0
+       </documentation>
+    </annotation>
+ 
+diff --git a/F:/demo/intellij-community/data/eclipse.platform.ui-I20180601-0915/bundles/org.eclipse.ui/schema/propertiesView.exsd b/F:/demo/intellij-community/data/eclipse.platform.ui-master/bundles/org.eclipse.ui/schema/propertiesView.exsd
+index dc1f51f52fa0..6ae46f4e9e2f 100644
+--- a/F:/demo/intellij-community/data/eclipse.platform.ui-I20180601-0915/bundles/org.eclipse.ui/schema/propertiesView.exsd
++++ b/F:/demo/intellij-community/data/eclipse.platform.ui-master/bundles/org.eclipse.ui/schema/propertiesView.exsd
+@@ -101,10 +101,13 @@ The same code pattern can be used to exclude editors.
+       </appInfo>
+       <documentation>
+          Copyright (c) 2009, 2011 IBM Corporation and others.&lt;br&gt;
+-All rights reserved. This program and the accompanying materials are made
+-available under the terms of the Eclipse Public License v1.0 which accompanies
++
++This program and the accompanying materials are made
++available under the terms of the Eclipse Public License 2.0 which accompanies
+ this distribution, and is available at &lt;a 
+-href=&quot;http://www.eclipse.org/legal/epl-v10.html&quot;&gt;http://www.eclipse.org/legal/epl-v10.html&lt;/a&gt;
++href=&quot;https://www.eclipse.org/legal/epl-2.0&quot;&gt;https://www.eclipse.org/legal/epl-v20.html&lt;/a&gt;/
++
++SPDX-License-Identifier: EPL-2.0
+       </documentation>
+    </annotation>
+ 
+diff --git a/F:/demo/intellij-community/data/eclipse.platform.ui-I20180601-0915/bundles/org.eclipse.ui/schema/propertyPages.exsd b/F:/demo/intellij-community/data/eclipse.platform.ui-master/bundles/org.eclipse.ui/schema/propertyPages.exsd
+index 8f03a599fe55..ffda589c275c 100644
+--- a/F:/demo/intellij-community/data/eclipse.platform.ui-I20180601-0915/bundles/org.eclipse.ui/schema/propertyPages.exsd
++++ b/F:/demo/intellij-community/data/eclipse.platform.ui-master/bundles/org.eclipse.ui/schema/propertyPages.exsd
+@@ -102,7 +102,7 @@ If these filtering mechanisms are inadequate a property page may use the filter
+          <attribute name="objectClass" type="string">
+             <annotation>
+                <documentation>
+-                  a fully qualified name of the class for which the page is registered. This class does not need to implement &lt;tt&gt;IAdaptable&lt;/tt&gt;. Objects that are not an instance of &lt;tt&gt;IAdaptable&lt;/tt&gt; will be wrappered in an &lt;tt&gt;IAdaptable&lt;/tt&gt; before being sent to the property page&apos;s instance (an &lt;tt&gt;org.eclipse.ui.IWorkbenchPropertyPage&lt;/tt&gt;).
++                  a fully qualified name of the class for which the page is registered. This class does not need to implement &lt;tt&gt;IAdaptable&lt;/tt&gt;. Objects that are not an instance of &lt;tt&gt;IAdaptable&lt;/tt&gt; will be wrapped in an &lt;tt&gt;IAdaptable&lt;/tt&gt; before being sent to the property page&apos;s instance (an &lt;tt&gt;org.eclipse.ui.IWorkbenchPropertyPage&lt;/tt&gt;).
+ 
+ &lt;p&gt;Deprecated in Eclipse 3.3. Use the instanceOf or adapt element of the enabledWhen element instead.  If duplicate page definitions were previously used to register the page for multiple objectClass types, these should be combined into one page definition using multiple instanceOf elements combined inside an or element&lt;/p&gt;
+                </documentation>
+@@ -137,7 +137,7 @@ This flag is used if objectClass adapts to IResource.  Default value is false.
+ 
+ &lt;p&gt;Deprecated in Eclipse 3.3. Use adapt sub element of the enabledWhen element instead&lt;/p&gt;
+ 
+-&lt;strong&gt;NOTE:&lt;/strong&gt; The adaptable attribute will attempt adapt an object to &lt;code&gt;org.eclipse.core.resources.IResource&lt;/code&gt; before referencing the types registered in &lt;code&gt;Platform#getAdaptorManager&lt;/code&gt;. The enabledWhen element has no special case tests for &lt;code&gt;org.eclipse.core.resources.IResource&lt;/code&gt; and uses &lt;code&gt;Platform#getAdaptorManager&lt;/code&gt; to look up adaptable types. These can be registered using the &lt;code&gt;org.eclipse.core.runtime.adaptors&lt;/code&gt; extension point.
++&lt;strong&gt;NOTE:&lt;/strong&gt; The adaptable attribute will attempt to adapt an object to &lt;code&gt;org.eclipse.core.resources.IResource&lt;/code&gt; before referencing the types registered in &lt;code&gt;Platform#getAdaptorManager&lt;/code&gt;. The enabledWhen element has no special case tests for &lt;code&gt;org.eclipse.core.resources.IResource&lt;/code&gt; and uses &lt;code&gt;Platform#getAdaptorManager&lt;/code&gt; to look up adaptable types. These can be registered using the &lt;code&gt;org.eclipse.core.runtime.adaptors&lt;/code&gt; extension point.
+                </documentation>
+                <appInfo>
+                   <meta.attribute deprecated="true"/>
+@@ -183,7 +183,7 @@ Since 3.7.
+    <element name="filter">
+       <annotation>
+          <documentation>
+-            This element is used to evaluate the attribute state of each object in the current selection. A match only if each object in the selection has the specified attribute state. Each object in the selection must implement, or adapt to, &lt;samp&gt;org.eclipse.ui.IActionFilter&lt;/samp&gt;.
++            This element is used to evaluate the attribute state of each object in the current selection. A match occurs only if each object in the selection has the specified attribute state. Each object in the selection must implement, or adapt to, &lt;samp&gt;org.eclipse.ui.IActionFilter&lt;/samp&gt;.
+          </documentation>
+       </annotation>
+       <complexType>
+@@ -312,10 +312,13 @@ allowed to register property pages for them.
+       </appInfo>
+       <documentation>
+          Copyright (c) 2002, 2010 IBM Corporation and others.&lt;br&gt;
+-All rights reserved. This program and the accompanying materials are made
+-available under the terms of the Eclipse Public License v1.0 which accompanies
++
++This program and the accompanying materials are made
++available under the terms of the Eclipse Public License 2.0 which accompanies
+ this distribution, and is available at &lt;a 
+-href=&quot;http://www.eclipse.org/legal/epl-v10.html&quot;&gt;http://www.eclipse.org/legal/epl-v10.html&lt;/a&gt;
++href=&quot;https://www.eclipse.org/legal/epl-2.0&quot;&gt;https://www.eclipse.org/legal/epl-v20.html&lt;/a&gt;/
++
++SPDX-License-Identifier: EPL-2.0
+       </documentation>
+    </annotation>
+ 
+diff --git a/F:/demo/intellij-community/data/eclipse.platform.ui-I20180601-0915/bundles/org.eclipse.ui/schema/services.exsd b/F:/demo/intellij-community/data/eclipse.platform.ui-master/bundles/org.eclipse.ui/schema/services.exsd
+index b30b5673ea3b..5a01b2c364ef 100644
+--- a/F:/demo/intellij-community/data/eclipse.platform.ui-I20180601-0915/bundles/org.eclipse.ui/schema/services.exsd
++++ b/F:/demo/intellij-community/data/eclipse.platform.ui-master/bundles/org.eclipse.ui/schema/services.exsd
+@@ -224,10 +224,13 @@ Please see &lt;code&gt;org.eclipse.ui.services.AbstractServiceFactory&lt;/code&g
+       </appinfo>
+       <documentation>
+          Copyright (c) 2007 IBM Corporation and others.&lt;br&gt;
+-All rights reserved. This program and the accompanying materials are made
+-available under the terms of the Eclipse Public License v1.0 which accompanies
++
++This program and the accompanying materials are made
++available under the terms of the Eclipse Public License 2.0 which accompanies
+ this distribution, and is available at &lt;a 
+-href=&quot;http://www.eclipse.org/legal/epl-v10.html&quot;&gt;http://www.eclipse.org/legal/epl-v10.html&lt;/a&gt;
++href=&quot;https://www.eclipse.org/legal/epl-2.0&quot;&gt;https://www.eclipse.org/legal/epl-v20.html&lt;/a&gt;/
++
++SPDX-License-Identifier: EPL-2.0
+       </documentation>
+    </annotation>
+ 
+diff --git a/F:/demo/intellij-community/data/eclipse.platform.ui-I20180601-0915/bundles/org.eclipse.ui/schema/splashHandlers.exsd b/F:/demo/intellij-community/data/eclipse.platform.ui-master/bundles/org.eclipse.ui/schema/splashHandlers.exsd
+index 997923c30081..6757b02e95d2 100644
+--- a/F:/demo/intellij-community/data/eclipse.platform.ui-I20180601-0915/bundles/org.eclipse.ui/schema/splashHandlers.exsd
++++ b/F:/demo/intellij-community/data/eclipse.platform.ui-master/bundles/org.eclipse.ui/schema/splashHandlers.exsd
+@@ -154,10 +154,13 @@
+       </appInfo>
+       <documentation>
+          Copyright (c) 2007 IBM Corporation and others.&lt;br&gt;
+-All rights reserved. This program and the accompanying materials are made
+-available under the terms of the Eclipse Public License v1.0 which accompanies
++
++This program and the accompanying materials are made
++available under the terms of the Eclipse Public License 2.0 which accompanies
+ this distribution, and is available at &lt;a 
+-href=&quot;http://www.eclipse.org/legal/epl-v10.html&quot;&gt;http://www.eclipse.org/legal/epl-v10.html&lt;/a&gt;
++href=&quot;https://www.eclipse.org/legal/epl-2.0&quot;&gt;https://www.eclipse.org/legal/epl-v20.html&lt;/a&gt;/
++
++SPDX-License-Identifier: EPL-2.0
+       </documentation>
+    </annotation>
+ 
+diff --git a/F:/demo/intellij-community/data/eclipse.platform.ui-I20180601-0915/bundles/org.eclipse.ui/schema/startup.exsd b/F:/demo/intellij-community/data/eclipse.platform.ui-master/bundles/org.eclipse.ui/schema/startup.exsd
+index 7a25120ba0b8..f821e91910de 100644
+--- a/F:/demo/intellij-community/data/eclipse.platform.ui-I20180601-0915/bundles/org.eclipse.ui/schema/startup.exsd
++++ b/F:/demo/intellij-community/data/eclipse.platform.ui-master/bundles/org.eclipse.ui/schema/startup.exsd
+@@ -107,10 +107,13 @@ Mandatory since 3.0. Do not specify the plug-in class as it would be instantiate
+       </appInfo>
+       <documentation>
+          Copyright (c) 2002, 2015 IBM Corporation and others.&lt;br&gt;
+-All rights reserved. This program and the accompanying materials are made
+-available under the terms of the Eclipse Public License v1.0 which accompanies
++
++This program and the accompanying materials are made
++available under the terms of the Eclipse Public License 2.0 which accompanies
+ this distribution, and is available at &lt;a 
+-href=&quot;http://www.eclipse.org/legal/epl-v10.html&quot;&gt;http://www.eclipse.org/legal/epl-v10.html&lt;/a&gt;
++href=&quot;https://www.eclipse.org/legal/epl-2.0&quot;&gt;https://www.eclipse.org/legal/epl-v20.html&lt;/a&gt;/
++
++SPDX-License-Identifier: EPL-2.0
+       </documentation>
+    </annotation>
+ 
+diff --git a/F:/demo/intellij-community/data/eclipse.platform.ui-I20180601-0915/bundles/org.eclipse.ui/schema/statusHandlers.exsd b/F:/demo/intellij-community/data/eclipse.platform.ui-master/bundles/org.eclipse.ui/schema/statusHandlers.exsd
+index d11ffcf970a3..268ea8ee9da0 100644
+--- a/F:/demo/intellij-community/data/eclipse.platform.ui-I20180601-0915/bundles/org.eclipse.ui/schema/statusHandlers.exsd
++++ b/F:/demo/intellij-community/data/eclipse.platform.ui-master/bundles/org.eclipse.ui/schema/statusHandlers.exsd
+@@ -262,10 +262,13 @@ It is &lt;code&gt;org.eclipse.ui.statushandlers.WorkbenchErrorHandler&lt;/code&g
+       </appinfo>
+       <documentation>
+          Copyright (c) 2006, 2011 IBM Corporation and others.&lt;br&gt;
+-All rights reserved. This program and the accompanying materials are made
+-available under the terms of the Eclipse Public License v1.0 which accompanies
++
++This program and the accompanying materials are made
++available under the terms of the Eclipse Public License 2.0 which accompanies
+ this distribution, and is available at &lt;a 
+-href=&quot;http://www.eclipse.org/legal/epl-v10.html&quot;&gt;http://www.eclipse.org/legal/epl-v10.html&lt;/a&gt;
++href=&quot;https://www.eclipse.org/legal/epl-2.0&quot;&gt;https://www.eclipse.org/legal/epl-v20.html&lt;/a&gt;/
++
++SPDX-License-Identifier: EPL-2.0
+       </documentation>
+    </annotation>
+ 
+diff --git a/F:/demo/intellij-community/data/eclipse.platform.ui-I20180601-0915/bundles/org.eclipse.ui/schema/systemSummarySections.exsd b/F:/demo/intellij-community/data/eclipse.platform.ui-master/bundles/org.eclipse.ui/schema/systemSummarySections.exsd
+index 9ad1e397f1cf..411103cdbace 100644
+--- a/F:/demo/intellij-community/data/eclipse.platform.ui-I20180601-0915/bundles/org.eclipse.ui/schema/systemSummarySections.exsd
++++ b/F:/demo/intellij-community/data/eclipse.platform.ui-master/bundles/org.eclipse.ui/schema/systemSummarySections.exsd
+@@ -137,10 +137,13 @@
+       </appInfo>
+       <documentation>
+          Copyright (c) 2004, 2005 IBM Corporation and others.&lt;br&gt;
+-All rights reserved. This program and the accompanying materials are made
+-available under the terms of the Eclipse Public License v1.0 which accompanies
++
++This program and the accompanying materials are made
++available under the terms of the Eclipse Public License 2.0 which accompanies
+ this distribution, and is available at &lt;a 
+-href=&quot;http://www.eclipse.org/legal/epl-v10.html&quot;&gt;http://www.eclipse.org/legal/epl-v10.html&lt;/a&gt;
++href=&quot;https://www.eclipse.org/legal/epl-2.0&quot;&gt;https://www.eclipse.org/legal/epl-v20.html&lt;/a&gt;/
++
++SPDX-License-Identifier: EPL-2.0
+       </documentation>
+    </annotation>
+ 
+diff --git a/F:/demo/intellij-community/data/eclipse.platform.ui-I20180601-0915/bundles/org.eclipse.ui/schema/themes.exsd b/F:/demo/intellij-community/data/eclipse.platform.ui-master/bundles/org.eclipse.ui/schema/themes.exsd
+index dfdd1c4d6187..21983524f1e0 100644
+--- a/F:/demo/intellij-community/data/eclipse.platform.ui-I20180601-0915/bundles/org.eclipse.ui/schema/themes.exsd
++++ b/F:/demo/intellij-community/data/eclipse.platform.ui-master/bundles/org.eclipse.ui/schema/themes.exsd
+@@ -657,10 +657,13 @@ Only one of &lt;code&gt;value&lt;/code&gt; or &lt;code&gt;colorFactory&lt;/code&
+       </appinfo>
+       <documentation>
+          Copyright (c) 2003, 2013 IBM Corporation and others.&lt;br&gt;
+-All rights reserved. This program and the accompanying materials are made
+-available under the terms of the Eclipse Public License v1.0 which accompanies
++
++This program and the accompanying materials are made
++available under the terms of the Eclipse Public License 2.0 which accompanies
+ this distribution, and is available at &lt;a 
+-href=&quot;http://www.eclipse.org/legal/epl-v10.html&quot;&gt;http://www.eclipse.org/legal/epl-v10.html&lt;/a&gt;
++href=&quot;https://www.eclipse.org/legal/epl-2.0&quot;&gt;https://www.eclipse.org/legal/epl-v20.html&lt;/a&gt;/
++
++SPDX-License-Identifier: EPL-2.0
+       </documentation>
+    </annotation>
+ 
+diff --git a/F:/demo/intellij-community/data/eclipse.platform.ui-I20180601-0915/bundles/org.eclipse.ui/schema/viewActions.exsd b/F:/demo/intellij-community/data/eclipse.platform.ui-master/bundles/org.eclipse.ui/schema/viewActions.exsd
+index 8e8d7e8cf19a..3771085ac21d 100644
+--- a/F:/demo/intellij-community/data/eclipse.platform.ui-I20180601-0915/bundles/org.eclipse.ui/schema/viewActions.exsd
++++ b/F:/demo/intellij-community/data/eclipse.platform.ui-master/bundles/org.eclipse.ui/schema/viewActions.exsd
+@@ -512,10 +512,13 @@ In the example above, the specified action will appear as a menu item. The actio
+       </appInfo>
+       <documentation>
+          Copyright (c) 2002, 2011 IBM Corporation and others.&lt;br&gt;
+-All rights reserved. This program and the accompanying materials are made
+-available under the terms of the Eclipse Public License v1.0 which accompanies
++
++This program and the accompanying materials are made
++available under the terms of the Eclipse Public License 2.0 which accompanies
+ this distribution, and is available at &lt;a 
+-href=&quot;http://www.eclipse.org/legal/epl-v10.html&quot;&gt;http://www.eclipse.org/legal/epl-v10.html&lt;/a&gt;
++href=&quot;https://www.eclipse.org/legal/epl-2.0&quot;&gt;https://www.eclipse.org/legal/epl-v20.html&lt;/a&gt;/
++
++SPDX-License-Identifier: EPL-2.0
+       </documentation>
+    </annotation>
+ 
+diff --git a/F:/demo/intellij-community/data/eclipse.platform.ui-I20180601-0915/bundles/org.eclipse.ui/schema/views.exsd b/F:/demo/intellij-community/data/eclipse.platform.ui-master/bundles/org.eclipse.ui/schema/views.exsd
+index 3036599d0890..d96971a64f5b 100644
+--- a/F:/demo/intellij-community/data/eclipse.platform.ui-I20180601-0915/bundles/org.eclipse.ui/schema/views.exsd
++++ b/F:/demo/intellij-community/data/eclipse.platform.ui-master/bundles/org.eclipse.ui/schema/views.exsd
+@@ -434,10 +434,13 @@ practice to subclass &lt;samp&gt;org.eclipse.ui.part.ViewPart&lt;/samp&gt;
+       </appInfo>
+       <documentation>
+          Copyright (c) 2002, 2013 IBM Corporation and others.&lt;br&gt;
+-All rights reserved. This program and the accompanying materials are made
+-available under the terms of the Eclipse Public License v1.0 which accompanies
++
++This program and the accompanying materials are made
++available under the terms of the Eclipse Public License 2.0 which accompanies
+ this distribution, and is available at &lt;a 
+-href=&quot;http://www.eclipse.org/legal/epl-v10.html&quot;&gt;http://www.eclipse.org/legal/epl-v10.html&lt;/a&gt;
++href=&quot;https://www.eclipse.org/legal/epl-2.0&quot;&gt;https://www.eclipse.org/legal/epl-v20.html&lt;/a&gt;/
++
++SPDX-License-Identifier: EPL-2.0
+       </documentation>
+    </annotation>
+ 
+diff --git a/F:/demo/intellij-community/data/eclipse.platform.ui-I20180601-0915/bundles/org.eclipse.ui/schema/workingSets.exsd b/F:/demo/intellij-community/data/eclipse.platform.ui-master/bundles/org.eclipse.ui/schema/workingSets.exsd
+index 988c9b7135b6..351f1bb66945 100644
+--- a/F:/demo/intellij-community/data/eclipse.platform.ui-I20180601-0915/bundles/org.eclipse.ui/schema/workingSets.exsd
++++ b/F:/demo/intellij-community/data/eclipse.platform.ui-master/bundles/org.eclipse.ui/schema/workingSets.exsd
+@@ -182,10 +182,13 @@ Added in 3.4.
+       </appInfo>
+       <documentation>
+          Copyright (c) 2002, 2006 IBM Corporation and others.&lt;br&gt;
+-All rights reserved. This program and the accompanying materials are made
+-available under the terms of the Eclipse Public License v1.0 which accompanies
++
++This program and the accompanying materials are made
++available under the terms of the Eclipse Public License 2.0 which accompanies
+ this distribution, and is available at &lt;a 
+-href=&quot;http://www.eclipse.org/legal/epl-v10.html&quot;&gt;http://www.eclipse.org/legal/epl-v10.html&lt;/a&gt;
++href=&quot;https://www.eclipse.org/legal/epl-2.0&quot;&gt;https://www.eclipse.org/legal/epl-v20.html&lt;/a&gt;/
++
++SPDX-License-Identifier: EPL-2.0
+       </documentation>
+    </annotation>
+ 
+diff --git a/F:/demo/intellij-community/data/eclipse.platform.ui-I20180601-0915/bundles/org.eclipse.ui/src/org/eclipse/ui/internal/UIPlugin.java b/F:/demo/intellij-community/data/eclipse.platform.ui-master/bundles/org.eclipse.ui/src/org/eclipse/ui/internal/UIPlugin.java
+index e572ea8be1b6..36b73f843492 100644
+--- a/F:/demo/intellij-community/data/eclipse.platform.ui-I20180601-0915/bundles/org.eclipse.ui/src/org/eclipse/ui/internal/UIPlugin.java
++++ b/F:/demo/intellij-community/data/eclipse.platform.ui-master/bundles/org.eclipse.ui/src/org/eclipse/ui/internal/UIPlugin.java
+@@ -1,9 +1,12 @@
+ /*******************************************************************************
+  * Copyright (c) 2000, 2015 IBM Corporation and others.
+- * All rights reserved. This program and the accompanying materials
+- * are made available under the terms of the Eclipse Public License v1.0
++ *
++ * This program and the accompanying materials
++ * are made available under the terms of the Eclipse Public License 2.0
+  * which accompanies this distribution, and is available at
+- * http://www.eclipse.org/legal/epl-v10.html
++ * https://www.eclipse.org/legal/epl-2.0/
++ *
++ * SPDX-License-Identifier: EPL-2.0
+  *
+  * Contributors:
+  *     IBM Corporation - initial API and implementation
+diff --git a/F:/demo/intellij-community/data/eclipse.platform.ui-I20180601-0915/bundles/org.eclipse.ui/src/org/eclipse/ui/internal/UIPreferenceInitializer.java b/F:/demo/intellij-community/data/eclipse.platform.ui-master/bundles/org.eclipse.ui/src/org/eclipse/ui/internal/UIPreferenceInitializer.java
+index 95855a26500e..893b0d3227e7 100644
+--- a/F:/demo/intellij-community/data/eclipse.platform.ui-I20180601-0915/bundles/org.eclipse.ui/src/org/eclipse/ui/internal/UIPreferenceInitializer.java
++++ b/F:/demo/intellij-community/data/eclipse.platform.ui-master/bundles/org.eclipse.ui/src/org/eclipse/ui/internal/UIPreferenceInitializer.java
+@@ -1,9 +1,12 @@
+ /*******************************************************************************
+  * Copyright (c) 2000, 2015 IBM Corporation and others.
+- * All rights reserved. This program and the accompanying materials
+- * are made available under the terms of the Eclipse Public License v1.0
++ *
++ * This program and the accompanying materials
++ * are made available under the terms of the Eclipse Public License 2.0
+  * which accompanies this distribution, and is available at
+- * http://www.eclipse.org/legal/epl-v10.html
++ * https://www.eclipse.org/legal/epl-2.0/
++ *
++ * SPDX-License-Identifier: EPL-2.0
+  *
+  * Contributors:
+  *     IBM Corporation - initial API and implementation

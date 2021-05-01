@@ -1,0 +1,784 @@
+diff --git a/F:/demo/intellij-community/data/eclipse.platform.ui-I20160601-1000/bundles/org.eclipse.ui/.classpath b/F:/demo/intellij-community/data/eclipse.platform.ui-I20170501-2000/bundles/org.eclipse.ui/.classpath
+index e8ea977a6942..eca7bdba8f03 100644
+--- a/F:/demo/intellij-community/data/eclipse.platform.ui-I20160601-1000/bundles/org.eclipse.ui/.classpath
++++ b/F:/demo/intellij-community/data/eclipse.platform.ui-I20170501-2000/bundles/org.eclipse.ui/.classpath
+@@ -1,7 +1,7 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <classpath>
++	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
+ 	<classpathentry kind="con" path="org.eclipse.pde.core.requiredPlugins"/>
+ 	<classpathentry kind="src" path="src"/>
+-	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.7"/>
+ 	<classpathentry kind="output" path="bin"/>
+ </classpath>
+diff --git a/F:/demo/intellij-community/data/eclipse.platform.ui-I20170501-2000/bundles/org.eclipse.ui/.settings/.api_filters b/F:/demo/intellij-community/data/eclipse.platform.ui-I20170501-2000/bundles/org.eclipse.ui/.settings/.api_filters
+new file mode 100644
+index 000000000000..3679afdf47ab
+--- /dev/null
++++ b/F:/demo/intellij-community/data/eclipse.platform.ui-I20170501-2000/bundles/org.eclipse.ui/.settings/.api_filters
+@@ -0,0 +1,11 @@
++<?xml version="1.0" encoding="UTF-8" standalone="no"?>
++<component id="org.eclipse.ui" version="2">
++    <resource path="META-INF/MANIFEST.MF" type="org.eclipse.jface.util.ListenerList">
++        <filter comment="Bug 436448 - Adds API filter as our standard for the scheduled API removals" id="305422471">
++            <message_arguments>
++                <message_argument value="org.eclipse.jface.util.ListenerList"/>
++                <message_argument value="org.eclipse.ui_3.108.1"/>
++            </message_arguments>
++        </filter>
++    </resource>
++</component>
+diff --git a/F:/demo/intellij-community/data/eclipse.platform.ui-I20160601-1000/bundles/org.eclipse.ui/.settings/org.eclipse.jdt.core.prefs b/F:/demo/intellij-community/data/eclipse.platform.ui-I20170501-2000/bundles/org.eclipse.ui/.settings/org.eclipse.jdt.core.prefs
+index 99ad96f554ea..64d4e5a353d7 100644
+--- a/F:/demo/intellij-community/data/eclipse.platform.ui-I20160601-1000/bundles/org.eclipse.ui/.settings/org.eclipse.jdt.core.prefs
++++ b/F:/demo/intellij-community/data/eclipse.platform.ui-I20170501-2000/bundles/org.eclipse.ui/.settings/org.eclipse.jdt.core.prefs
+@@ -8,9 +8,9 @@ org.eclipse.jdt.core.classpath.exclusionPatterns=enabled
+ org.eclipse.jdt.core.classpath.multipleOutputLocations=enabled
+ org.eclipse.jdt.core.compiler.codegen.inlineJsrBytecode=enabled
+ org.eclipse.jdt.core.compiler.codegen.methodParameters=do not generate
+-org.eclipse.jdt.core.compiler.codegen.targetPlatform=1.7
++org.eclipse.jdt.core.compiler.codegen.targetPlatform=1.8
+ org.eclipse.jdt.core.compiler.codegen.unusedLocal=preserve
+-org.eclipse.jdt.core.compiler.compliance=1.7
++org.eclipse.jdt.core.compiler.compliance=1.8
+ org.eclipse.jdt.core.compiler.debug.lineNumber=generate
+ org.eclipse.jdt.core.compiler.debug.localVariable=generate
+ org.eclipse.jdt.core.compiler.debug.sourceFile=generate
+@@ -67,7 +67,7 @@ org.eclipse.jdt.core.compiler.problem.unusedParameterWhenImplementingAbstract=di
+ org.eclipse.jdt.core.compiler.problem.unusedParameterWhenOverridingConcrete=disabled
+ org.eclipse.jdt.core.compiler.problem.unusedPrivateMember=error
+ org.eclipse.jdt.core.compiler.problem.varargsArgumentNeedCast=warning
+-org.eclipse.jdt.core.compiler.source=1.7
++org.eclipse.jdt.core.compiler.source=1.8
+ org.eclipse.jdt.core.formatter.align_type_members_on_columns=false
+ org.eclipse.jdt.core.formatter.alignment_for_arguments_in_allocation_expression=16
+ org.eclipse.jdt.core.formatter.alignment_for_arguments_in_annotation=0
+diff --git a/F:/demo/intellij-community/data/eclipse.platform.ui-I20160601-1000/bundles/org.eclipse.ui/META-INF/MANIFEST.MF b/F:/demo/intellij-community/data/eclipse.platform.ui-I20170501-2000/bundles/org.eclipse.ui/META-INF/MANIFEST.MF
+index ba61d507247f..5f5015a88fb9 100644
+--- a/F:/demo/intellij-community/data/eclipse.platform.ui-I20160601-1000/bundles/org.eclipse.ui/META-INF/MANIFEST.MF
++++ b/F:/demo/intellij-community/data/eclipse.platform.ui-I20170501-2000/bundles/org.eclipse.ui/META-INF/MANIFEST.MF
+@@ -2,7 +2,7 @@ Manifest-Version: 1.0
+ Bundle-ManifestVersion: 2
+ Bundle-Name: %Plugin.name
+ Bundle-SymbolicName: org.eclipse.ui; singleton:=true
+-Bundle-Version: 3.108.0.qualifier
++Bundle-Version: 3.109.0.qualifier
+ Bundle-ClassPath: .
+ Bundle-Activator: org.eclipse.ui.internal.UIPlugin
+ Bundle-ActivationPolicy: lazy
+@@ -11,7 +11,7 @@ Bundle-Localization: plugin
+ Export-Package: org.eclipse.ui.internal;x-internal:=true
+ Require-Bundle: org.eclipse.core.runtime;bundle-version="[3.2.0,4.0.0)",
+  org.eclipse.swt;bundle-version="[3.103.0,4.0.0)";visibility:=reexport,
+- org.eclipse.jface;bundle-version="[3.10.100,4.0.0)";visibility:=reexport,
++ org.eclipse.jface;bundle-version="[3.13.0,4.0.0)";visibility:=reexport,
+  org.eclipse.ui.workbench;bundle-version="[3.105.0,4.0.0)";visibility:=reexport,
+  org.eclipse.core.expressions;bundle-version="[3.4.0,4.0.0)"
+-Bundle-RequiredExecutionEnvironment: JavaSE-1.7
++Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+diff --git a/F:/demo/intellij-community/data/eclipse.platform.ui-I20160601-1000/bundles/org.eclipse.ui/icons/full/dtool16/export_wiz.png b/F:/demo/intellij-community/data/eclipse.platform.ui-I20170501-2000/bundles/org.eclipse.ui/icons/full/dtool16/export_wiz.png
+index a362bebb2e35..4a81890f69bc 100644
+Binary files a/F:/demo/intellij-community/data/eclipse.platform.ui-I20160601-1000/bundles/org.eclipse.ui/icons/full/dtool16/export_wiz.png and b/F:/demo/intellij-community/data/eclipse.platform.ui-I20170501-2000/bundles/org.eclipse.ui/icons/full/dtool16/export_wiz.png differ
+diff --git a/F:/demo/intellij-community/data/eclipse.platform.ui-I20160601-1000/bundles/org.eclipse.ui/icons/full/elcl16/refresh_nav.png b/F:/demo/intellij-community/data/eclipse.platform.ui-I20170501-2000/bundles/org.eclipse.ui/icons/full/elcl16/refresh_nav.png
+index 1e1f9e03ef7d..f9dba28fb79a 100644
+Binary files a/F:/demo/intellij-community/data/eclipse.platform.ui-I20160601-1000/bundles/org.eclipse.ui/icons/full/elcl16/refresh_nav.png and b/F:/demo/intellij-community/data/eclipse.platform.ui-I20170501-2000/bundles/org.eclipse.ui/icons/full/elcl16/refresh_nav.png differ
+diff --git a/F:/demo/intellij-community/data/eclipse.platform.ui-I20160601-1000/bundles/org.eclipse.ui/icons/full/elcl16/thin_restore_view.png b/F:/demo/intellij-community/data/eclipse.platform.ui-I20170501-2000/bundles/org.eclipse.ui/icons/full/elcl16/thin_restore_view.png
+index e57c8f101a52..f0e75f55acea 100644
+Binary files a/F:/demo/intellij-community/data/eclipse.platform.ui-I20160601-1000/bundles/org.eclipse.ui/icons/full/elcl16/thin_restore_view.png and b/F:/demo/intellij-community/data/eclipse.platform.ui-I20170501-2000/bundles/org.eclipse.ui/icons/full/elcl16/thin_restore_view.png differ
+diff --git a/F:/demo/intellij-community/data/eclipse.platform.ui-I20160601-1000/bundles/org.eclipse.ui/icons/full/etool16/export_wiz.png b/F:/demo/intellij-community/data/eclipse.platform.ui-I20170501-2000/bundles/org.eclipse.ui/icons/full/etool16/export_wiz.png
+index 266c6f203766..7d4fb4ae04e2 100644
+Binary files a/F:/demo/intellij-community/data/eclipse.platform.ui-I20160601-1000/bundles/org.eclipse.ui/icons/full/etool16/export_wiz.png and b/F:/demo/intellij-community/data/eclipse.platform.ui-I20170501-2000/bundles/org.eclipse.ui/icons/full/etool16/export_wiz.png differ
+diff --git a/F:/demo/intellij-community/data/eclipse.platform.ui-I20160601-1000/bundles/org.eclipse.ui/icons/full/etool16/import_wiz.png b/F:/demo/intellij-community/data/eclipse.platform.ui-I20170501-2000/bundles/org.eclipse.ui/icons/full/etool16/import_wiz.png
+index c21bd7329572..0e36eb3fab34 100644
+Binary files a/F:/demo/intellij-community/data/eclipse.platform.ui-I20160601-1000/bundles/org.eclipse.ui/icons/full/etool16/import_wiz.png and b/F:/demo/intellij-community/data/eclipse.platform.ui-I20170501-2000/bundles/org.eclipse.ui/icons/full/etool16/import_wiz.png differ
+diff --git a/F:/demo/intellij-community/data/eclipse.platform.ui-I20160601-1000/bundles/org.eclipse.ui/icons/full/etool16/new_fastview.png b/F:/demo/intellij-community/data/eclipse.platform.ui-I20170501-2000/bundles/org.eclipse.ui/icons/full/etool16/new_fastview.png
+index 4e3e2f0e27de..90d27798df49 100644
+Binary files a/F:/demo/intellij-community/data/eclipse.platform.ui-I20160601-1000/bundles/org.eclipse.ui/icons/full/etool16/new_fastview.png and b/F:/demo/intellij-community/data/eclipse.platform.ui-I20170501-2000/bundles/org.eclipse.ui/icons/full/etool16/new_fastview.png differ
+diff --git a/F:/demo/intellij-community/data/eclipse.platform.ui-I20160601-1000/bundles/org.eclipse.ui/icons/full/etool16/paste_edit.png b/F:/demo/intellij-community/data/eclipse.platform.ui-I20170501-2000/bundles/org.eclipse.ui/icons/full/etool16/paste_edit.png
+index dd078d45684d..b3a72b6ff5cc 100644
+Binary files a/F:/demo/intellij-community/data/eclipse.platform.ui-I20160601-1000/bundles/org.eclipse.ui/icons/full/etool16/paste_edit.png and b/F:/demo/intellij-community/data/eclipse.platform.ui-I20170501-2000/bundles/org.eclipse.ui/icons/full/etool16/paste_edit.png differ
+diff --git a/F:/demo/intellij-community/data/eclipse.platform.ui-I20160601-1000/bundles/org.eclipse.ui/icons/full/etool16/print_edit.png b/F:/demo/intellij-community/data/eclipse.platform.ui-I20170501-2000/bundles/org.eclipse.ui/icons/full/etool16/print_edit.png
+index 21bccf916329..dcd47bbd3fa9 100644
+Binary files a/F:/demo/intellij-community/data/eclipse.platform.ui-I20160601-1000/bundles/org.eclipse.ui/icons/full/etool16/print_edit.png and b/F:/demo/intellij-community/data/eclipse.platform.ui-I20170501-2000/bundles/org.eclipse.ui/icons/full/etool16/print_edit.png differ
+diff --git a/F:/demo/intellij-community/data/eclipse.platform.ui-I20160601-1000/bundles/org.eclipse.ui/icons/full/etool16/redo_edit.png b/F:/demo/intellij-community/data/eclipse.platform.ui-I20170501-2000/bundles/org.eclipse.ui/icons/full/etool16/redo_edit.png
+index 5c48e354d5e8..5e40a43ae476 100644
+Binary files a/F:/demo/intellij-community/data/eclipse.platform.ui-I20160601-1000/bundles/org.eclipse.ui/icons/full/etool16/redo_edit.png and b/F:/demo/intellij-community/data/eclipse.platform.ui-I20170501-2000/bundles/org.eclipse.ui/icons/full/etool16/redo_edit.png differ
+diff --git a/F:/demo/intellij-community/data/eclipse.platform.ui-I20160601-1000/bundles/org.eclipse.ui/icons/full/etool16/undo_edit.png b/F:/demo/intellij-community/data/eclipse.platform.ui-I20170501-2000/bundles/org.eclipse.ui/icons/full/etool16/undo_edit.png
+index 111b944b3eac..41f4f2701a3f 100644
+Binary files a/F:/demo/intellij-community/data/eclipse.platform.ui-I20160601-1000/bundles/org.eclipse.ui/icons/full/etool16/undo_edit.png and b/F:/demo/intellij-community/data/eclipse.platform.ui-I20170501-2000/bundles/org.eclipse.ui/icons/full/etool16/undo_edit.png differ
+diff --git a/F:/demo/intellij-community/data/eclipse.platform.ui-I20160601-1000/bundles/org.eclipse.ui/icons/full/eview16/default_persp.png b/F:/demo/intellij-community/data/eclipse.platform.ui-I20170501-2000/bundles/org.eclipse.ui/icons/full/eview16/default_persp.png
+index 707ed5cefb85..62311f20db28 100644
+Binary files a/F:/demo/intellij-community/data/eclipse.platform.ui-I20160601-1000/bundles/org.eclipse.ui/icons/full/eview16/default_persp.png and b/F:/demo/intellij-community/data/eclipse.platform.ui-I20170501-2000/bundles/org.eclipse.ui/icons/full/eview16/default_persp.png differ
+diff --git a/F:/demo/intellij-community/data/eclipse.platform.ui-I20160601-1000/bundles/org.eclipse.ui/icons/full/eview16/defaultview_misc.png b/F:/demo/intellij-community/data/eclipse.platform.ui-I20170501-2000/bundles/org.eclipse.ui/icons/full/eview16/defaultview_misc.png
+index f1c6444ae9f9..911ed00e7d9c 100644
+Binary files a/F:/demo/intellij-community/data/eclipse.platform.ui-I20160601-1000/bundles/org.eclipse.ui/icons/full/eview16/defaultview_misc.png and b/F:/demo/intellij-community/data/eclipse.platform.ui-I20170501-2000/bundles/org.eclipse.ui/icons/full/eview16/defaultview_misc.png differ
+diff --git a/F:/demo/intellij-community/data/eclipse.platform.ui-I20160601-1000/bundles/org.eclipse.ui/icons/full/eview16/new_persp.png b/F:/demo/intellij-community/data/eclipse.platform.ui-I20170501-2000/bundles/org.eclipse.ui/icons/full/eview16/new_persp.png
+index 8cc7ebd5e168..823738923cf5 100644
+Binary files a/F:/demo/intellij-community/data/eclipse.platform.ui-I20160601-1000/bundles/org.eclipse.ui/icons/full/eview16/new_persp.png and b/F:/demo/intellij-community/data/eclipse.platform.ui-I20170501-2000/bundles/org.eclipse.ui/icons/full/eview16/new_persp.png differ
+diff --git a/F:/demo/intellij-community/data/eclipse.platform.ui-I20160601-1000/bundles/org.eclipse.ui/icons/full/eview16/outline_co.png b/F:/demo/intellij-community/data/eclipse.platform.ui-I20170501-2000/bundles/org.eclipse.ui/icons/full/eview16/outline_co.png
+index c9653ce3cc27..eb3d1ae802f7 100644
+Binary files a/F:/demo/intellij-community/data/eclipse.platform.ui-I20160601-1000/bundles/org.eclipse.ui/icons/full/eview16/outline_co.png and b/F:/demo/intellij-community/data/eclipse.platform.ui-I20170501-2000/bundles/org.eclipse.ui/icons/full/eview16/outline_co.png differ
+diff --git a/F:/demo/intellij-community/data/eclipse.platform.ui-I20160601-1000/bundles/org.eclipse.ui/icons/full/eview16/problems_view.png b/F:/demo/intellij-community/data/eclipse.platform.ui-I20170501-2000/bundles/org.eclipse.ui/icons/full/eview16/problems_view.png
+index 58debbf7b491..0045565f2d83 100644
+Binary files a/F:/demo/intellij-community/data/eclipse.platform.ui-I20160601-1000/bundles/org.eclipse.ui/icons/full/eview16/problems_view.png and b/F:/demo/intellij-community/data/eclipse.platform.ui-I20170501-2000/bundles/org.eclipse.ui/icons/full/eview16/problems_view.png differ
+diff --git a/F:/demo/intellij-community/data/eclipse.platform.ui-I20160601-1000/bundles/org.eclipse.ui/icons/full/eview16/tasks_tsk.png b/F:/demo/intellij-community/data/eclipse.platform.ui-I20170501-2000/bundles/org.eclipse.ui/icons/full/eview16/tasks_tsk.png
+index 161a3df30c11..8b11e5e8f2b6 100644
+Binary files a/F:/demo/intellij-community/data/eclipse.platform.ui-I20160601-1000/bundles/org.eclipse.ui/icons/full/eview16/tasks_tsk.png and b/F:/demo/intellij-community/data/eclipse.platform.ui-I20170501-2000/bundles/org.eclipse.ui/icons/full/eview16/tasks_tsk.png differ
+diff --git a/F:/demo/intellij-community/data/eclipse.platform.ui-I20160601-1000/bundles/org.eclipse.ui/icons/full/obj16/activity_category.png b/F:/demo/intellij-community/data/eclipse.platform.ui-I20170501-2000/bundles/org.eclipse.ui/icons/full/obj16/activity_category.png
+index 951f24e45907..1c63a1b6aa33 100644
+Binary files a/F:/demo/intellij-community/data/eclipse.platform.ui-I20160601-1000/bundles/org.eclipse.ui/icons/full/obj16/activity_category.png and b/F:/demo/intellij-community/data/eclipse.platform.ui-I20170501-2000/bundles/org.eclipse.ui/icons/full/obj16/activity_category.png differ
+diff --git a/F:/demo/intellij-community/data/eclipse.platform.ui-I20160601-1000/bundles/org.eclipse.ui/icons/full/obj16/elements_obj.png b/F:/demo/intellij-community/data/eclipse.platform.ui-I20170501-2000/bundles/org.eclipse.ui/icons/full/obj16/elements_obj.png
+index 4ca6d9840b40..a95f9ced15a8 100644
+Binary files a/F:/demo/intellij-community/data/eclipse.platform.ui-I20160601-1000/bundles/org.eclipse.ui/icons/full/obj16/elements_obj.png and b/F:/demo/intellij-community/data/eclipse.platform.ui-I20170501-2000/bundles/org.eclipse.ui/icons/full/obj16/elements_obj.png differ
+diff --git a/F:/demo/intellij-community/data/eclipse.platform.ui-I20160601-1000/bundles/org.eclipse.ui/icons/full/obj16/error_tsk.png b/F:/demo/intellij-community/data/eclipse.platform.ui-I20170501-2000/bundles/org.eclipse.ui/icons/full/obj16/error_tsk.png
+index fd428126a1e9..119e92f317be 100644
+Binary files a/F:/demo/intellij-community/data/eclipse.platform.ui-I20160601-1000/bundles/org.eclipse.ui/icons/full/obj16/error_tsk.png and b/F:/demo/intellij-community/data/eclipse.platform.ui-I20170501-2000/bundles/org.eclipse.ui/icons/full/obj16/error_tsk.png differ
+diff --git a/F:/demo/intellij-community/data/eclipse.platform.ui-I20160601-1000/bundles/org.eclipse.ui/icons/full/obj16/fldr_obj.png b/F:/demo/intellij-community/data/eclipse.platform.ui-I20170501-2000/bundles/org.eclipse.ui/icons/full/obj16/fldr_obj.png
+index c0aa2abb334e..88ad5b9dcc2f 100644
+Binary files a/F:/demo/intellij-community/data/eclipse.platform.ui-I20160601-1000/bundles/org.eclipse.ui/icons/full/obj16/fldr_obj.png and b/F:/demo/intellij-community/data/eclipse.platform.ui-I20170501-2000/bundles/org.eclipse.ui/icons/full/obj16/fldr_obj.png differ
+diff --git a/F:/demo/intellij-community/data/eclipse.platform.ui-I20160601-1000/bundles/org.eclipse.ui/icons/full/obj16/info_tsk.png b/F:/demo/intellij-community/data/eclipse.platform.ui-I20170501-2000/bundles/org.eclipse.ui/icons/full/obj16/info_tsk.png
+index d1fcbf3124f6..c18aa5a511e2 100644
+Binary files a/F:/demo/intellij-community/data/eclipse.platform.ui-I20160601-1000/bundles/org.eclipse.ui/icons/full/obj16/info_tsk.png and b/F:/demo/intellij-community/data/eclipse.platform.ui-I20170501-2000/bundles/org.eclipse.ui/icons/full/obj16/info_tsk.png differ
+diff --git a/F:/demo/intellij-community/data/eclipse.platform.ui-I20160601-1000/bundles/org.eclipse.ui/icons/full/obj16/keygroups_obj.png b/F:/demo/intellij-community/data/eclipse.platform.ui-I20170501-2000/bundles/org.eclipse.ui/icons/full/obj16/keygroups_obj.png
+index bebc40a2fa48..5604f95a4409 100644
+Binary files a/F:/demo/intellij-community/data/eclipse.platform.ui-I20160601-1000/bundles/org.eclipse.ui/icons/full/obj16/keygroups_obj.png and b/F:/demo/intellij-community/data/eclipse.platform.ui-I20170501-2000/bundles/org.eclipse.ui/icons/full/obj16/keygroups_obj.png differ
+diff --git a/F:/demo/intellij-community/data/eclipse.platform.ui-I20160601-1000/bundles/org.eclipse.ui/icons/full/obj16/layout_co.png b/F:/demo/intellij-community/data/eclipse.platform.ui-I20170501-2000/bundles/org.eclipse.ui/icons/full/obj16/layout_co.png
+index 4c50765e3d30..29454ce60fa0 100644
+Binary files a/F:/demo/intellij-community/data/eclipse.platform.ui-I20160601-1000/bundles/org.eclipse.ui/icons/full/obj16/layout_co.png and b/F:/demo/intellij-community/data/eclipse.platform.ui-I20170501-2000/bundles/org.eclipse.ui/icons/full/obj16/layout_co.png differ
+diff --git a/F:/demo/intellij-community/data/eclipse.platform.ui-I20160601-1000/bundles/org.eclipse.ui/icons/full/obj16/menu.png b/F:/demo/intellij-community/data/eclipse.platform.ui-I20170501-2000/bundles/org.eclipse.ui/icons/full/obj16/menu.png
+index 72f58d12853e..9740c6576af4 100644
+Binary files a/F:/demo/intellij-community/data/eclipse.platform.ui-I20160601-1000/bundles/org.eclipse.ui/icons/full/obj16/menu.png and b/F:/demo/intellij-community/data/eclipse.platform.ui-I20170501-2000/bundles/org.eclipse.ui/icons/full/obj16/menu.png differ
+diff --git a/F:/demo/intellij-community/data/eclipse.platform.ui-I20160601-1000/bundles/org.eclipse.ui/icons/full/obj16/signed_unkn_tbl.png b/F:/demo/intellij-community/data/eclipse.platform.ui-I20170501-2000/bundles/org.eclipse.ui/icons/full/obj16/signed_unkn_tbl.png
+index 14a6d14703d9..67754ad4fa8c 100644
+Binary files a/F:/demo/intellij-community/data/eclipse.platform.ui-I20160601-1000/bundles/org.eclipse.ui/icons/full/obj16/signed_unkn_tbl.png and b/F:/demo/intellij-community/data/eclipse.platform.ui-I20170501-2000/bundles/org.eclipse.ui/icons/full/obj16/signed_unkn_tbl.png differ
+diff --git a/F:/demo/intellij-community/data/eclipse.platform.ui-I20160601-1000/bundles/org.eclipse.ui/icons/full/obj16/submenu.png b/F:/demo/intellij-community/data/eclipse.platform.ui-I20170501-2000/bundles/org.eclipse.ui/icons/full/obj16/submenu.png
+index 93128dec7d2b..5c6eb3902942 100644
+Binary files a/F:/demo/intellij-community/data/eclipse.platform.ui-I20160601-1000/bundles/org.eclipse.ui/icons/full/obj16/submenu.png and b/F:/demo/intellij-community/data/eclipse.platform.ui-I20170501-2000/bundles/org.eclipse.ui/icons/full/obj16/submenu.png differ
+diff --git a/F:/demo/intellij-community/data/eclipse.platform.ui-I20160601-1000/bundles/org.eclipse.ui/icons/full/obj16/theme_category.png b/F:/demo/intellij-community/data/eclipse.platform.ui-I20170501-2000/bundles/org.eclipse.ui/icons/full/obj16/theme_category.png
+index 3ec98fa73340..001b87f4bcdb 100644
+Binary files a/F:/demo/intellij-community/data/eclipse.platform.ui-I20160601-1000/bundles/org.eclipse.ui/icons/full/obj16/theme_category.png and b/F:/demo/intellij-community/data/eclipse.platform.ui-I20170501-2000/bundles/org.eclipse.ui/icons/full/obj16/theme_category.png differ
+diff --git a/F:/demo/intellij-community/data/eclipse.platform.ui-I20160601-1000/bundles/org.eclipse.ui/icons/full/obj16/toolbar.png b/F:/demo/intellij-community/data/eclipse.platform.ui-I20170501-2000/bundles/org.eclipse.ui/icons/full/obj16/toolbar.png
+index 88b4f1541942..47f42e305c85 100644
+Binary files a/F:/demo/intellij-community/data/eclipse.platform.ui-I20160601-1000/bundles/org.eclipse.ui/icons/full/obj16/toolbar.png and b/F:/demo/intellij-community/data/eclipse.platform.ui-I20170501-2000/bundles/org.eclipse.ui/icons/full/obj16/toolbar.png differ
+diff --git a/F:/demo/intellij-community/data/eclipse.platform.ui-I20160601-1000/bundles/org.eclipse.ui/icons/full/obj16/warn_tsk.png b/F:/demo/intellij-community/data/eclipse.platform.ui-I20170501-2000/bundles/org.eclipse.ui/icons/full/obj16/warn_tsk.png
+index c2166d46373f..080cfb8420c5 100644
+Binary files a/F:/demo/intellij-community/data/eclipse.platform.ui-I20160601-1000/bundles/org.eclipse.ui/icons/full/obj16/warn_tsk.png and b/F:/demo/intellij-community/data/eclipse.platform.ui-I20170501-2000/bundles/org.eclipse.ui/icons/full/obj16/warn_tsk.png differ
+diff --git a/F:/demo/intellij-community/data/eclipse.platform.ui-I20160601-1000/bundles/org.eclipse.ui/icons/full/obj16/workingsets.png b/F:/demo/intellij-community/data/eclipse.platform.ui-I20170501-2000/bundles/org.eclipse.ui/icons/full/obj16/workingsets.png
+index 75aa444bf080..be93b44e78d0 100644
+Binary files a/F:/demo/intellij-community/data/eclipse.platform.ui-I20160601-1000/bundles/org.eclipse.ui/icons/full/obj16/workingsets.png and b/F:/demo/intellij-community/data/eclipse.platform.ui-I20170501-2000/bundles/org.eclipse.ui/icons/full/obj16/workingsets.png differ
+diff --git a/F:/demo/intellij-community/data/eclipse.platform.ui-I20160601-1000/bundles/org.eclipse.ui/icons/full/progress/progress_task.png b/F:/demo/intellij-community/data/eclipse.platform.ui-I20170501-2000/bundles/org.eclipse.ui/icons/full/progress/progress_task.png
+index 32b333a695c4..0d3632e7df98 100644
+Binary files a/F:/demo/intellij-community/data/eclipse.platform.ui-I20160601-1000/bundles/org.eclipse.ui/icons/full/progress/progress_task.png and b/F:/demo/intellij-community/data/eclipse.platform.ui-I20170501-2000/bundles/org.eclipse.ui/icons/full/progress/progress_task.png differ
+diff --git a/F:/demo/intellij-community/data/eclipse.platform.ui-I20160601-1000/bundles/org.eclipse.ui/icons/full/wizban/export_wiz.png b/F:/demo/intellij-community/data/eclipse.platform.ui-I20170501-2000/bundles/org.eclipse.ui/icons/full/wizban/export_wiz.png
+index aa787ef5614d..8ee1713c5b28 100644
+Binary files a/F:/demo/intellij-community/data/eclipse.platform.ui-I20160601-1000/bundles/org.eclipse.ui/icons/full/wizban/export_wiz.png and b/F:/demo/intellij-community/data/eclipse.platform.ui-I20170501-2000/bundles/org.eclipse.ui/icons/full/wizban/export_wiz.png differ
+diff --git a/F:/demo/intellij-community/data/eclipse.platform.ui-I20170501-2000/bundles/org.eclipse.ui/icons/full/wizban/export_wiz@2x.png b/F:/demo/intellij-community/data/eclipse.platform.ui-I20170501-2000/bundles/org.eclipse.ui/icons/full/wizban/export_wiz@2x.png
+new file mode 100644
+index 000000000000..07cc3bb245f9
+Binary files /dev/null and b/F:/demo/intellij-community/data/eclipse.platform.ui-I20170501-2000/bundles/org.eclipse.ui/icons/full/wizban/export_wiz@2x.png differ
+diff --git a/F:/demo/intellij-community/data/eclipse.platform.ui-I20160601-1000/bundles/org.eclipse.ui/icons/full/wizban/exportdir_wiz.png b/F:/demo/intellij-community/data/eclipse.platform.ui-I20170501-2000/bundles/org.eclipse.ui/icons/full/wizban/exportdir_wiz.png
+index dabdfa301812..0d7bf3e273bc 100644
+Binary files a/F:/demo/intellij-community/data/eclipse.platform.ui-I20160601-1000/bundles/org.eclipse.ui/icons/full/wizban/exportdir_wiz.png and b/F:/demo/intellij-community/data/eclipse.platform.ui-I20170501-2000/bundles/org.eclipse.ui/icons/full/wizban/exportdir_wiz.png differ
+diff --git a/F:/demo/intellij-community/data/eclipse.platform.ui-I20170501-2000/bundles/org.eclipse.ui/icons/full/wizban/exportdir_wiz@2x.png b/F:/demo/intellij-community/data/eclipse.platform.ui-I20170501-2000/bundles/org.eclipse.ui/icons/full/wizban/exportdir_wiz@2x.png
+new file mode 100644
+index 000000000000..dd91deef2466
+Binary files /dev/null and b/F:/demo/intellij-community/data/eclipse.platform.ui-I20170501-2000/bundles/org.eclipse.ui/icons/full/wizban/exportdir_wiz@2x.png differ
+diff --git a/F:/demo/intellij-community/data/eclipse.platform.ui-I20160601-1000/bundles/org.eclipse.ui/icons/full/wizban/exportpref_wiz.png b/F:/demo/intellij-community/data/eclipse.platform.ui-I20170501-2000/bundles/org.eclipse.ui/icons/full/wizban/exportpref_wiz.png
+index ef3c3d425293..84cbcfd62979 100644
+Binary files a/F:/demo/intellij-community/data/eclipse.platform.ui-I20160601-1000/bundles/org.eclipse.ui/icons/full/wizban/exportpref_wiz.png and b/F:/demo/intellij-community/data/eclipse.platform.ui-I20170501-2000/bundles/org.eclipse.ui/icons/full/wizban/exportpref_wiz.png differ
+diff --git a/F:/demo/intellij-community/data/eclipse.platform.ui-I20170501-2000/bundles/org.eclipse.ui/icons/full/wizban/exportpref_wiz@2x.png b/F:/demo/intellij-community/data/eclipse.platform.ui-I20170501-2000/bundles/org.eclipse.ui/icons/full/wizban/exportpref_wiz@2x.png
+new file mode 100644
+index 000000000000..70445aadd5da
+Binary files /dev/null and b/F:/demo/intellij-community/data/eclipse.platform.ui-I20170501-2000/bundles/org.eclipse.ui/icons/full/wizban/exportpref_wiz@2x.png differ
+diff --git a/F:/demo/intellij-community/data/eclipse.platform.ui-I20160601-1000/bundles/org.eclipse.ui/icons/full/wizban/import_wiz.png b/F:/demo/intellij-community/data/eclipse.platform.ui-I20170501-2000/bundles/org.eclipse.ui/icons/full/wizban/import_wiz.png
+index 732631c0ac75..bc979552297b 100644
+Binary files a/F:/demo/intellij-community/data/eclipse.platform.ui-I20160601-1000/bundles/org.eclipse.ui/icons/full/wizban/import_wiz.png and b/F:/demo/intellij-community/data/eclipse.platform.ui-I20170501-2000/bundles/org.eclipse.ui/icons/full/wizban/import_wiz.png differ
+diff --git a/F:/demo/intellij-community/data/eclipse.platform.ui-I20170501-2000/bundles/org.eclipse.ui/icons/full/wizban/import_wiz@2x.png b/F:/demo/intellij-community/data/eclipse.platform.ui-I20170501-2000/bundles/org.eclipse.ui/icons/full/wizban/import_wiz@2x.png
+new file mode 100644
+index 000000000000..58f668fc4777
+Binary files /dev/null and b/F:/demo/intellij-community/data/eclipse.platform.ui-I20170501-2000/bundles/org.eclipse.ui/icons/full/wizban/import_wiz@2x.png differ
+diff --git a/F:/demo/intellij-community/data/eclipse.platform.ui-I20160601-1000/bundles/org.eclipse.ui/icons/full/wizban/importdir_wiz.png b/F:/demo/intellij-community/data/eclipse.platform.ui-I20170501-2000/bundles/org.eclipse.ui/icons/full/wizban/importdir_wiz.png
+index dce21ed68d55..9368ac9f4a31 100644
+Binary files a/F:/demo/intellij-community/data/eclipse.platform.ui-I20160601-1000/bundles/org.eclipse.ui/icons/full/wizban/importdir_wiz.png and b/F:/demo/intellij-community/data/eclipse.platform.ui-I20170501-2000/bundles/org.eclipse.ui/icons/full/wizban/importdir_wiz.png differ
+diff --git a/F:/demo/intellij-community/data/eclipse.platform.ui-I20170501-2000/bundles/org.eclipse.ui/icons/full/wizban/importdir_wiz@2x.png b/F:/demo/intellij-community/data/eclipse.platform.ui-I20170501-2000/bundles/org.eclipse.ui/icons/full/wizban/importdir_wiz@2x.png
+new file mode 100644
+index 000000000000..2219e08b1a83
+Binary files /dev/null and b/F:/demo/intellij-community/data/eclipse.platform.ui-I20170501-2000/bundles/org.eclipse.ui/icons/full/wizban/importdir_wiz@2x.png differ
+diff --git a/F:/demo/intellij-community/data/eclipse.platform.ui-I20160601-1000/bundles/org.eclipse.ui/icons/full/wizban/importpref_wiz.png b/F:/demo/intellij-community/data/eclipse.platform.ui-I20170501-2000/bundles/org.eclipse.ui/icons/full/wizban/importpref_wiz.png
+index 71c36e111fd6..36b2f84db723 100644
+Binary files a/F:/demo/intellij-community/data/eclipse.platform.ui-I20160601-1000/bundles/org.eclipse.ui/icons/full/wizban/importpref_wiz.png and b/F:/demo/intellij-community/data/eclipse.platform.ui-I20170501-2000/bundles/org.eclipse.ui/icons/full/wizban/importpref_wiz.png differ
+diff --git a/F:/demo/intellij-community/data/eclipse.platform.ui-I20170501-2000/bundles/org.eclipse.ui/icons/full/wizban/importpref_wiz@2x.png b/F:/demo/intellij-community/data/eclipse.platform.ui-I20170501-2000/bundles/org.eclipse.ui/icons/full/wizban/importpref_wiz@2x.png
+new file mode 100644
+index 000000000000..45d70a8c99e7
+Binary files /dev/null and b/F:/demo/intellij-community/data/eclipse.platform.ui-I20170501-2000/bundles/org.eclipse.ui/icons/full/wizban/importpref_wiz@2x.png differ
+diff --git a/F:/demo/intellij-community/data/eclipse.platform.ui-I20160601-1000/bundles/org.eclipse.ui/icons/full/wizban/new_wiz.png b/F:/demo/intellij-community/data/eclipse.platform.ui-I20170501-2000/bundles/org.eclipse.ui/icons/full/wizban/new_wiz.png
+index 6b410e2eaee8..912be0bb2d89 100644
+Binary files a/F:/demo/intellij-community/data/eclipse.platform.ui-I20160601-1000/bundles/org.eclipse.ui/icons/full/wizban/new_wiz.png and b/F:/demo/intellij-community/data/eclipse.platform.ui-I20170501-2000/bundles/org.eclipse.ui/icons/full/wizban/new_wiz.png differ
+diff --git a/F:/demo/intellij-community/data/eclipse.platform.ui-I20170501-2000/bundles/org.eclipse.ui/icons/full/wizban/new_wiz@2x.png b/F:/demo/intellij-community/data/eclipse.platform.ui-I20170501-2000/bundles/org.eclipse.ui/icons/full/wizban/new_wiz@2x.png
+new file mode 100644
+index 000000000000..9beef002fa0b
+Binary files /dev/null and b/F:/demo/intellij-community/data/eclipse.platform.ui-I20170501-2000/bundles/org.eclipse.ui/icons/full/wizban/new_wiz@2x.png differ
+diff --git a/F:/demo/intellij-community/data/eclipse.platform.ui-I20160601-1000/bundles/org.eclipse.ui/icons/full/wizban/workset_wiz.png b/F:/demo/intellij-community/data/eclipse.platform.ui-I20170501-2000/bundles/org.eclipse.ui/icons/full/wizban/workset_wiz.png
+index b720214832fd..453bb4f45fa8 100644
+Binary files a/F:/demo/intellij-community/data/eclipse.platform.ui-I20160601-1000/bundles/org.eclipse.ui/icons/full/wizban/workset_wiz.png and b/F:/demo/intellij-community/data/eclipse.platform.ui-I20170501-2000/bundles/org.eclipse.ui/icons/full/wizban/workset_wiz.png differ
+diff --git a/F:/demo/intellij-community/data/eclipse.platform.ui-I20170501-2000/bundles/org.eclipse.ui/icons/full/wizban/workset_wiz@2x.png b/F:/demo/intellij-community/data/eclipse.platform.ui-I20170501-2000/bundles/org.eclipse.ui/icons/full/wizban/workset_wiz@2x.png
+new file mode 100644
+index 000000000000..06ae93cc88ae
+Binary files /dev/null and b/F:/demo/intellij-community/data/eclipse.platform.ui-I20170501-2000/bundles/org.eclipse.ui/icons/full/wizban/workset_wiz@2x.png differ
+diff --git a/F:/demo/intellij-community/data/eclipse.platform.ui-I20160601-1000/bundles/org.eclipse.ui/plugin.properties b/F:/demo/intellij-community/data/eclipse.platform.ui-I20170501-2000/bundles/org.eclipse.ui/plugin.properties
+index 3e16dfd0c1e3..bf53fe8fec6b 100644
+--- a/F:/demo/intellij-community/data/eclipse.platform.ui-I20160601-1000/bundles/org.eclipse.ui/plugin.properties
++++ b/F:/demo/intellij-community/data/eclipse.platform.ui-I20170501-2000/bundles/org.eclipse.ui/plugin.properties
+@@ -1,5 +1,5 @@
+ ###############################################################################
+-# Copyright (c) 2000, 2015 IBM Corporation and others.
++# Copyright (c) 2000, 2016 IBM Corporation and others.
+ # All rights reserved. This program and the accompanying materials
+ # are made available under the terms of the Eclipse Public License v1.0
+ # which accompanies this distribution, and is available at
+@@ -162,8 +162,8 @@ command.hideShowEditors.name = Toggle Shared Area Visibility
+ command.import.description = Import
+ command.import.importWizardIdParameter.name = Import Wizard
+ command.import.name = Import
+-command.lockToolBar.description = Lock the Toolbars
+-command.lockToolBar.name = Lock the Toolbars
++command.lockToolBar.description = Toggle the Lock on the Toolbars
++command.lockToolBar.name = Toggle Lock Toolbars
+ command.linkWithEditor.description = Toggles linking of a view's selection with the active editor's selection
+ command.linkWithEditor.name = Toggle Link with Editor
+ command.maximizePart.name = Maximize Active View or Editor
+@@ -172,6 +172,8 @@ command.windowsHideTrimbars.name = Toggle visibility of the window toolbars
+ command.windowsHideTrimbars.description = Toggle the visibility of the toolbars of the current window
+ command.fullscreenmode.name = Toggle Full Screen
+ command.fullscreenmode.description = Toggles the window between full screen and normal
++command.togglestatusbar.name = Toggle Statusbar
++command.togglestatusbar.description = Toggle the visibility of the bottom status bar
+ command.minimizePart.name = Minimize Active View or Editor
+ command.minimizePart.description = Minimizes the active view or editor
+ command.move.description = Move the selected item
+@@ -321,6 +323,8 @@ Color.inactiveTabBGEnd=Inactive part background end
+ Color.inactiveTabBGStartDesc=The first color used for inactive view and editor title gradients.  This color is also used for active editors that do not have focus.
+ Color.inactiveTabBGEndDesc=The second color used for inactive view and editor title gradients.  This color is also used for the view menu background.
+ 
++Color.infoBackground=Information background color
++Color.infoForeground=Information text color
+ Color.errorText=Error text color
+ Color.errorTextDesc=Color used to show error messages.
+ Color.hyperlinkText=Hyperlink text color
+@@ -343,8 +347,9 @@ HighContrast.ThemeDescription = A theme that takes all of its values from the sy
+ 
+ ThemeName.R30 = Classic Theme
+ 
+-SettingsTransfer.WorkbenchLayout = Workbench Layout
+-SettingsTransfer.WorkingSets = Working Sets
++SettingsTransfer.WorkbenchLayout = Workbench L&ayout
++SettingsTransfer.WorkingSets = Working &Sets
++SettingsTransfer.Preferences = &Preferences
+ 
+ PropertyPage.workingSets.name = Working Set Contents
+ 
+diff --git a/F:/demo/intellij-community/data/eclipse.platform.ui-I20160601-1000/bundles/org.eclipse.ui/plugin.xml b/F:/demo/intellij-community/data/eclipse.platform.ui-I20170501-2000/bundles/org.eclipse.ui/plugin.xml
+index 6cde20c646fb..78e1bb171a6a 100644
+--- a/F:/demo/intellij-community/data/eclipse.platform.ui-I20160601-1000/bundles/org.eclipse.ui/plugin.xml
++++ b/F:/demo/intellij-community/data/eclipse.platform.ui-I20170501-2000/bundles/org.eclipse.ui/plugin.xml
+@@ -1103,7 +1103,6 @@
+             id="org.eclipse.ui.window.newEditor" />
+       <command
+             categoryId="org.eclipse.ui.category.window"
+-            defaultHandler="org.eclipse.ui.internal.SplitHandler"
+             description="%command.splitEditor.description"
+             id="org.eclipse.ui.window.splitEditor"
+             name="%command.splitEditor.name">
+@@ -1174,6 +1173,11 @@
+             description="%command.fullscreenmode.description"
+             id="org.eclipse.ui.window.fullscreenmode"
+             name="%command.fullscreenmode.name"/>
++      <command
++            categoryId="org.eclipse.ui.category.window"
++            description="%command.togglestatusbar.description"
++            id="org.eclipse.ui.window.togglestatusbar"
++            name="%command.togglestatusbar.name"/>
+       <command
+             categoryId="org.eclipse.ui.category.window"
+             defaultHandler="org.eclipse.ui.internal.handlers.MinimizePartHandler"
+@@ -1896,6 +1900,32 @@
+       		name="org.eclipse.ui.workbench.ACTIVE_TAB_HIGHLIGHT" value="false">
+ 		 </data>
+       </theme>
++      <colorDefinition
++            categoryId="org.eclipse.ui.workbenchMisc"
++            id="org.eclipse.ui.workbench.HOVER_BACKGROUND"
++            label="%Color.infoBackground">
++            <colorFactory
++               class="org.eclipse.ui.internal.themes.RGBInfoColorFactory"
++               plugin="org.eclipse.ui">
++               <parameter
++                      name="color"
++                      value="background">
++                </parameter>
++            </colorFactory>
++      </colorDefinition>
++      <colorDefinition
++            categoryId="org.eclipse.ui.workbenchMisc"
++            id="org.eclipse.ui.workbench.HOVER_FOREGROUND"
++            label="%Color.infoForeground">
++            <colorFactory
++               class="org.eclipse.ui.internal.themes.RGBInfoColorFactory"
++               plugin="org.eclipse.ui">
++               <parameter
++                      name="color"
++                      value="foreground">
++                </parameter>
++            </colorFactory>
++      </colorDefinition>
+       <theme
+             id="org.eclipse.ui.r30"
+             name="%ThemeName.R30">
+@@ -2001,6 +2031,12 @@
+             id="org.eclipse.ui.workingSets"
+             name="%SettingsTransfer.WorkingSets">
+       </settingsTransfer>
++      <settingsTransfer
++            class="org.eclipse.ui.internal.preferences.PreferencesSettingsTransfer"
++            helpContext="org.eclipse.ui.switch_workspace_dialog_context"
++            id="org.eclipse.ui.preferences"
++            name="%SettingsTransfer.Preferences">
++      </settingsTransfer>
+    </extension>
+    
+    <extension
+@@ -2110,6 +2146,18 @@
+             </with>
+          </enabledWhen>
+       </handler>
++      <handler
++            class="org.eclipse.ui.internal.handlers.ToggleStatusBarHandler"
++            commandId="org.eclipse.ui.window.togglestatusbar">
++      	 <enabledWhen>
++            <with
++                  variable="activeWorkbenchWindow">
++               <instanceof
++                     value="org.eclipse.ui.IWorkbenchWindow">
++               </instanceof>
++            </with>
++         </enabledWhen>
++      </handler>
+       <handler
+             class="org.eclipse.ui.internal.CycleEditorHandler:true"
+             commandId="org.eclipse.ui.window.nextEditor">
+@@ -2247,6 +2295,18 @@
+       <handler
+             class="org.eclipse.ui.internal.WorkbookEditorsHandler"
+             commandId="org.eclipse.ui.window.openEditorDropDown">
++         <enabledWhen>
++            <with
++                  variable="activePart">
++               <instanceof
++                     value="org.eclipse.ui.IWorkbenchPart">
++               </instanceof>
++            </with>
++         </enabledWhen>
++      </handler>
++      <handler
++            class="org.eclipse.ui.internal.SplitHandler"
++            commandId="org.eclipse.ui.window.splitEditor">
+          <enabledWhen>
+             <with
+                   variable="activeEditor">
+diff --git a/F:/demo/intellij-community/data/eclipse.platform.ui-I20160601-1000/bundles/org.eclipse.ui/pom.xml b/F:/demo/intellij-community/data/eclipse.platform.ui-I20170501-2000/bundles/org.eclipse.ui/pom.xml
+index fb04780cddc4..082efe1fa781 100644
+--- a/F:/demo/intellij-community/data/eclipse.platform.ui-I20160601-1000/bundles/org.eclipse.ui/pom.xml
++++ b/F:/demo/intellij-community/data/eclipse.platform.ui-I20170501-2000/bundles/org.eclipse.ui/pom.xml
+@@ -5,7 +5,7 @@
+   are made available under the terms of the Eclipse Distribution License v1.0
+   which accompanies this distribution, and is available at
+   http://www.eclipse.org/org/documents/edl-v10.php
+- 
++
+   Contributors:
+      Igor Fedorenko - initial implementation
+ -->
+@@ -14,11 +14,11 @@
+   <parent>
+     <artifactId>eclipse.platform.ui</artifactId>
+     <groupId>eclipse.platform.ui</groupId>
+-    <version>4.6.0-SNAPSHOT</version>
++    <version>4.7.0-SNAPSHOT</version>
+     <relativePath>../../</relativePath>
+   </parent>
+   <groupId>org.eclipse.ui</groupId>
+   <artifactId>org.eclipse.ui</artifactId>
+-  <version>3.108.0-SNAPSHOT</version>
++  <version>3.109.0-SNAPSHOT</version>
+   <packaging>eclipse-plugin</packaging>
+ </project>
+diff --git a/F:/demo/intellij-community/data/eclipse.platform.ui-I20160601-1000/bundles/org.eclipse.ui/schema/editors.exsd b/F:/demo/intellij-community/data/eclipse.platform.ui-I20170501-2000/bundles/org.eclipse.ui/schema/editors.exsd
+index 504aa55c3bf4..2559813a9366 100644
+--- a/F:/demo/intellij-community/data/eclipse.platform.ui-I20160601-1000/bundles/org.eclipse.ui/schema/editors.exsd
++++ b/F:/demo/intellij-community/data/eclipse.platform.ui-I20170501-2000/bundles/org.eclipse.ui/schema/editors.exsd
+@@ -2,12 +2,13 @@
+ <!-- Schema file written by PDE -->
+ <schema targetNamespace="org.eclipse.ui" xmlns="http://www.w3.org/2001/XMLSchema">
+ <annotation>
+-      <appinfo>
++      <appInfo>
+          <meta.schema plugin="org.eclipse.ui" id="editors" name="Internal and External Editors"/>
+-      </appinfo>
++      </appInfo>
+       <documentation>
+-         This extension point is used to add new editors to the 
+-workbench.  A editor is a visual component within a 
++         This extension point is used to add new editors to the workbench or to
++associate an already declared editor with a content-type.
++An editor is a visual component within a 
+ workbench page. It is typically used to edit or browse 
+ a document or input object.  To open an editor, the user 
+ will typically invoke &quot;Open&quot; on an &lt;samp&gt;IFile&lt;/samp&gt;.  
+@@ -42,13 +43,14 @@ with it by any means except through the file system.
+ 
+    <element name="extension">
+       <annotation>
+-         <appinfo>
++         <appInfo>
+             <meta.element />
+-         </appinfo>
++         </appInfo>
+       </annotation>
+       <complexType>
+          <sequence>
+             <element ref="editor" minOccurs="0" maxOccurs="unbounded"/>
++            <element ref="editorContentTypeBinding" minOccurs="0" maxOccurs="unbounded"/>
+          </sequence>
+          <attribute name="point" type="string" use="required">
+             <annotation>
+@@ -69,9 +71,9 @@ with it by any means except through the file system.
+                <documentation>
+                   an optional name of the extension instance
+                </documentation>
+-               <appinfo>
++               <appInfo>
+                   <meta.attribute translatable="true"/>
+-               </appinfo>
++               </appInfo>
+             </annotation>
+          </attribute>
+       </complexType>
+@@ -79,9 +81,9 @@ with it by any means except through the file system.
+ 
+    <element name="editor">
+       <annotation>
+-         <appinfo>
++         <appInfo>
+             <meta.element labelAttribute="name" icon="icon"/>
+-         </appinfo>
++         </appInfo>
+       </annotation>
+       <complexType>
+          <sequence>
+@@ -99,9 +101,9 @@ with it by any means except through the file system.
+                <documentation>
+                   a translatable name that will be used in the UI for this editor
+                </documentation>
+-               <appinfo>
++               <appInfo>
+                   <meta.attribute translatable="true"/>
+-               </appinfo>
++               </appInfo>
+             </annotation>
+          </attribute>
+          <attribute name="icon" type="string">
+@@ -110,9 +112,9 @@ with it by any means except through the file system.
+                   A relative name of the icon that will be used for all resources that match the specified extensions. Editors should provide an icon to make it easy for users to distinguish between different editor types. If you specify a command rather than a class, an icon is not needed. In that case, the workbench 
+ will use the icon provided by the operating system.
+                </documentation>
+-               <appinfo>
++               <appInfo>
+                   <meta.attribute kind="resource"/>
+-               </appinfo>
++               </appInfo>
+             </annotation>
+          </attribute>
+          <attribute name="extensions" type="string">
+@@ -127,9 +129,9 @@ will use the icon provided by the operating system.
+                <documentation>
+                   the name of a class that implements &lt;samp&gt;org.eclipse.ui.IEditorPart&lt;/samp&gt;. The attributes &lt;samp&gt;class&lt;/samp&gt;, &lt;samp&gt;command&lt;/samp&gt;, and &lt;samp&gt;launcher&lt;/samp&gt; are mutually exclusive. If this attribute is defined then &lt;samp&gt;contributorClass&lt;/samp&gt; should also be defined.
+                </documentation>
+-               <appinfo>
++               <appInfo>
+                   <meta.attribute kind="java" basedOn="org.eclipse.ui.part.EditorPart"/>
+-               </appinfo>
++               </appInfo>
+             </annotation>
+          </attribute>
+          <attribute name="command" type="string">
+@@ -145,9 +147,9 @@ will use the icon provided by the operating system.
+                   the name of a class which that implements &lt;samp&gt;org.eclipse.ui.IEditorLauncher&lt;/samp&gt;. 
+ A launcher will open an external editor. The attributes &lt;samp&gt;class&lt;/samp&gt;, &lt;samp&gt;command&lt;/samp&gt;, and &lt;samp&gt;launcher&lt;/samp&gt; are mutually exclusive.
+                </documentation>
+-               <appinfo>
++               <appInfo>
+                   <meta.attribute kind="java" basedOn="org.eclipse.ui.IEditorLauncher"/>
+-               </appinfo>
++               </appInfo>
+             </annotation>
+          </attribute>
+          <attribute name="contributorClass" type="string">
+@@ -155,9 +157,9 @@ A launcher will open an external editor. The attributes &lt;samp&gt;class&lt;/sa
+                <documentation>
+                   the name of a class that implements &lt;samp&gt;org.eclipse.ui.IEditorActionBarContributor&lt;/samp&gt;. This attribute should only be defined if the &lt;samp&gt;class&lt;/samp&gt; attribute is defined. This class is used to add new actions to the workbench menu and tool bar which reflect the features of the editor type.
+                </documentation>
+-               <appinfo>
++               <appInfo>
+                   <meta.attribute kind="java" basedOn="org.eclipse.ui.part.EditorActionBarContributor"/>
+-               </appinfo>
++               </appInfo>
+             </annotation>
+          </attribute>
+          <attribute name="default" type="boolean" use="default" value="false">
+@@ -196,9 +198,9 @@ documents may register for &quot;ejb.htm, ejb.html&quot;.
+                <documentation>
+                   the name of a class that implements &lt;samp&gt;org.eclipse.ui.IEditorMatchingStrategy&lt;/samp&gt;. This attribute should only be defined if the &lt;samp&gt;class&lt;/samp&gt; attribute is defined. This allows the editor extension to provide its own algorithm for matching the input of one of its editors to a given editor input.
+                </documentation>
+-               <appinfo>
++               <appInfo>
+                   <meta.attribute kind="java" basedOn="org.eclipse.ui.IEditorMatchingStrategy"/>
+-               </appinfo>
++               </appInfo>
+             </annotation>
+          </attribute>
+       </complexType>
+@@ -206,9 +208,9 @@ documents may register for &quot;ejb.htm, ejb.html&quot;.
+ 
+    <element name="contentTypeBinding">
+       <annotation>
+-         <appinfo>
++         <appInfo>
+             <meta.element labelAttribute="contentTypeId"/>
+-         </appinfo>
++         </appInfo>
+          <documentation>
+             Advertises that the containing editor understands the given content type and is suitable for editing files of that type.
+          </documentation>
+@@ -219,18 +221,49 @@ documents may register for &quot;ejb.htm, ejb.html&quot;.
+                <documentation>
+                   The content type identifier. This is an ID defined by the &apos;org.eclipse.core.contenttype.contentTypes&apos; extension point.
+                </documentation>
+-               <appinfo>
++               <appInfo>
+                   <meta.attribute kind="identifier" basedOn="org.eclipse.core.contenttype.contentTypes/content-type/@id"/>
+-               </appinfo>
++               </appInfo>
+             </annotation>
+          </attribute>
+       </complexType>
+    </element>
+ 
++   <element name="editorContentTypeBinding">
++      <annotation>
++         <documentation>
++            Binds an existing editor to the given content-type.
++         </documentation>
++      </annotation>
++      <complexType>
++         <attribute name="contentTypeId" type="string" use="required">
++            <annotation>
++               <documentation>
++                  The content type identifier. This is an ID defined by the &apos;org.eclipse.core.contenttype.contentTypes&apos; extension point.
++               </documentation>
++               <appInfo>
++                  <meta.attribute kind="identifier" basedOn="org.eclipse.core.contenttype.contentTypes/content-type/@id"/>
++               </appInfo>
++            </annotation>
++         </attribute>
++         <attribute name="editorId" type="string" use="required">
++            <annotation>
++               <documentation>
++                  The editor identifier. This is an ID of an editor by the &apos;org.eclipse.ui.editors&apos; extension point.
++               </documentation>
++               <appInfo>
++                  <meta.attribute kind="identifier" basedOn="org.eclipse.ui.editors/editor/@id"/>
++               </appInfo>
++            </annotation>
++         </attribute>
++      </complexType>
++   </element>
++
++
+    <annotation>
+-      <appinfo>
++      <appInfo>
+          <meta.section type="examples"/>
+-      </appinfo>
++      </appInfo>
+       <documentation>
+          The following is an example 
+ of an internal editor extension definition: 
+@@ -254,9 +287,9 @@ of an internal editor extension definition:
+    </annotation>
+ 
+    <annotation>
+-      <appinfo>
++      <appInfo>
+          <meta.section type="apiInfo"/>
+-      </appinfo>
++      </appInfo>
+       <documentation>
+          If the command attribute is used, it will be treated 
+ as an external program command line that will be executed
+@@ -318,20 +351,19 @@ editor is closed, menus and actions will be removed.
+       </documentation>
+    </annotation>
+ 
+-
+    <annotation>
+-      <appinfo>
++      <appInfo>
+          <meta.section type="implementation"/>
+-      </appinfo>
++      </appInfo>
+       <documentation>
+          The workbench provides a &quot;Default Text Editor&quot;. The end user product may contain other editors as part of the shipping bundle. In that case, editors will be registered as extensions using the syntax described above.
+       </documentation>
+    </annotation>
+ 
+    <annotation>
+-      <appinfo>
++      <appInfo>
+          <meta.section type="copyright"/>
+-      </appinfo>
++      </appInfo>
+       <documentation>
+          Copyright (c) 2002, 2007 IBM Corporation and others.&lt;br&gt;
+ All rights reserved. This program and the accompanying materials are made
+diff --git a/F:/demo/intellij-community/data/eclipse.platform.ui-I20160601-1000/bundles/org.eclipse.ui/schema/perspectiveExtensions.exsd b/F:/demo/intellij-community/data/eclipse.platform.ui-I20170501-2000/bundles/org.eclipse.ui/schema/perspectiveExtensions.exsd
+index 4a1b7050f8f9..7c3e0f0dd600 100644
+--- a/F:/demo/intellij-community/data/eclipse.platform.ui-I20160601-1000/bundles/org.eclipse.ui/schema/perspectiveExtensions.exsd
++++ b/F:/demo/intellij-community/data/eclipse.platform.ui-I20170501-2000/bundles/org.eclipse.ui/schema/perspectiveExtensions.exsd
+@@ -114,7 +114,7 @@ are appended to the initial definition.
+                   the unique identifier of the view which will be added to the perspective&apos;s &quot;Show View&quot; submenu of the &quot;Window&quot; menu.
+                </documentation>
+                <appInfo>
+-                  <meta.attribute kind="identifier" basedOn="org.eclipse.ui.views/view/@id"/>
++                  <meta.attribute kind="identifier" basedOn="org.eclipse.ui.views/view/@id,org.eclipse.ui.views/e4view/@id"/>
+                </appInfo>
+             </annotation>
+          </attribute>
+@@ -159,7 +159,7 @@ are appended to the initial definition.
+                   the unique identifier of the view which will be added to the perspective&apos;s &quot;Show In...&quot; prompter in the Navigate menu.
+                </documentation>
+                <appInfo>
+-                  <meta.attribute kind="identifier" basedOn="org.eclipse.ui.views/view/@id"/>
++                  <meta.attribute kind="identifier" basedOn="org.eclipse.ui.views/view/@id,org.eclipse.ui.views/e4view/@id"/>
+                </appInfo>
+             </annotation>
+          </attribute>
+@@ -174,7 +174,7 @@ are appended to the initial definition.
+                   the unique identifier of the view which will be added to the perspective layout.
+                </documentation>
+                <appInfo>
+-                  <meta.attribute kind="identifier" basedOn="org.eclipse.ui.views/view/@id"/>
++                  <meta.attribute kind="identifier" basedOn="org.eclipse.ui.views/view/@id,org.eclipse.ui.views/e4view/@id"/>
+                </appInfo>
+             </annotation>
+          </attribute>
+@@ -184,7 +184,7 @@ are appended to the initial definition.
+                   the unique identifier of a view which already exists in the perspective.  This will be used as a reference point for placement of the view.  The relationship between these two views is defined by &lt;samp&gt;relationship&lt;/samp&gt;.  Ignored if relationship is &quot;fast&quot;.
+                </documentation>
+                <appInfo>
+-                  <meta.attribute kind="identifier" basedOn="org.eclipse.ui.views/view/@id"/>
++                  <meta.attribute kind="identifier" basedOn="org.eclipse.ui.views/view/@id,org.eclipse.ui.views/e4view/@id"/>
+                </appInfo>
+             </annotation>
+             <simpleType>
+@@ -201,7 +201,7 @@ are appended to the initial definition.
+ &lt;samp&gt;relative&lt;/samp&gt;. 
+ The following values are supported:
+ &lt;ul&gt;
+-&lt;b&gt;fast&lt;/b&gt; - the view extension will be created as a fast view.
++&lt;b&gt;fast&lt;/b&gt; - &lt;b&gt;Deprecated&lt;/b&gt; - the view extension will be created as a fast view.
+ &lt;br&gt;&lt;b&gt;stack&lt;/b&gt; - the view extension will be stacked with the relative
+ view in a folder.
+ &lt;br&gt;&lt;b&gt;left, right, top, bottom&lt;/b&gt; - the view extension will be placed
+@@ -308,6 +308,7 @@ If this attribute is not used, the view will be moveable, unless the perspective
+       </complexType>
+    </element>
+ 
++
+    <annotation>
+       <appInfo>
+          <meta.section type="examples"/>
+@@ -356,7 +357,6 @@ added beside the Resource Navigator.
+    </annotation>
+ 
+ 
+-
+    <annotation>
+       <appInfo>
+          <meta.section type="copyright"/>
+diff --git a/F:/demo/intellij-community/data/eclipse.platform.ui-I20160601-1000/bundles/org.eclipse.ui/schema/viewActions.exsd b/F:/demo/intellij-community/data/eclipse.platform.ui-I20170501-2000/bundles/org.eclipse.ui/schema/viewActions.exsd
+index 08eade9a73e5..8e8d7e8cf19a 100644
+--- a/F:/demo/intellij-community/data/eclipse.platform.ui-I20160601-1000/bundles/org.eclipse.ui/schema/viewActions.exsd
++++ b/F:/demo/intellij-community/data/eclipse.platform.ui-I20170501-2000/bundles/org.eclipse.ui/schema/viewActions.exsd
+@@ -87,7 +87,7 @@ You can now use &lt;a href=&quot;org_eclipse_ui_menus.html&quot;&gt;org.eclipse.
+                   a unique identifier of a registered view that is the target of this contribution.
+                </documentation>
+                <appInfo>
+-                  <meta.attribute kind="identifier" basedOn="org.eclipse.ui.views/view/@id"/>
++                  <meta.attribute kind="identifier" basedOn="org.eclipse.ui.views/view/@id,org.eclipse.ui.views/e4view/@id"/>
+                </appInfo>
+             </annotation>
+          </attribute>
+diff --git a/F:/demo/intellij-community/data/eclipse.platform.ui-I20160601-1000/bundles/org.eclipse.ui/schema/views.exsd b/F:/demo/intellij-community/data/eclipse.platform.ui-I20170501-2000/bundles/org.eclipse.ui/schema/views.exsd
+index 2c05c547db77..3036599d0890 100644
+--- a/F:/demo/intellij-community/data/eclipse.platform.ui-I20160601-1000/bundles/org.eclipse.ui/schema/views.exsd
++++ b/F:/demo/intellij-community/data/eclipse.platform.ui-I20170501-2000/bundles/org.eclipse.ui/schema/views.exsd
+@@ -183,6 +183,40 @@ If no value is supplied, a default ratio will be used.
+                </documentation>
+             </annotation>
+          </attribute>
++         <attribute name="inject" type="boolean">
++            <annotation>
++               <documentation>
++                  flag indicating whether this view allows to use the Eclipse dependency injection (Eclipse DI) framework. 
++If set to true, Eclipse DI will be used to inject the view.  Otherwise no Eclipse DI is used.
++The default is false.
++
++&lt;p/&gt;
++The framework will process the fields and methods in the following order. * steps are in addition to the process without Eclipse DI.
++
++&lt;ol&gt;
++ &lt;li&gt; default constructor&lt;/li&gt;
++ &lt;li&gt; the IExecutableExtension#setInitializationData method&lt;/li&gt;
++ &lt;li&gt; the IViewPart#init method&lt;/li&gt;
++ &lt;li&gt; optionally fields annotated with @Inject  *&lt;/li&gt;
++ &lt;li&gt; optionally methods annoted with @Inject * &lt;/li&gt;
++ &lt;li&gt; optionally one method annotated with @PostConstruct *&lt;/li&gt;
++ &lt;li&gt; the IWorkbenchPart#createPartControl method&lt;/li&gt;
++&lt;/ol&gt;
++
++&lt;p/&gt;
++You cannot use constructor injection with these views, as the framework still requires a parameterless constructor.
++&lt;p/&gt;
++ On disposal of the view the methods are called in the following order:
++ &lt;ol&gt;
++ &lt;li&gt; IWorkbenchPart#dispose&lt;/li&gt;
++ &lt;li&gt; optionally a method annotated with @PreDestroy *&lt;/li&gt;
++&lt;/ol&gt;
++
++
++&lt;p&gt;&lt;em&gt;Since: 4.7&lt;/em&gt;&lt;/p&gt;
++               </documentation>
++            </annotation>
++         </attribute>
+       </complexType>
+    </element>
+ 
+@@ -298,7 +332,7 @@ If no value is supplied, a default ratio will be used.
+                   the id of the view to be made sticky.
+                </documentation>
+                <appInfo>
+-                  <meta.attribute kind="identifier" basedOn="org.eclipse.ui.views/view/@id"/>
++                  <meta.attribute kind="identifier" basedOn="org.eclipse.ui.views/view/@id,org.eclipse.ui.views/e4view/@id"/>
+                </appInfo>
+             </annotation>
+          </attribute>

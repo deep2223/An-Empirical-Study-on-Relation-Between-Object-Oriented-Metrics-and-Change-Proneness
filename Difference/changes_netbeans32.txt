@@ -1,0 +1,2086 @@
+diff --git a/F:/demo/intellij-community/data/netbeans-9.0-vc3/java.platform.ui/apichanges.xml b/F:/demo/intellij-community/data/netbeans-jshell_api9/java.platform.ui/apichanges.xml
+index b19b4488a380..262d7892ca61 100644
+--- a/F:/demo/intellij-community/data/netbeans-9.0-vc3/java.platform.ui/apichanges.xml
++++ b/F:/demo/intellij-community/data/netbeans-jshell_api9/java.platform.ui/apichanges.xml
+@@ -1,23 +1,47 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <!--
+-
+-    Licensed to the Apache Software Foundation (ASF) under one
+-    or more contributor license agreements.  See the NOTICE file
+-    distributed with this work for additional information
+-    regarding copyright ownership.  The ASF licenses this file
+-    to you under the Apache License, Version 2.0 (the
+-    "License"); you may not use this file except in compliance
+-    with the License.  You may obtain a copy of the License at
+-
+-      http://www.apache.org/licenses/LICENSE-2.0
+-
+-    Unless required by applicable law or agreed to in writing,
+-    software distributed under the License is distributed on an
+-    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+-    KIND, either express or implied.  See the License for the
+-    specific language governing permissions and limitations
+-    under the License.
+-
++DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS HEADER.
++
++Copyright 1997-2010 Oracle and/or its affiliates. All rights reserved.
++
++Oracle and Java are registered trademarks of Oracle and/or its affiliates.
++Other names may be trademarks of their respective owners.
++
++
++The contents of this file are subject to the terms of either the GNU
++General Public License Version 2 only ("GPL") or the Common
++Development and Distribution License("CDDL") (collectively, the
++"License"). You may not use this file except in compliance with the
++License. You can obtain a copy of the License at
++http://www.netbeans.org/cddl-gplv2.html
++or nbbuild/licenses/CDDL-GPL-2-CP. See the License for the
++specific language governing permissions and limitations under the
++License.  When distributing the software, include this License Header
++Notice in each file and include the License file at
++nbbuild/licenses/CDDL-GPL-2-CP.  Oracle designates this
++particular file as subject to the "Classpath" exception as provided
++by Oracle in the GPL Version 2 section of the License file that
++accompanied this code. If applicable, add the following below the
++License Header, with the fields enclosed by brackets [] replaced by
++your own identifying information:
++"Portions Copyrighted [year] [name of copyright owner]"
++
++Contributor(s):
++
++The Original Software is NetBeans. The Initial Developer of the Original
++Software is Sun Microsystems, Inc. Portions Copyright 1997-2006 Sun
++Microsystems, Inc. All Rights Reserved.
++
++If you wish your version of this file to be governed by only the CDDL
++or only the GPL Version 2, indicate your decision by adding
++"[Contributor] elects to include this software in this distribution
++under the [CDDL or GPL Version 2] license." If you do not indicate a
++single choice of license, a recipient has the option to distribute
++your version of this file under either the CDDL, the GPL Version 2 or
++to extend the choice of license to its licensees as provided above.
++However, if you add GPL Version 2 code and therefore, elected the GPL
++Version 2 license, then the option applies only if the new code is
++made subject to such option by the copyright holder.
+ -->
+ <?xml-stylesheet type="text/xml" href="../nbbuild/javadoctools/apichanges.xsl"?>
+ <!DOCTYPE apichanges PUBLIC "-//NetBeans//DTD API changes list 1.0//EN" "../nbbuild/javadoctools/apichanges.dtd">
+diff --git a/F:/demo/intellij-community/data/netbeans-9.0-vc3/java.platform.ui/arch.xml b/F:/demo/intellij-community/data/netbeans-jshell_api9/java.platform.ui/arch.xml
+index c006b1d5e9e3..178f1d2b5b70 100644
+--- a/F:/demo/intellij-community/data/netbeans-9.0-vc3/java.platform.ui/arch.xml
++++ b/F:/demo/intellij-community/data/netbeans-jshell_api9/java.platform.ui/arch.xml
+@@ -1,23 +1,47 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <!--
+-
+-    Licensed to the Apache Software Foundation (ASF) under one
+-    or more contributor license agreements.  See the NOTICE file
+-    distributed with this work for additional information
+-    regarding copyright ownership.  The ASF licenses this file
+-    to you under the Apache License, Version 2.0 (the
+-    "License"); you may not use this file except in compliance
+-    with the License.  You may obtain a copy of the License at
+-
+-      http://www.apache.org/licenses/LICENSE-2.0
+-
+-    Unless required by applicable law or agreed to in writing,
+-    software distributed under the License is distributed on an
+-    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+-    KIND, either express or implied.  See the License for the
+-    specific language governing permissions and limitations
+-    under the License.
+-
++DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS HEADER.
++
++Copyright 1997-2010 Oracle and/or its affiliates. All rights reserved.
++
++Oracle and Java are registered trademarks of Oracle and/or its affiliates.
++Other names may be trademarks of their respective owners.
++
++
++The contents of this file are subject to the terms of either the GNU
++General Public License Version 2 only ("GPL") or the Common
++Development and Distribution License("CDDL") (collectively, the
++"License"). You may not use this file except in compliance with the
++License. You can obtain a copy of the License at
++http://www.netbeans.org/cddl-gplv2.html
++or nbbuild/licenses/CDDL-GPL-2-CP. See the License for the
++specific language governing permissions and limitations under the
++License.  When distributing the software, include this License Header
++Notice in each file and include the License file at
++nbbuild/licenses/CDDL-GPL-2-CP.  Oracle designates this
++particular file as subject to the "Classpath" exception as provided
++by Oracle in the GPL Version 2 section of the License file that
++accompanied this code. If applicable, add the following below the
++License Header, with the fields enclosed by brackets [] replaced by
++your own identifying information:
++"Portions Copyrighted [year] [name of copyright owner]"
++
++Contributor(s):
++
++The Original Software is NetBeans. The Initial Developer of the Original
++Software is Sun Microsystems, Inc. Portions Copyright 1997-2006 Sun
++Microsystems, Inc. All Rights Reserved.
++
++If you wish your version of this file to be governed by only the CDDL
++or only the GPL Version 2, indicate your decision by adding
++"[Contributor] elects to include this software in this distribution
++under the [CDDL or GPL Version 2] license." If you do not indicate a
++single choice of license, a recipient has the option to distribute
++your version of this file under either the CDDL, the GPL Version 2 or
++to extend the choice of license to its licensees as provided above.
++However, if you add GPL Version 2 code and therefore, elected the GPL
++Version 2 license, then the option applies only if the new code is
++made subject to such option by the copyright holder.
+ -->
+ <!DOCTYPE api-answers PUBLIC "-//NetBeans//DTD Arch Answers//EN" "../nbbuild/antsrc/org/netbeans/nbbuild/Arch.dtd" [
+   <!ENTITY api-questions SYSTEM "../nbbuild/antsrc/org/netbeans/nbbuild/Arch-api-questions.xml">
+diff --git a/F:/demo/intellij-community/data/netbeans-9.0-vc3/java.platform.ui/build.xml b/F:/demo/intellij-community/data/netbeans-jshell_api9/java.platform.ui/build.xml
+index 35b9fd1162a4..722757d256fe 100644
+--- a/F:/demo/intellij-community/data/netbeans-9.0-vc3/java.platform.ui/build.xml
++++ b/F:/demo/intellij-community/data/netbeans-jshell_api9/java.platform.ui/build.xml
+@@ -1,24 +1,48 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <!--
++DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS HEADER.
+ 
+-    Licensed to the Apache Software Foundation (ASF) under one
+-    or more contributor license agreements.  See the NOTICE file
+-    distributed with this work for additional information
+-    regarding copyright ownership.  The ASF licenses this file
+-    to you under the Apache License, Version 2.0 (the
+-    "License"); you may not use this file except in compliance
+-    with the License.  You may obtain a copy of the License at
++Copyright 1997-2010 Oracle and/or its affiliates. All rights reserved.
+ 
+-      http://www.apache.org/licenses/LICENSE-2.0
++Oracle and Java are registered trademarks of Oracle and/or its affiliates.
++Other names may be trademarks of their respective owners.
+ 
+-    Unless required by applicable law or agreed to in writing,
+-    software distributed under the License is distributed on an
+-    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+-    KIND, either express or implied.  See the License for the
+-    specific language governing permissions and limitations
+-    under the License.
+ 
++The contents of this file are subject to the terms of either the GNU
++General Public License Version 2 only ("GPL") or the Common
++Development and Distribution License("CDDL") (collectively, the
++"License"). You may not use this file except in compliance with the
++License. You can obtain a copy of the License at
++http://www.netbeans.org/cddl-gplv2.html
++or nbbuild/licenses/CDDL-GPL-2-CP. See the License for the
++specific language governing permissions and limitations under the
++License.  When distributing the software, include this License Header
++Notice in each file and include the License file at
++nbbuild/licenses/CDDL-GPL-2-CP.  Oracle designates this
++particular file as subject to the "Classpath" exception as provided
++by Oracle in the GPL Version 2 section of the License file that
++accompanied this code. If applicable, add the following below the
++License Header, with the fields enclosed by brackets [] replaced by
++your own identifying information:
++"Portions Copyrighted [year] [name of copyright owner]"
++
++Contributor(s):
++
++The Original Software is NetBeans. The Initial Developer of the Original
++Software is Sun Microsystems, Inc. Portions Copyright 1997-2006 Sun
++Microsystems, Inc. All Rights Reserved.
++
++If you wish your version of this file to be governed by only the CDDL
++or only the GPL Version 2, indicate your decision by adding
++"[Contributor] elects to include this software in this distribution
++under the [CDDL or GPL Version 2] license." If you do not indicate a
++single choice of license, a recipient has the option to distribute
++your version of this file under either the CDDL, the GPL Version 2 or
++to extend the choice of license to its licensees as provided above.
++However, if you add GPL Version 2 code and therefore, elected the GPL
++Version 2 license, then the option applies only if the new code is
++made subject to such option by the copyright holder.
+ -->
+-<project basedir="." default="build" name="java.platform.ui">
++<project basedir="." default="netbeans" name="java.platform.ui">
+     <import file="../nbbuild/templates/projectized.xml"/>
+ </project>
+diff --git a/F:/demo/intellij-community/data/netbeans-9.0-vc3/java.platform.ui/licenseinfo.xml b/F:/demo/intellij-community/data/netbeans-9.0-vc3/java.platform.ui/licenseinfo.xml
+deleted file mode 100644
+index 151d002d54cd..000000000000
+--- a/F:/demo/intellij-community/data/netbeans-9.0-vc3/java.platform.ui/licenseinfo.xml
++++ /dev/null
+@@ -1,30 +0,0 @@
+-<?xml version="1.0" encoding="UTF-8"?>
+-<!--
+-
+-    Licensed to the Apache Software Foundation (ASF) under one
+-    or more contributor license agreements.  See the NOTICE file
+-    distributed with this work for additional information
+-    regarding copyright ownership.  The ASF licenses this file
+-    to you under the Apache License, Version 2.0 (the
+-    "License"); you may not use this file except in compliance
+-    with the License.  You may obtain a copy of the License at
+-
+-      http://www.apache.org/licenses/LICENSE-2.0
+-
+-    Unless required by applicable law or agreed to in writing,
+-    software distributed under the License is distributed on an
+-    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+-    KIND, either express or implied.  See the License for the
+-    specific language governing permissions and limitations
+-    under the License.
+-
+--->
+-<licenseinfo>
+-    <fileset>
+-        <file>src/org/netbeans/modules/java/platform/resources/platformBadge.gif</file>
+-        <file>src/org/netbeans/modules/java/platform/resources/empty.gif</file>
+-        <file>src/org/netbeans/modules/java/platform/resources/platform.gif</file>
+-        <license ref="Apache-2.0-ASF" />
+-        <comment type="COMMENT_UNSUPPORTED" />
+-    </fileset>
+-</licenseinfo>
+diff --git a/F:/demo/intellij-community/data/netbeans-9.0-vc3/java.platform.ui/manifest.mf b/F:/demo/intellij-community/data/netbeans-jshell_api9/java.platform.ui/manifest.mf
+index 84c5b336ff43..03de7ac47a32 100644
+--- a/F:/demo/intellij-community/data/netbeans-9.0-vc3/java.platform.ui/manifest.mf
++++ b/F:/demo/intellij-community/data/netbeans-jshell_api9/java.platform.ui/manifest.mf
+@@ -1,6 +1,6 @@
+ Manifest-Version: 1.0
+ OpenIDE-Module: org.netbeans.modules.java.platform.ui/1
+-OpenIDE-Module-Specification-Version: 1.44.1
++OpenIDE-Module-Specification-Version: 1.40
+ OpenIDE-Module-Localizing-Bundle: org/netbeans/modules/java/platform/Bundle.properties
+ OpenIDE-Module-Layer: org/netbeans/modules/java/platform/resources/layer.xml
+ AutoUpdate-Show-In-Client: false
+diff --git a/F:/demo/intellij-community/data/netbeans-9.0-vc3/java.platform.ui/nbproject/project.properties b/F:/demo/intellij-community/data/netbeans-jshell_api9/java.platform.ui/nbproject/project.properties
+index 403cf7398805..358c7f7147ee 100644
+--- a/F:/demo/intellij-community/data/netbeans-9.0-vc3/java.platform.ui/nbproject/project.properties
++++ b/F:/demo/intellij-community/data/netbeans-jshell_api9/java.platform.ui/nbproject/project.properties
+@@ -1,19 +1,44 @@
+-# Licensed to the Apache Software Foundation (ASF) under one
+-# or more contributor license agreements.  See the NOTICE file
+-# distributed with this work for additional information
+-# regarding copyright ownership.  The ASF licenses this file
+-# to you under the Apache License, Version 2.0 (the
+-# "License"); you may not use this file except in compliance
+-# with the License.  You may obtain a copy of the License at
++# DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS HEADER.
+ #
+-#   http://www.apache.org/licenses/LICENSE-2.0
++# Copyright 1997-2010 Oracle and/or its affiliates. All rights reserved.
+ #
+-# Unless required by applicable law or agreed to in writing,
+-# software distributed under the License is distributed on an
+-# "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+-# KIND, either express or implied.  See the License for the
+-# specific language governing permissions and limitations
+-# under the License.
++# Oracle and Java are registered trademarks of Oracle and/or its affiliates.
++# Other names may be trademarks of their respective owners.
++#
++# The contents of this file are subject to the terms of either the GNU
++# General Public License Version 2 only ("GPL") or the Common
++# Development and Distribution License("CDDL") (collectively, the
++# "License"). You may not use this file except in compliance with the
++# License. You can obtain a copy of the License at
++# http://www.netbeans.org/cddl-gplv2.html
++# or nbbuild/licenses/CDDL-GPL-2-CP. See the License for the
++# specific language governing permissions and limitations under the
++# License.  When distributing the software, include this License Header
++# Notice in each file and include the License file at
++# nbbuild/licenses/CDDL-GPL-2-CP.  Oracle designates this
++# particular file as subject to the "Classpath" exception as provided
++# by Oracle in the GPL Version 2 section of the License file that
++# accompanied this code. If applicable, add the following below the
++# License Header, with the fields enclosed by brackets [] replaced by
++# your own identifying information:
++# "Portions Copyrighted [year] [name of copyright owner]"
++#
++# Contributor(s):
++#
++# The Original Software is NetBeans. The Initial Developer of the Original
++# Software is Sun Microsystems, Inc. Portions Copyright 1997-2006 Sun
++# Microsystems, Inc. All Rights Reserved.
++#
++# If you wish your version of this file to be governed by only the CDDL
++# or only the GPL Version 2, indicate your decision by adding
++# "[Contributor] elects to include this software in this distribution
++# under the [CDDL or GPL Version 2] license." If you do not indicate a
++# single choice of license, a recipient has the option to distribute
++# your version of this file under either the CDDL, the GPL Version 2 or
++# to extend the choice of license to its licensees as provided above.
++# However, if you add GPL Version 2 code and therefore, elected the GPL
++# Version 2 license, then the option applies only if the new code is
++# made subject to such option by the copyright holder.
+ 
+ is.autoload=true
+ 
+diff --git a/F:/demo/intellij-community/data/netbeans-9.0-vc3/java.platform.ui/nbproject/project.xml b/F:/demo/intellij-community/data/netbeans-jshell_api9/java.platform.ui/nbproject/project.xml
+index afb308f4f3d2..e2e90c19005a 100644
+--- a/F:/demo/intellij-community/data/netbeans-9.0-vc3/java.platform.ui/nbproject/project.xml
++++ b/F:/demo/intellij-community/data/netbeans-jshell_api9/java.platform.ui/nbproject/project.xml
+@@ -1,23 +1,47 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <!--
++DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS HEADER.
+ 
+-    Licensed to the Apache Software Foundation (ASF) under one
+-    or more contributor license agreements.  See the NOTICE file
+-    distributed with this work for additional information
+-    regarding copyright ownership.  The ASF licenses this file
+-    to you under the Apache License, Version 2.0 (the
+-    "License"); you may not use this file except in compliance
+-    with the License.  You may obtain a copy of the License at
++Copyright 1997-2010 Oracle and/or its affiliates. All rights reserved.
+ 
+-      http://www.apache.org/licenses/LICENSE-2.0
++Oracle and Java are registered trademarks of Oracle and/or its affiliates.
++Other names may be trademarks of their respective owners.
+ 
+-    Unless required by applicable law or agreed to in writing,
+-    software distributed under the License is distributed on an
+-    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+-    KIND, either express or implied.  See the License for the
+-    specific language governing permissions and limitations
+-    under the License.
+ 
++The contents of this file are subject to the terms of either the GNU
++General Public License Version 2 only ("GPL") or the Common
++Development and Distribution License("CDDL") (collectively, the
++"License"). You may not use this file except in compliance with the
++License. You can obtain a copy of the License at
++http://www.netbeans.org/cddl-gplv2.html
++or nbbuild/licenses/CDDL-GPL-2-CP. See the License for the
++specific language governing permissions and limitations under the
++License.  When distributing the software, include this License Header
++Notice in each file and include the License file at
++nbbuild/licenses/CDDL-GPL-2-CP.  Oracle designates this
++particular file as subject to the "Classpath" exception as provided
++by Oracle in the GPL Version 2 section of the License file that
++accompanied this code. If applicable, add the following below the
++License Header, with the fields enclosed by brackets [] replaced by
++your own identifying information:
++"Portions Copyrighted [year] [name of copyright owner]"
++
++Contributor(s):
++
++The Original Software is NetBeans. The Initial Developer of the Original
++Software is Sun Microsystems, Inc. Portions Copyright 1997-2006 Sun
++Microsystems, Inc. All Rights Reserved.
++
++If you wish your version of this file to be governed by only the CDDL
++or only the GPL Version 2, indicate your decision by adding
++"[Contributor] elects to include this software in this distribution
++under the [CDDL or GPL Version 2] license." If you do not indicate a
++single choice of license, a recipient has the option to distribute
++your version of this file under either the CDDL, the GPL Version 2 or
++to extend the choice of license to its licensees as provided above.
++However, if you add GPL Version 2 code and therefore, elected the GPL
++Version 2 license, then the option applies only if the new code is
++made subject to such option by the copyright holder.
+ -->
+ <project xmlns="http://www.netbeans.org/ns/project/1">
+     <type>org.netbeans.modules.apisupport.project</type>
+diff --git a/F:/demo/intellij-community/data/netbeans-9.0-vc3/java.platform.ui/src/org/netbeans/api/java/platform/Bundle.properties b/F:/demo/intellij-community/data/netbeans-jshell_api9/java.platform.ui/src/org/netbeans/api/java/platform/Bundle.properties
+index 0eeb2d6a0452..5a32371771b2 100644
+--- a/F:/demo/intellij-community/data/netbeans-9.0-vc3/java.platform.ui/src/org/netbeans/api/java/platform/Bundle.properties
++++ b/F:/demo/intellij-community/data/netbeans-jshell_api9/java.platform.ui/src/org/netbeans/api/java/platform/Bundle.properties
+@@ -1,19 +1,44 @@
+-# Licensed to the Apache Software Foundation (ASF) under one
+-# or more contributor license agreements.  See the NOTICE file
+-# distributed with this work for additional information
+-# regarding copyright ownership.  The ASF licenses this file
+-# to you under the Apache License, Version 2.0 (the
+-# "License"); you may not use this file except in compliance
+-# with the License.  You may obtain a copy of the License at
++# DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS HEADER.
+ #
+-#   http://www.apache.org/licenses/LICENSE-2.0
++# Copyright 1997-2010 Oracle and/or its affiliates. All rights reserved.
+ #
+-# Unless required by applicable law or agreed to in writing,
+-# software distributed under the License is distributed on an
+-# "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+-# KIND, either express or implied.  See the License for the
+-# specific language governing permissions and limitations
+-# under the License.
++# Oracle and Java are registered trademarks of Oracle and/or its affiliates.
++# Other names may be trademarks of their respective owners.
++#
++# The contents of this file are subject to the terms of either the GNU
++# General Public License Version 2 only ("GPL") or the Common
++# Development and Distribution License("CDDL") (collectively, the
++# "License"). You may not use this file except in compliance with the
++# License. You can obtain a copy of the License at
++# http://www.netbeans.org/cddl-gplv2.html
++# or nbbuild/licenses/CDDL-GPL-2-CP. See the License for the
++# specific language governing permissions and limitations under the
++# License.  When distributing the software, include this License Header
++# Notice in each file and include the License file at
++# nbbuild/licenses/CDDL-GPL-2-CP.  Oracle designates this
++# particular file as subject to the "Classpath" exception as provided
++# by Oracle in the GPL Version 2 section of the License file that
++# accompanied this code. If applicable, add the following below the
++# License Header, with the fields enclosed by brackets [] replaced by
++# your own identifying information:
++# "Portions Copyrighted [year] [name of copyright owner]"
++#
++# Contributor(s):
++#
++# The Original Software is NetBeans. The Initial Developer of the Original
++# Software is Sun Microsystems, Inc. Portions Copyright 1997-2006 Sun
++# Microsystems, Inc. All Rights Reserved.
++#
++# If you wish your version of this file to be governed by only the CDDL
++# or only the GPL Version 2, indicate your decision by adding
++# "[Contributor] elects to include this software in this distribution
++# under the [CDDL or GPL Version 2] license." If you do not indicate a
++# single choice of license, a recipient has the option to distribute
++# your version of this file under either the CDDL, the GPL Version 2 or
++# to extend the choice of license to its licensees as provided above.
++# However, if you add GPL Version 2 code and therefore, elected the GPL
++# Version 2 license, then the option applies only if the new code is
++# made subject to such option by the copyright holder.
+ 
+ TXT_PlatformsManager=Java Platform Manager
+ CTL_Close=Close
+diff --git a/F:/demo/intellij-community/data/netbeans-9.0-vc3/java.platform.ui/src/org/netbeans/api/java/platform/PlatformsCustomizer.java b/F:/demo/intellij-community/data/netbeans-jshell_api9/java.platform.ui/src/org/netbeans/api/java/platform/PlatformsCustomizer.java
+index 3c1e10048c28..8ed4fadd6684 100644
+--- a/F:/demo/intellij-community/data/netbeans-9.0-vc3/java.platform.ui/src/org/netbeans/api/java/platform/PlatformsCustomizer.java
++++ b/F:/demo/intellij-community/data/netbeans-jshell_api9/java.platform.ui/src/org/netbeans/api/java/platform/PlatformsCustomizer.java
+@@ -1,20 +1,45 @@
+ /*
+- * Licensed to the Apache Software Foundation (ASF) under one
+- * or more contributor license agreements.  See the NOTICE file
+- * distributed with this work for additional information
+- * regarding copyright ownership.  The ASF licenses this file
+- * to you under the Apache License, Version 2.0 (the
+- * "License"); you may not use this file except in compliance
+- * with the License.  You may obtain a copy of the License at
++ * DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS HEADER.
+  *
+- *   http://www.apache.org/licenses/LICENSE-2.0
++ * Copyright 1997-2010 Oracle and/or its affiliates. All rights reserved.
+  *
+- * Unless required by applicable law or agreed to in writing,
+- * software distributed under the License is distributed on an
+- * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+- * KIND, either express or implied.  See the License for the
+- * specific language governing permissions and limitations
+- * under the License.
++ * Oracle and Java are registered trademarks of Oracle and/or its affiliates.
++ * Other names may be trademarks of their respective owners.
++ *
++ * The contents of this file are subject to the terms of either the GNU
++ * General Public License Version 2 only ("GPL") or the Common
++ * Development and Distribution License("CDDL") (collectively, the
++ * "License"). You may not use this file except in compliance with the
++ * License. You can obtain a copy of the License at
++ * http://www.netbeans.org/cddl-gplv2.html
++ * or nbbuild/licenses/CDDL-GPL-2-CP. See the License for the
++ * specific language governing permissions and limitations under the
++ * License.  When distributing the software, include this License Header
++ * Notice in each file and include the License file at
++ * nbbuild/licenses/CDDL-GPL-2-CP.  Oracle designates this
++ * particular file as subject to the "Classpath" exception as provided
++ * by Oracle in the GPL Version 2 section of the License file that
++ * accompanied this code. If applicable, add the following below the
++ * License Header, with the fields enclosed by brackets [] replaced by
++ * your own identifying information:
++ * "Portions Copyrighted [year] [name of copyright owner]"
++ *
++ * Contributor(s):
++ *
++ * The Original Software is NetBeans. The Initial Developer of the Original
++ * Software is Sun Microsystems, Inc. Portions Copyright 1997-2006 Sun
++ * Microsystems, Inc. All Rights Reserved.
++ *
++ * If you wish your version of this file to be governed by only the CDDL
++ * or only the GPL Version 2, indicate your decision by adding
++ * "[Contributor] elects to include this software in this distribution
++ * under the [CDDL or GPL Version 2] license." If you do not indicate a
++ * single choice of license, a recipient has the option to distribute
++ * your version of this file under either the CDDL, the GPL Version 2 or
++ * to extend the choice of license to its licensees as provided above.
++ * However, if you add GPL Version 2 code and therefore, elected the GPL
++ * Version 2 license, then the option applies only if the new code is
++ * made subject to such option by the copyright holder.
+  */
+ package org.netbeans.api.java.platform;
+ 
+diff --git a/F:/demo/intellij-community/data/netbeans-9.0-vc3/java.platform.ui/src/org/netbeans/modules/java/platform/Bundle.properties b/F:/demo/intellij-community/data/netbeans-jshell_api9/java.platform.ui/src/org/netbeans/modules/java/platform/Bundle.properties
+index ddb96e02f5bd..2d5c4f5f6780 100644
+--- a/F:/demo/intellij-community/data/netbeans-9.0-vc3/java.platform.ui/src/org/netbeans/modules/java/platform/Bundle.properties
++++ b/F:/demo/intellij-community/data/netbeans-jshell_api9/java.platform.ui/src/org/netbeans/modules/java/platform/Bundle.properties
+@@ -1,19 +1,44 @@
+-# Licensed to the Apache Software Foundation (ASF) under one
+-# or more contributor license agreements.  See the NOTICE file
+-# distributed with this work for additional information
+-# regarding copyright ownership.  The ASF licenses this file
+-# to you under the Apache License, Version 2.0 (the
+-# "License"); you may not use this file except in compliance
+-# with the License.  You may obtain a copy of the License at
++# DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS HEADER.
+ #
+-#   http://www.apache.org/licenses/LICENSE-2.0
++# Copyright 1997-2010 Oracle and/or its affiliates. All rights reserved.
+ #
+-# Unless required by applicable law or agreed to in writing,
+-# software distributed under the License is distributed on an
+-# "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+-# KIND, either express or implied.  See the License for the
+-# specific language governing permissions and limitations
+-# under the License.
++# Oracle and Java are registered trademarks of Oracle and/or its affiliates.
++# Other names may be trademarks of their respective owners.
++#
++# The contents of this file are subject to the terms of either the GNU
++# General Public License Version 2 only ("GPL") or the Common
++# Development and Distribution License("CDDL") (collectively, the
++# "License"). You may not use this file except in compliance with the
++# License. You can obtain a copy of the License at
++# http://www.netbeans.org/cddl-gplv2.html
++# or nbbuild/licenses/CDDL-GPL-2-CP. See the License for the
++# specific language governing permissions and limitations under the
++# License.  When distributing the software, include this License Header
++# Notice in each file and include the License file at
++# nbbuild/licenses/CDDL-GPL-2-CP.  Oracle designates this
++# particular file as subject to the "Classpath" exception as provided
++# by Oracle in the GPL Version 2 section of the License file that
++# accompanied this code. If applicable, add the following below the
++# License Header, with the fields enclosed by brackets [] replaced by
++# your own identifying information:
++# "Portions Copyrighted [year] [name of copyright owner]"
++#
++# Contributor(s):
++#
++# The Original Software is NetBeans. The Initial Developer of the Original
++# Software is Sun Microsystems, Inc. Portions Copyright 1997-2006 Sun
++# Microsystems, Inc. All Rights Reserved.
++#
++# If you wish your version of this file to be governed by only the CDDL
++# or only the GPL Version 2, indicate your decision by adding
++# "[Contributor] elects to include this software in this distribution
++# under the [CDDL or GPL Version 2] license." If you do not indicate a
++# single choice of license, a recipient has the option to distribute
++# your version of this file under either the CDDL, the GPL Version 2 or
++# to extend the choice of license to its licensees as provided above.
++# However, if you add GPL Version 2 code and therefore, elected the GPL
++# Version 2 license, then the option applies only if the new code is
++# made subject to such option by the copyright holder.
+ 
+ #PlatformSettings
+ TXT_PlatformSettings=Platform Settings
+diff --git a/F:/demo/intellij-community/data/netbeans-9.0-vc3/java.platform.ui/src/org/netbeans/modules/java/platform/DefaultJavaPlatformProvider.java b/F:/demo/intellij-community/data/netbeans-jshell_api9/java.platform.ui/src/org/netbeans/modules/java/platform/DefaultJavaPlatformProvider.java
+index 70066f8e8650..6755a903a8b3 100644
+--- a/F:/demo/intellij-community/data/netbeans-9.0-vc3/java.platform.ui/src/org/netbeans/modules/java/platform/DefaultJavaPlatformProvider.java
++++ b/F:/demo/intellij-community/data/netbeans-jshell_api9/java.platform.ui/src/org/netbeans/modules/java/platform/DefaultJavaPlatformProvider.java
+@@ -1,20 +1,45 @@
+ /*
+- * Licensed to the Apache Software Foundation (ASF) under one
+- * or more contributor license agreements.  See the NOTICE file
+- * distributed with this work for additional information
+- * regarding copyright ownership.  The ASF licenses this file
+- * to you under the Apache License, Version 2.0 (the
+- * "License"); you may not use this file except in compliance
+- * with the License.  You may obtain a copy of the License at
++ * DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS HEADER.
+  *
+- *   http://www.apache.org/licenses/LICENSE-2.0
++ * Copyright 1997-2010 Oracle and/or its affiliates. All rights reserved.
+  *
+- * Unless required by applicable law or agreed to in writing,
+- * software distributed under the License is distributed on an
+- * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+- * KIND, either express or implied.  See the License for the
+- * specific language governing permissions and limitations
+- * under the License.
++ * Oracle and Java are registered trademarks of Oracle and/or its affiliates.
++ * Other names may be trademarks of their respective owners.
++ *
++ * The contents of this file are subject to the terms of either the GNU
++ * General Public License Version 2 only ("GPL") or the Common
++ * Development and Distribution License("CDDL") (collectively, the
++ * "License"). You may not use this file except in compliance with the
++ * License. You can obtain a copy of the License at
++ * http://www.netbeans.org/cddl-gplv2.html
++ * or nbbuild/licenses/CDDL-GPL-2-CP. See the License for the
++ * specific language governing permissions and limitations under the
++ * License.  When distributing the software, include this License Header
++ * Notice in each file and include the License file at
++ * nbbuild/licenses/CDDL-GPL-2-CP.  Oracle designates this
++ * particular file as subject to the "Classpath" exception as provided
++ * by Oracle in the GPL Version 2 section of the License file that
++ * accompanied this code. If applicable, add the following below the
++ * License Header, with the fields enclosed by brackets [] replaced by
++ * your own identifying information:
++ * "Portions Copyrighted [year] [name of copyright owner]"
++ *
++ * Contributor(s):
++ *
++ * The Original Software is NetBeans. The Initial Developer of the Original
++ * Software is Sun Microsystems, Inc. Portions Copyright 1997-2006 Sun
++ * Microsystems, Inc. All Rights Reserved.
++ *
++ * If you wish your version of this file to be governed by only the CDDL
++ * or only the GPL Version 2, indicate your decision by adding
++ * "[Contributor] elects to include this software in this distribution
++ * under the [CDDL or GPL Version 2] license." If you do not indicate a
++ * single choice of license, a recipient has the option to distribute
++ * your version of this file under either the CDDL, the GPL Version 2 or
++ * to extend the choice of license to its licensees as provided above.
++ * However, if you add GPL Version 2 code and therefore, elected the GPL
++ * Version 2 license, then the option applies only if the new code is
++ * made subject to such option by the copyright holder.
+  */
+ package org.netbeans.modules.java.platform;
+ 
+diff --git a/F:/demo/intellij-community/data/netbeans-9.0-vc3/java.platform.ui/src/org/netbeans/modules/java/platform/InstallerRegistry.java b/F:/demo/intellij-community/data/netbeans-jshell_api9/java.platform.ui/src/org/netbeans/modules/java/platform/InstallerRegistry.java
+index 615aaebf17a9..15a165356dfd 100644
+--- a/F:/demo/intellij-community/data/netbeans-9.0-vc3/java.platform.ui/src/org/netbeans/modules/java/platform/InstallerRegistry.java
++++ b/F:/demo/intellij-community/data/netbeans-jshell_api9/java.platform.ui/src/org/netbeans/modules/java/platform/InstallerRegistry.java
+@@ -1,20 +1,45 @@
+ /*
+- * Licensed to the Apache Software Foundation (ASF) under one
+- * or more contributor license agreements.  See the NOTICE file
+- * distributed with this work for additional information
+- * regarding copyright ownership.  The ASF licenses this file
+- * to you under the Apache License, Version 2.0 (the
+- * "License"); you may not use this file except in compliance
+- * with the License.  You may obtain a copy of the License at
++ * DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS HEADER.
+  *
+- *   http://www.apache.org/licenses/LICENSE-2.0
++ * Copyright 1997-2010 Oracle and/or its affiliates. All rights reserved.
+  *
+- * Unless required by applicable law or agreed to in writing,
+- * software distributed under the License is distributed on an
+- * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+- * KIND, either express or implied.  See the License for the
+- * specific language governing permissions and limitations
+- * under the License.
++ * Oracle and Java are registered trademarks of Oracle and/or its affiliates.
++ * Other names may be trademarks of their respective owners.
++ *
++ * The contents of this file are subject to the terms of either the GNU
++ * General Public License Version 2 only ("GPL") or the Common
++ * Development and Distribution License("CDDL") (collectively, the
++ * "License"). You may not use this file except in compliance with the
++ * License. You can obtain a copy of the License at
++ * http://www.netbeans.org/cddl-gplv2.html
++ * or nbbuild/licenses/CDDL-GPL-2-CP. See the License for the
++ * specific language governing permissions and limitations under the
++ * License.  When distributing the software, include this License Header
++ * Notice in each file and include the License file at
++ * nbbuild/licenses/CDDL-GPL-2-CP.  Oracle designates this
++ * particular file as subject to the "Classpath" exception as provided
++ * by Oracle in the GPL Version 2 section of the License file that
++ * accompanied this code. If applicable, add the following below the
++ * License Header, with the fields enclosed by brackets [] replaced by
++ * your own identifying information:
++ * "Portions Copyrighted [year] [name of copyright owner]"
++ *
++ * Contributor(s):
++ *
++ * The Original Software is NetBeans. The Initial Developer of the Original
++ * Software is Sun Microsystems, Inc. Portions Copyright 1997-2006 Sun
++ * Microsystems, Inc. All Rights Reserved.
++ *
++ * If you wish your version of this file to be governed by only the CDDL
++ * or only the GPL Version 2, indicate your decision by adding
++ * "[Contributor] elects to include this software in this distribution
++ * under the [CDDL or GPL Version 2] license." If you do not indicate a
++ * single choice of license, a recipient has the option to distribute
++ * your version of this file under either the CDDL, the GPL Version 2 or
++ * to extend the choice of license to its licensees as provided above.
++ * However, if you add GPL Version 2 code and therefore, elected the GPL
++ * Version 2 license, then the option applies only if the new code is
++ * made subject to such option by the copyright holder.
+  */
+ 
+ package org.netbeans.modules.java.platform;
+diff --git a/F:/demo/intellij-community/data/netbeans-9.0-vc3/java.platform.ui/src/org/netbeans/modules/java/platform/PlatformSettings.java b/F:/demo/intellij-community/data/netbeans-jshell_api9/java.platform.ui/src/org/netbeans/modules/java/platform/PlatformSettings.java
+index 886b2fdec5d3..aa1116bc6015 100644
+--- a/F:/demo/intellij-community/data/netbeans-9.0-vc3/java.platform.ui/src/org/netbeans/modules/java/platform/PlatformSettings.java
++++ b/F:/demo/intellij-community/data/netbeans-jshell_api9/java.platform.ui/src/org/netbeans/modules/java/platform/PlatformSettings.java
+@@ -1,20 +1,45 @@
+ /*
+- * Licensed to the Apache Software Foundation (ASF) under one
+- * or more contributor license agreements.  See the NOTICE file
+- * distributed with this work for additional information
+- * regarding copyright ownership.  The ASF licenses this file
+- * to you under the Apache License, Version 2.0 (the
+- * "License"); you may not use this file except in compliance
+- * with the License.  You may obtain a copy of the License at
++ * DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS HEADER.
+  *
+- *   http://www.apache.org/licenses/LICENSE-2.0
++ * Copyright 1997-2010 Oracle and/or its affiliates. All rights reserved.
+  *
+- * Unless required by applicable law or agreed to in writing,
+- * software distributed under the License is distributed on an
+- * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+- * KIND, either express or implied.  See the License for the
+- * specific language governing permissions and limitations
+- * under the License.
++ * Oracle and Java are registered trademarks of Oracle and/or its affiliates.
++ * Other names may be trademarks of their respective owners.
++ *
++ * The contents of this file are subject to the terms of either the GNU
++ * General Public License Version 2 only ("GPL") or the Common
++ * Development and Distribution License("CDDL") (collectively, the
++ * "License"). You may not use this file except in compliance with the
++ * License. You can obtain a copy of the License at
++ * http://www.netbeans.org/cddl-gplv2.html
++ * or nbbuild/licenses/CDDL-GPL-2-CP. See the License for the
++ * specific language governing permissions and limitations under the
++ * License.  When distributing the software, include this License Header
++ * Notice in each file and include the License file at
++ * nbbuild/licenses/CDDL-GPL-2-CP.  Oracle designates this
++ * particular file as subject to the "Classpath" exception as provided
++ * by Oracle in the GPL Version 2 section of the License file that
++ * accompanied this code. If applicable, add the following below the
++ * License Header, with the fields enclosed by brackets [] replaced by
++ * your own identifying information:
++ * "Portions Copyrighted [year] [name of copyright owner]"
++ *
++ * Contributor(s):
++ *
++ * The Original Software is NetBeans. The Initial Developer of the Original
++ * Software is Sun Microsystems, Inc. Portions Copyright 1997-2006 Sun
++ * Microsystems, Inc. All Rights Reserved.
++ *
++ * If you wish your version of this file to be governed by only the CDDL
++ * or only the GPL Version 2, indicate your decision by adding
++ * "[Contributor] elects to include this software in this distribution
++ * under the [CDDL or GPL Version 2] license." If you do not indicate a
++ * single choice of license, a recipient has the option to distribute
++ * your version of this file under either the CDDL, the GPL Version 2 or
++ * to extend the choice of license to its licensees as provided above.
++ * However, if you add GPL Version 2 code and therefore, elected the GPL
++ * Version 2 license, then the option applies only if the new code is
++ * made subject to such option by the copyright holder.
+  */
+ package org.netbeans.modules.java.platform;
+ 
+diff --git a/F:/demo/intellij-community/data/netbeans-9.0-vc3/java.platform.ui/src/org/netbeans/modules/java/platform/resources/Bundle.properties b/F:/demo/intellij-community/data/netbeans-jshell_api9/java.platform.ui/src/org/netbeans/modules/java/platform/resources/Bundle.properties
+index e4463d287d35..19bc349494e4 100644
+--- a/F:/demo/intellij-community/data/netbeans-9.0-vc3/java.platform.ui/src/org/netbeans/modules/java/platform/resources/Bundle.properties
++++ b/F:/demo/intellij-community/data/netbeans-jshell_api9/java.platform.ui/src/org/netbeans/modules/java/platform/resources/Bundle.properties
+@@ -1,19 +1,44 @@
+-# Licensed to the Apache Software Foundation (ASF) under one
+-# or more contributor license agreements.  See the NOTICE file
+-# distributed with this work for additional information
+-# regarding copyright ownership.  The ASF licenses this file
+-# to you under the Apache License, Version 2.0 (the
+-# "License"); you may not use this file except in compliance
+-# with the License.  You may obtain a copy of the License at
++# DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS HEADER.
+ #
+-#   http://www.apache.org/licenses/LICENSE-2.0
++# Copyright 1997-2010 Oracle and/or its affiliates. All rights reserved.
+ #
+-# Unless required by applicable law or agreed to in writing,
+-# software distributed under the License is distributed on an
+-# "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+-# KIND, either express or implied.  See the License for the
+-# specific language governing permissions and limitations
+-# under the License.
++# Oracle and Java are registered trademarks of Oracle and/or its affiliates.
++# Other names may be trademarks of their respective owners.
++#
++# The contents of this file are subject to the terms of either the GNU
++# General Public License Version 2 only ("GPL") or the Common
++# Development and Distribution License("CDDL") (collectively, the
++# "License"). You may not use this file except in compliance with the
++# License. You can obtain a copy of the License at
++# http://www.netbeans.org/cddl-gplv2.html
++# or nbbuild/licenses/CDDL-GPL-2-CP. See the License for the
++# specific language governing permissions and limitations under the
++# License.  When distributing the software, include this License Header
++# Notice in each file and include the License file at
++# nbbuild/licenses/CDDL-GPL-2-CP.  Oracle designates this
++# particular file as subject to the "Classpath" exception as provided
++# by Oracle in the GPL Version 2 section of the License file that
++# accompanied this code. If applicable, add the following below the
++# License Header, with the fields enclosed by brackets [] replaced by
++# your own identifying information:
++# "Portions Copyrighted [year] [name of copyright owner]"
++#
++# Contributor(s):
++#
++# The Original Software is NetBeans. The Initial Developer of the Original
++# Software is Sun Microsystems, Inc. Portions Copyright 1997-2006 Sun
++# Microsystems, Inc. All Rights Reserved.
++#
++# If you wish your version of this file to be governed by only the CDDL
++# or only the GPL Version 2, indicate your decision by adding
++# "[Contributor] elects to include this software in this distribution
++# under the [CDDL or GPL Version 2] license." If you do not indicate a
++# single choice of license, a recipient has the option to distribute
++# your version of this file under either the CDDL, the GPL Version 2 or
++# to extend the choice of license to its licensees as provided above.
++# However, if you add GPL Version 2 code and therefore, elected the GPL
++# Version 2 license, then the option applies only if the new code is
++# made subject to such option by the copyright holder.
+ 
+ # File names on system filesystem
+ # Each key is resource path to a primary file
+diff --git a/F:/demo/intellij-community/data/netbeans-9.0-vc3/java.platform.ui/src/org/netbeans/modules/java/platform/resources/layer.xml b/F:/demo/intellij-community/data/netbeans-jshell_api9/java.platform.ui/src/org/netbeans/modules/java/platform/resources/layer.xml
+index 63e359e0a28c..5d1e51333e5a 100644
+--- a/F:/demo/intellij-community/data/netbeans-9.0-vc3/java.platform.ui/src/org/netbeans/modules/java/platform/resources/layer.xml
++++ b/F:/demo/intellij-community/data/netbeans-jshell_api9/java.platform.ui/src/org/netbeans/modules/java/platform/resources/layer.xml
+@@ -1,23 +1,47 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <!--
++DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS HEADER.
+ 
+-    Licensed to the Apache Software Foundation (ASF) under one
+-    or more contributor license agreements.  See the NOTICE file
+-    distributed with this work for additional information
+-    regarding copyright ownership.  The ASF licenses this file
+-    to you under the Apache License, Version 2.0 (the
+-    "License"); you may not use this file except in compliance
+-    with the License.  You may obtain a copy of the License at
++Copyright 1997-2010 Oracle and/or its affiliates. All rights reserved.
+ 
+-      http://www.apache.org/licenses/LICENSE-2.0
++Oracle and Java are registered trademarks of Oracle and/or its affiliates.
++Other names may be trademarks of their respective owners.
+ 
+-    Unless required by applicable law or agreed to in writing,
+-    software distributed under the License is distributed on an
+-    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+-    KIND, either express or implied.  See the License for the
+-    specific language governing permissions and limitations
+-    under the License.
+ 
++The contents of this file are subject to the terms of either the GNU
++General Public License Version 2 only ("GPL") or the Common
++Development and Distribution License("CDDL") (collectively, the
++"License"). You may not use this file except in compliance with the
++License. You can obtain a copy of the License at
++http://www.netbeans.org/cddl-gplv2.html
++or nbbuild/licenses/CDDL-GPL-2-CP. See the License for the
++specific language governing permissions and limitations under the
++License.  When distributing the software, include this License Header
++Notice in each file and include the License file at
++nbbuild/licenses/CDDL-GPL-2-CP.  Oracle designates this
++particular file as subject to the "Classpath" exception as provided
++by Oracle in the GPL Version 2 section of the License file that
++accompanied this code. If applicable, add the following below the
++License Header, with the fields enclosed by brackets [] replaced by
++your own identifying information:
++"Portions Copyrighted [year] [name of copyright owner]"
++
++Contributor(s):
++
++The Original Software is NetBeans. The Initial Developer of the Original
++Software is Sun Microsystems, Inc. Portions Copyright 1997-2006 Sun
++Microsystems, Inc. All Rights Reserved.
++
++If you wish your version of this file to be governed by only the CDDL
++or only the GPL Version 2, indicate your decision by adding
++"[Contributor] elects to include this software in this distribution
++under the [CDDL or GPL Version 2] license." If you do not indicate a
++single choice of license, a recipient has the option to distribute
++your version of this file under either the CDDL, the GPL Version 2 or
++to extend the choice of license to its licensees as provided above.
++However, if you add GPL Version 2 code and therefore, elected the GPL
++Version 2 license, then the option applies only if the new code is
++made subject to such option by the copyright holder.
+ -->
+ <!DOCTYPE filesystem PUBLIC "-//NetBeans//DTD Filesystem 1.2//EN" "http://www.netbeans.org/dtds/filesystem-1_2.dtd">
+ <filesystem>
+diff --git a/F:/demo/intellij-community/data/netbeans-9.0-vc3/java.platform.ui/src/org/netbeans/modules/java/platform/resources/templates/javaplatform.html b/F:/demo/intellij-community/data/netbeans-jshell_api9/java.platform.ui/src/org/netbeans/modules/java/platform/resources/templates/javaplatform.html
+index ccb38e06dc9e..4b024e0bfa2b 100644
+--- a/F:/demo/intellij-community/data/netbeans-9.0-vc3/java.platform.ui/src/org/netbeans/modules/java/platform/resources/templates/javaplatform.html
++++ b/F:/demo/intellij-community/data/netbeans-jshell_api9/java.platform.ui/src/org/netbeans/modules/java/platform/resources/templates/javaplatform.html
+@@ -1,22 +1,41 @@
+ <!--
++DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS HEADER.
+ 
+-    Licensed to the Apache Software Foundation (ASF) under one
+-    or more contributor license agreements.  See the NOTICE file
+-    distributed with this work for additional information
+-    regarding copyright ownership.  The ASF licenses this file
+-    to you under the Apache License, Version 2.0 (the
+-    "License"); you may not use this file except in compliance
+-    with the License.  You may obtain a copy of the License at
++Copyright (c) 2014, 2016 Oracle and/or its affiliates. All rights reserved.
+ 
+-      http://www.apache.org/licenses/LICENSE-2.0
++Oracle and Java are registered trademarks of Oracle and/or its affiliates.
++Other names may be trademarks of their respective owners.
+ 
+-    Unless required by applicable law or agreed to in writing,
+-    software distributed under the License is distributed on an
+-    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+-    KIND, either express or implied.  See the License for the
+-    specific language governing permissions and limitations
+-    under the License.
++The contents of this file are subject to the terms of either the GNU
++General Public License Version 2 only ("GPL") or the Common
++Development and Distribution License("CDDL") (collectively, the
++"License"). You may not use this file except in compliance with the
++License. You can obtain a copy of the License at
++http://www.netbeans.org/cddl-gplv2.html
++or nbbuild/licenses/CDDL-GPL-2-CP. See the License for the
++specific language governing permissions and limitations under the
++License.  When distributing the software, include this License Header
++Notice in each file and include the License file at
++nbbuild/licenses/CDDL-GPL-2-CP.  Oracle designates this
++particular file as subject to the "Classpath" exception as provided
++by Oracle in the GPL Version 2 section of the License file that
++accompanied this code. If applicable, add the following below the
++License Header, with the fields enclosed by brackets [] replaced by
++your own identifying information:
++"Portions Copyrighted [year] [name of copyright owner]"
+ 
++If you wish your version of this file to be governed by only the CDDL
++or only the GPL Version 2, indicate your decision by adding
++"[Contributor] elects to include this software in this distribution
++under the [CDDL or GPL Version 2] license." If you do not indicate a
++single choice of license, a recipient has the option to distribute
++your version of this file under either the CDDL, the GPL Version 2 or
++to extend the choice of license to its licensees as provided above.
++However, if you add GPL Version 2 code and therefore, elected the GPL
++Version 2 license, then the option applies only if the new code is
++made subject to such option by the copyright holder.
++
++Contributor(s):
+ -->
+ <HTML><BODY>
+ Java Platform Templates.
+diff --git a/F:/demo/intellij-community/data/netbeans-9.0-vc3/java.platform.ui/src/org/netbeans/modules/java/platform/resources/templates/javaplatformdefinition.html b/F:/demo/intellij-community/data/netbeans-jshell_api9/java.platform.ui/src/org/netbeans/modules/java/platform/resources/templates/javaplatformdefinition.html
+index 3cd501269824..a42160d18531 100644
+--- a/F:/demo/intellij-community/data/netbeans-9.0-vc3/java.platform.ui/src/org/netbeans/modules/java/platform/resources/templates/javaplatformdefinition.html
++++ b/F:/demo/intellij-community/data/netbeans-jshell_api9/java.platform.ui/src/org/netbeans/modules/java/platform/resources/templates/javaplatformdefinition.html
+@@ -1,22 +1,41 @@
+ <!--
++DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS HEADER.
+ 
+-    Licensed to the Apache Software Foundation (ASF) under one
+-    or more contributor license agreements.  See the NOTICE file
+-    distributed with this work for additional information
+-    regarding copyright ownership.  The ASF licenses this file
+-    to you under the Apache License, Version 2.0 (the
+-    "License"); you may not use this file except in compliance
+-    with the License.  You may obtain a copy of the License at
++Copyright (c) 2014, 2016 Oracle and/or its affiliates. All rights reserved.
+ 
+-      http://www.apache.org/licenses/LICENSE-2.0
++Oracle and Java are registered trademarks of Oracle and/or its affiliates.
++Other names may be trademarks of their respective owners.
+ 
+-    Unless required by applicable law or agreed to in writing,
+-    software distributed under the License is distributed on an
+-    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+-    KIND, either express or implied.  See the License for the
+-    specific language governing permissions and limitations
+-    under the License.
++The contents of this file are subject to the terms of either the GNU
++General Public License Version 2 only ("GPL") or the Common
++Development and Distribution License("CDDL") (collectively, the
++"License"). You may not use this file except in compliance with the
++License. You can obtain a copy of the License at
++http://www.netbeans.org/cddl-gplv2.html
++or nbbuild/licenses/CDDL-GPL-2-CP. See the License for the
++specific language governing permissions and limitations under the
++License.  When distributing the software, include this License Header
++Notice in each file and include the License file at
++nbbuild/licenses/CDDL-GPL-2-CP.  Oracle designates this
++particular file as subject to the "Classpath" exception as provided
++by Oracle in the GPL Version 2 section of the License file that
++accompanied this code. If applicable, add the following below the
++License Header, with the fields enclosed by brackets [] replaced by
++your own identifying information:
++"Portions Copyrighted [year] [name of copyright owner]"
+ 
++If you wish your version of this file to be governed by only the CDDL
++or only the GPL Version 2, indicate your decision by adding
++"[Contributor] elects to include this software in this distribution
++under the [CDDL or GPL Version 2] license." If you do not indicate a
++single choice of license, a recipient has the option to distribute
++your version of this file under either the CDDL, the GPL Version 2 or
++to extend the choice of license to its licensees as provided above.
++However, if you add GPL Version 2 code and therefore, elected the GPL
++Version 2 license, then the option applies only if the new code is
++made subject to such option by the copyright holder.
++
++Contributor(s):
+ -->
+ <html>
+ <head>
+diff --git a/F:/demo/intellij-community/data/netbeans-9.0-vc3/java.platform.ui/src/org/netbeans/modules/java/platform/ui/Bundle.properties b/F:/demo/intellij-community/data/netbeans-jshell_api9/java.platform.ui/src/org/netbeans/modules/java/platform/ui/Bundle.properties
+index 1b4f665c5f47..b1800bc012d4 100644
+--- a/F:/demo/intellij-community/data/netbeans-9.0-vc3/java.platform.ui/src/org/netbeans/modules/java/platform/ui/Bundle.properties
++++ b/F:/demo/intellij-community/data/netbeans-jshell_api9/java.platform.ui/src/org/netbeans/modules/java/platform/ui/Bundle.properties
+@@ -1,19 +1,44 @@
+-# Licensed to the Apache Software Foundation (ASF) under one
+-# or more contributor license agreements.  See the NOTICE file
+-# distributed with this work for additional information
+-# regarding copyright ownership.  The ASF licenses this file
+-# to you under the Apache License, Version 2.0 (the
+-# "License"); you may not use this file except in compliance
+-# with the License.  You may obtain a copy of the License at
++# DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS HEADER.
+ #
+-#   http://www.apache.org/licenses/LICENSE-2.0
++# Copyright 1997-2010 Oracle and/or its affiliates. All rights reserved.
+ #
+-# Unless required by applicable law or agreed to in writing,
+-# software distributed under the License is distributed on an
+-# "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+-# KIND, either express or implied.  See the License for the
+-# specific language governing permissions and limitations
+-# under the License.
++# Oracle and Java are registered trademarks of Oracle and/or its affiliates.
++# Other names may be trademarks of their respective owners.
++#
++# The contents of this file are subject to the terms of either the GNU
++# General Public License Version 2 only ("GPL") or the Common
++# Development and Distribution License("CDDL") (collectively, the
++# "License"). You may not use this file except in compliance with the
++# License. You can obtain a copy of the License at
++# http://www.netbeans.org/cddl-gplv2.html
++# or nbbuild/licenses/CDDL-GPL-2-CP. See the License for the
++# specific language governing permissions and limitations under the
++# License.  When distributing the software, include this License Header
++# Notice in each file and include the License file at
++# nbbuild/licenses/CDDL-GPL-2-CP.  Oracle designates this
++# particular file as subject to the "Classpath" exception as provided
++# by Oracle in the GPL Version 2 section of the License file that
++# accompanied this code. If applicable, add the following below the
++# License Header, with the fields enclosed by brackets [] replaced by
++# your own identifying information:
++# "Portions Copyrighted [year] [name of copyright owner]"
++#
++# Contributor(s):
++#
++# The Original Software is NetBeans. The Initial Developer of the Original
++# Software is Sun Microsystems, Inc. Portions Copyright 1997-2006 Sun
++# Microsystems, Inc. All Rights Reserved.
++#
++# If you wish your version of this file to be governed by only the CDDL
++# or only the GPL Version 2, indicate your decision by adding
++# "[Contributor] elects to include this software in this distribution
++# under the [CDDL or GPL Version 2] license." If you do not indicate a
++# single choice of license, a recipient has the option to distribute
++# your version of this file under either the CDDL, the GPL Version 2 or
++# to extend the choice of license to its licensees as provided above.
++# However, if you add GPL Version 2 code and therefore, elected the GPL
++# Version 2 license, then the option applies only if the new code is
++# made subject to such option by the copyright holder.
+ 
+ CTL_PlatformHome=Platform Folder:
+ 
+diff --git a/F:/demo/intellij-community/data/netbeans-9.0-vc3/java.platform.ui/src/org/netbeans/modules/java/platform/ui/PlatformsCustomizer.form b/F:/demo/intellij-community/data/netbeans-jshell_api9/java.platform.ui/src/org/netbeans/modules/java/platform/ui/PlatformsCustomizer.form
+index f58ab2543aec..60bde55cb724 100644
+--- a/F:/demo/intellij-community/data/netbeans-9.0-vc3/java.platform.ui/src/org/netbeans/modules/java/platform/ui/PlatformsCustomizer.form
++++ b/F:/demo/intellij-community/data/netbeans-jshell_api9/java.platform.ui/src/org/netbeans/modules/java/platform/ui/PlatformsCustomizer.form
+@@ -1,26 +1,5 @@
+ <?xml version="1.0" encoding="UTF-8" ?>
+ 
+-<!--
+-
+-    Licensed to the Apache Software Foundation (ASF) under one
+-    or more contributor license agreements.  See the NOTICE file
+-    distributed with this work for additional information
+-    regarding copyright ownership.  The ASF licenses this file
+-    to you under the Apache License, Version 2.0 (the
+-    "License"); you may not use this file except in compliance
+-    with the License.  You may obtain a copy of the License at
+-
+-      http://www.apache.org/licenses/LICENSE-2.0
+-
+-    Unless required by applicable law or agreed to in writing,
+-    software distributed under the License is distributed on an
+-    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+-    KIND, either express or implied.  See the License for the
+-    specific language governing permissions and limitations
+-    under the License.
+-
+--->
+-
+ <Form version="1.2" maxVersion="1.2" type="org.netbeans.modules.form.forminfo.JPanelFormInfo">
+   <NonVisualComponents>
+     <Container class="javax.swing.JPanel" name="jPanel3">
+diff --git a/F:/demo/intellij-community/data/netbeans-9.0-vc3/java.platform.ui/src/org/netbeans/modules/java/platform/ui/PlatformsCustomizer.java b/F:/demo/intellij-community/data/netbeans-jshell_api9/java.platform.ui/src/org/netbeans/modules/java/platform/ui/PlatformsCustomizer.java
+index 59bbe2cb6aa8..72ce750072ef 100644
+--- a/F:/demo/intellij-community/data/netbeans-9.0-vc3/java.platform.ui/src/org/netbeans/modules/java/platform/ui/PlatformsCustomizer.java
++++ b/F:/demo/intellij-community/data/netbeans-jshell_api9/java.platform.ui/src/org/netbeans/modules/java/platform/ui/PlatformsCustomizer.java
+@@ -1,20 +1,45 @@
+ /*
+- * Licensed to the Apache Software Foundation (ASF) under one
+- * or more contributor license agreements.  See the NOTICE file
+- * distributed with this work for additional information
+- * regarding copyright ownership.  The ASF licenses this file
+- * to you under the Apache License, Version 2.0 (the
+- * "License"); you may not use this file except in compliance
+- * with the License.  You may obtain a copy of the License at
++ * DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS HEADER.
+  *
+- *   http://www.apache.org/licenses/LICENSE-2.0
++ * Copyright 1997-2010 Oracle and/or its affiliates. All rights reserved.
+  *
+- * Unless required by applicable law or agreed to in writing,
+- * software distributed under the License is distributed on an
+- * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+- * KIND, either express or implied.  See the License for the
+- * specific language governing permissions and limitations
+- * under the License.
++ * Oracle and Java are registered trademarks of Oracle and/or its affiliates.
++ * Other names may be trademarks of their respective owners.
++ *
++ * The contents of this file are subject to the terms of either the GNU
++ * General Public License Version 2 only ("GPL") or the Common
++ * Development and Distribution License("CDDL") (collectively, the
++ * "License"). You may not use this file except in compliance with the
++ * License. You can obtain a copy of the License at
++ * http://www.netbeans.org/cddl-gplv2.html
++ * or nbbuild/licenses/CDDL-GPL-2-CP. See the License for the
++ * specific language governing permissions and limitations under the
++ * License.  When distributing the software, include this License Header
++ * Notice in each file and include the License file at
++ * nbbuild/licenses/CDDL-GPL-2-CP.  Oracle designates this
++ * particular file as subject to the "Classpath" exception as provided
++ * by Oracle in the GPL Version 2 section of the License file that
++ * accompanied this code. If applicable, add the following below the
++ * License Header, with the fields enclosed by brackets [] replaced by
++ * your own identifying information:
++ * "Portions Copyrighted [year] [name of copyright owner]"
++ *
++ * Contributor(s):
++ *
++ * The Original Software is NetBeans. The Initial Developer of the Original
++ * Software is Sun Microsystems, Inc. Portions Copyright 1997-2006 Sun
++ * Microsystems, Inc. All Rights Reserved.
++ *
++ * If you wish your version of this file to be governed by only the CDDL
++ * or only the GPL Version 2, indicate your decision by adding
++ * "[Contributor] elects to include this software in this distribution
++ * under the [CDDL or GPL Version 2] license." If you do not indicate a
++ * single choice of license, a recipient has the option to distribute
++ * your version of this file under either the CDDL, the GPL Version 2 or
++ * to extend the choice of license to its licensees as provided above.
++ * However, if you add GPL Version 2 code and therefore, elected the GPL
++ * Version 2 license, then the option applies only if the new code is
++ * made subject to such option by the copyright holder.
+  */
+ 
+ package org.netbeans.modules.java.platform.ui;
+diff --git a/F:/demo/intellij-community/data/netbeans-9.0-vc3/java.platform.ui/src/org/netbeans/modules/java/platform/ui/PlatformsCustomizerAction.java b/F:/demo/intellij-community/data/netbeans-jshell_api9/java.platform.ui/src/org/netbeans/modules/java/platform/ui/PlatformsCustomizerAction.java
+index 409a792f881a..0fab311e95eb 100644
+--- a/F:/demo/intellij-community/data/netbeans-9.0-vc3/java.platform.ui/src/org/netbeans/modules/java/platform/ui/PlatformsCustomizerAction.java
++++ b/F:/demo/intellij-community/data/netbeans-jshell_api9/java.platform.ui/src/org/netbeans/modules/java/platform/ui/PlatformsCustomizerAction.java
+@@ -1,20 +1,43 @@
+ /*
+- * Licensed to the Apache Software Foundation (ASF) under one
+- * or more contributor license agreements.  See the NOTICE file
+- * distributed with this work for additional information
+- * regarding copyright ownership.  The ASF licenses this file
+- * to you under the Apache License, Version 2.0 (the
+- * "License"); you may not use this file except in compliance
+- * with the License.  You may obtain a copy of the License at
++ * DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS HEADER.
+  *
+- *   http://www.apache.org/licenses/LICENSE-2.0
++ * Copyright 2010 Oracle and/or its affiliates. All rights reserved.
+  *
+- * Unless required by applicable law or agreed to in writing,
+- * software distributed under the License is distributed on an
+- * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+- * KIND, either express or implied.  See the License for the
+- * specific language governing permissions and limitations
+- * under the License.
++ * Oracle and Java are registered trademarks of Oracle and/or its affiliates.
++ * Other names may be trademarks of their respective owners.
++ *
++ * The contents of this file are subject to the terms of either the GNU
++ * General Public License Version 2 only ("GPL") or the Common
++ * Development and Distribution License("CDDL") (collectively, the
++ * "License"). You may not use this file except in compliance with the
++ * License. You can obtain a copy of the License at
++ * http://www.netbeans.org/cddl-gplv2.html
++ * or nbbuild/licenses/CDDL-GPL-2-CP. See the License for the
++ * specific language governing permissions and limitations under the
++ * License.  When distributing the software, include this License Header
++ * Notice in each file and include the License file at
++ * nbbuild/licenses/CDDL-GPL-2-CP.  Oracle designates this
++ * particular file as subject to the "Classpath" exception as provided
++ * by Oracle in the GPL Version 2 section of the License file that
++ * accompanied this code. If applicable, add the following below the
++ * License Header, with the fields enclosed by brackets [] replaced by
++ * your own identifying information:
++ * "Portions Copyrighted [year] [name of copyright owner]"
++ *
++ * If you wish your version of this file to be governed by only the CDDL
++ * or only the GPL Version 2, indicate your decision by adding
++ * "[Contributor] elects to include this software in this distribution
++ * under the [CDDL or GPL Version 2] license." If you do not indicate a
++ * single choice of license, a recipient has the option to distribute
++ * your version of this file under either the CDDL, the GPL Version 2 or
++ * to extend the choice of license to its licensees as provided above.
++ * However, if you add GPL Version 2 code and therefore, elected the GPL
++ * Version 2 license, then the option applies only if the new code is
++ * made subject to such option by the copyright holder.
++ *
++ * Contributor(s):
++ *
++ * Portions Copyrighted 2009 Sun Microsystems, Inc.
+  */
+ package org.netbeans.modules.java.platform.ui;
+ 
+diff --git a/F:/demo/intellij-community/data/netbeans-9.0-vc3/java.platform.ui/src/org/netbeans/modules/java/platform/wizard/Bundle.properties b/F:/demo/intellij-community/data/netbeans-jshell_api9/java.platform.ui/src/org/netbeans/modules/java/platform/wizard/Bundle.properties
+index 94532676051f..fd4781fde466 100644
+--- a/F:/demo/intellij-community/data/netbeans-9.0-vc3/java.platform.ui/src/org/netbeans/modules/java/platform/wizard/Bundle.properties
++++ b/F:/demo/intellij-community/data/netbeans-jshell_api9/java.platform.ui/src/org/netbeans/modules/java/platform/wizard/Bundle.properties
+@@ -1,19 +1,44 @@
+-# Licensed to the Apache Software Foundation (ASF) under one
+-# or more contributor license agreements.  See the NOTICE file
+-# distributed with this work for additional information
+-# regarding copyright ownership.  The ASF licenses this file
+-# to you under the Apache License, Version 2.0 (the
+-# "License"); you may not use this file except in compliance
+-# with the License.  You may obtain a copy of the License at
++# DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS HEADER.
+ #
+-#   http://www.apache.org/licenses/LICENSE-2.0
++# Copyright 1997-2010 Oracle and/or its affiliates. All rights reserved.
+ #
+-# Unless required by applicable law or agreed to in writing,
+-# software distributed under the License is distributed on an
+-# "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+-# KIND, either express or implied.  See the License for the
+-# specific language governing permissions and limitations
+-# under the License.
++# Oracle and Java are registered trademarks of Oracle and/or its affiliates.
++# Other names may be trademarks of their respective owners.
++#
++# The contents of this file are subject to the terms of either the GNU
++# General Public License Version 2 only ("GPL") or the Common
++# Development and Distribution License("CDDL") (collectively, the
++# "License"). You may not use this file except in compliance with the
++# License. You can obtain a copy of the License at
++# http://www.netbeans.org/cddl-gplv2.html
++# or nbbuild/licenses/CDDL-GPL-2-CP. See the License for the
++# specific language governing permissions and limitations under the
++# License.  When distributing the software, include this License Header
++# Notice in each file and include the License file at
++# nbbuild/licenses/CDDL-GPL-2-CP.  Oracle designates this
++# particular file as subject to the "Classpath" exception as provided
++# by Oracle in the GPL Version 2 section of the License file that
++# accompanied this code. If applicable, add the following below the
++# License Header, with the fields enclosed by brackets [] replaced by
++# your own identifying information:
++# "Portions Copyrighted [year] [name of copyright owner]"
++#
++# Contributor(s):
++#
++# The Original Software is NetBeans. The Initial Developer of the Original
++# Software is Sun Microsystems, Inc. Portions Copyright 1997-2006 Sun
++# Microsystems, Inc. All Rights Reserved.
++#
++# If you wish your version of this file to be governed by only the CDDL
++# or only the GPL Version 2, indicate your decision by adding
++# "[Contributor] elects to include this software in this distribution
++# under the [CDDL or GPL Version 2] license." If you do not indicate a
++# single choice of license, a recipient has the option to distribute
++# your version of this file under either the CDDL, the GPL Version 2 or
++# to extend the choice of license to its licensees as provided above.
++# However, if you add GPL Version 2 code and therefore, elected the GPL
++# Version 2 license, then the option applies only if the new code is
++# made subject to such option by the copyright holder.
+ 
+ TITLE_PlatformLocationUnknown=...
+ TXT_PlatformType=Platform Type:
+diff --git a/F:/demo/intellij-community/data/netbeans-9.0-vc3/java.platform.ui/src/org/netbeans/modules/java/platform/wizard/LocationChooser.java b/F:/demo/intellij-community/data/netbeans-jshell_api9/java.platform.ui/src/org/netbeans/modules/java/platform/wizard/LocationChooser.java
+index e2c258d9f719..5a2cb2607612 100644
+--- a/F:/demo/intellij-community/data/netbeans-9.0-vc3/java.platform.ui/src/org/netbeans/modules/java/platform/wizard/LocationChooser.java
++++ b/F:/demo/intellij-community/data/netbeans-jshell_api9/java.platform.ui/src/org/netbeans/modules/java/platform/wizard/LocationChooser.java
+@@ -1,20 +1,45 @@
+ /*
+- * Licensed to the Apache Software Foundation (ASF) under one
+- * or more contributor license agreements.  See the NOTICE file
+- * distributed with this work for additional information
+- * regarding copyright ownership.  The ASF licenses this file
+- * to you under the Apache License, Version 2.0 (the
+- * "License"); you may not use this file except in compliance
+- * with the License.  You may obtain a copy of the License at
++ * DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS HEADER.
+  *
+- *   http://www.apache.org/licenses/LICENSE-2.0
++ * Copyright 1997-2010 Oracle and/or its affiliates. All rights reserved.
+  *
+- * Unless required by applicable law or agreed to in writing,
+- * software distributed under the License is distributed on an
+- * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+- * KIND, either express or implied.  See the License for the
+- * specific language governing permissions and limitations
+- * under the License.
++ * Oracle and Java are registered trademarks of Oracle and/or its affiliates.
++ * Other names may be trademarks of their respective owners.
++ *
++ * The contents of this file are subject to the terms of either the GNU
++ * General Public License Version 2 only ("GPL") or the Common
++ * Development and Distribution License("CDDL") (collectively, the
++ * "License"). You may not use this file except in compliance with the
++ * License. You can obtain a copy of the License at
++ * http://www.netbeans.org/cddl-gplv2.html
++ * or nbbuild/licenses/CDDL-GPL-2-CP. See the License for the
++ * specific language governing permissions and limitations under the
++ * License.  When distributing the software, include this License Header
++ * Notice in each file and include the License file at
++ * nbbuild/licenses/CDDL-GPL-2-CP.  Oracle designates this
++ * particular file as subject to the "Classpath" exception as provided
++ * by Oracle in the GPL Version 2 section of the License file that
++ * accompanied this code. If applicable, add the following below the
++ * License Header, with the fields enclosed by brackets [] replaced by
++ * your own identifying information:
++ * "Portions Copyrighted [year] [name of copyright owner]"
++ *
++ * Contributor(s):
++ *
++ * The Original Software is NetBeans. The Initial Developer of the Original
++ * Software is Sun Microsystems, Inc. Portions Copyright 1997-2006 Sun
++ * Microsystems, Inc. All Rights Reserved.
++ *
++ * If you wish your version of this file to be governed by only the CDDL
++ * or only the GPL Version 2, indicate your decision by adding
++ * "[Contributor] elects to include this software in this distribution
++ * under the [CDDL or GPL Version 2] license." If you do not indicate a
++ * single choice of license, a recipient has the option to distribute
++ * your version of this file under either the CDDL, the GPL Version 2 or
++ * to extend the choice of license to its licensees as provided above.
++ * However, if you add GPL Version 2 code and therefore, elected the GPL
++ * Version 2 license, then the option applies only if the new code is
++ * made subject to such option by the copyright holder.
+  */
+ 
+ package org.netbeans.modules.java.platform.wizard;
+diff --git a/F:/demo/intellij-community/data/netbeans-9.0-vc3/java.platform.ui/src/org/netbeans/modules/java/platform/wizard/PlatformInstallIterator.java b/F:/demo/intellij-community/data/netbeans-jshell_api9/java.platform.ui/src/org/netbeans/modules/java/platform/wizard/PlatformInstallIterator.java
+index 1f9ab7701182..1adcbacbaa6d 100644
+--- a/F:/demo/intellij-community/data/netbeans-9.0-vc3/java.platform.ui/src/org/netbeans/modules/java/platform/wizard/PlatformInstallIterator.java
++++ b/F:/demo/intellij-community/data/netbeans-jshell_api9/java.platform.ui/src/org/netbeans/modules/java/platform/wizard/PlatformInstallIterator.java
+@@ -1,20 +1,45 @@
+ /*
+- * Licensed to the Apache Software Foundation (ASF) under one
+- * or more contributor license agreements.  See the NOTICE file
+- * distributed with this work for additional information
+- * regarding copyright ownership.  The ASF licenses this file
+- * to you under the Apache License, Version 2.0 (the
+- * "License"); you may not use this file except in compliance
+- * with the License.  You may obtain a copy of the License at
++ * DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS HEADER.
+  *
+- *   http://www.apache.org/licenses/LICENSE-2.0
++ * Copyright 1997-2010 Oracle and/or its affiliates. All rights reserved.
+  *
+- * Unless required by applicable law or agreed to in writing,
+- * software distributed under the License is distributed on an
+- * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+- * KIND, either express or implied.  See the License for the
+- * specific language governing permissions and limitations
+- * under the License.
++ * Oracle and Java are registered trademarks of Oracle and/or its affiliates.
++ * Other names may be trademarks of their respective owners.
++ *
++ * The contents of this file are subject to the terms of either the GNU
++ * General Public License Version 2 only ("GPL") or the Common
++ * Development and Distribution License("CDDL") (collectively, the
++ * "License"). You may not use this file except in compliance with the
++ * License. You can obtain a copy of the License at
++ * http://www.netbeans.org/cddl-gplv2.html
++ * or nbbuild/licenses/CDDL-GPL-2-CP. See the License for the
++ * specific language governing permissions and limitations under the
++ * License.  When distributing the software, include this License Header
++ * Notice in each file and include the License file at
++ * nbbuild/licenses/CDDL-GPL-2-CP.  Oracle designates this
++ * particular file as subject to the "Classpath" exception as provided
++ * by Oracle in the GPL Version 2 section of the License file that
++ * accompanied this code. If applicable, add the following below the
++ * License Header, with the fields enclosed by brackets [] replaced by
++ * your own identifying information:
++ * "Portions Copyrighted [year] [name of copyright owner]"
++ *
++ * Contributor(s):
++ *
++ * The Original Software is NetBeans. The Initial Developer of the Original
++ * Software is Sun Microsystems, Inc. Portions Copyright 1997-2006 Sun
++ * Microsystems, Inc. All Rights Reserved.
++ *
++ * If you wish your version of this file to be governed by only the CDDL
++ * or only the GPL Version 2, indicate your decision by adding
++ * "[Contributor] elects to include this software in this distribution
++ * under the [CDDL or GPL Version 2] license." If you do not indicate a
++ * single choice of license, a recipient has the option to distribute
++ * your version of this file under either the CDDL, the GPL Version 2 or
++ * to extend the choice of license to its licensees as provided above.
++ * However, if you add GPL Version 2 code and therefore, elected the GPL
++ * Version 2 license, then the option applies only if the new code is
++ * made subject to such option by the copyright holder.
+  */
+ 
+ package org.netbeans.modules.java.platform.wizard;
+diff --git a/F:/demo/intellij-community/data/netbeans-9.0-vc3/java.platform.ui/src/org/netbeans/modules/java/platform/wizard/SelectorPanel.form b/F:/demo/intellij-community/data/netbeans-jshell_api9/java.platform.ui/src/org/netbeans/modules/java/platform/wizard/SelectorPanel.form
+index fc8ebc503472..7e65c90ca18c 100644
+--- a/F:/demo/intellij-community/data/netbeans-9.0-vc3/java.platform.ui/src/org/netbeans/modules/java/platform/wizard/SelectorPanel.form
++++ b/F:/demo/intellij-community/data/netbeans-jshell_api9/java.platform.ui/src/org/netbeans/modules/java/platform/wizard/SelectorPanel.form
+@@ -1,26 +1,5 @@
+ <?xml version="1.0" encoding="UTF-8" ?>
+ 
+-<!--
+-
+-    Licensed to the Apache Software Foundation (ASF) under one
+-    or more contributor license agreements.  See the NOTICE file
+-    distributed with this work for additional information
+-    regarding copyright ownership.  The ASF licenses this file
+-    to you under the Apache License, Version 2.0 (the
+-    "License"); you may not use this file except in compliance
+-    with the License.  You may obtain a copy of the License at
+-
+-      http://www.apache.org/licenses/LICENSE-2.0
+-
+-    Unless required by applicable law or agreed to in writing,
+-    software distributed under the License is distributed on an
+-    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+-    KIND, either express or implied.  See the License for the
+-    specific language governing permissions and limitations
+-    under the License.
+-
+--->
+-
+ <Form version="1.0" type="org.netbeans.modules.form.forminfo.JPanelFormInfo">
+   <AuxValues>
+     <AuxValue name="FormSettings_generateMnemonicsCode" type="java.lang.Boolean" value="true"/>
+diff --git a/F:/demo/intellij-community/data/netbeans-9.0-vc3/java.platform.ui/src/org/netbeans/modules/java/platform/wizard/SelectorPanel.java b/F:/demo/intellij-community/data/netbeans-jshell_api9/java.platform.ui/src/org/netbeans/modules/java/platform/wizard/SelectorPanel.java
+index 31ff3abafc79..80c0d7e77960 100644
+--- a/F:/demo/intellij-community/data/netbeans-9.0-vc3/java.platform.ui/src/org/netbeans/modules/java/platform/wizard/SelectorPanel.java
++++ b/F:/demo/intellij-community/data/netbeans-jshell_api9/java.platform.ui/src/org/netbeans/modules/java/platform/wizard/SelectorPanel.java
+@@ -1,20 +1,45 @@
+ /*
+- * Licensed to the Apache Software Foundation (ASF) under one
+- * or more contributor license agreements.  See the NOTICE file
+- * distributed with this work for additional information
+- * regarding copyright ownership.  The ASF licenses this file
+- * to you under the Apache License, Version 2.0 (the
+- * "License"); you may not use this file except in compliance
+- * with the License.  You may obtain a copy of the License at
++ * DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS HEADER.
+  *
+- *   http://www.apache.org/licenses/LICENSE-2.0
++ * Copyright 1997-2010 Oracle and/or its affiliates. All rights reserved.
+  *
+- * Unless required by applicable law or agreed to in writing,
+- * software distributed under the License is distributed on an
+- * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+- * KIND, either express or implied.  See the License for the
+- * specific language governing permissions and limitations
+- * under the License.
++ * Oracle and Java are registered trademarks of Oracle and/or its affiliates.
++ * Other names may be trademarks of their respective owners.
++ *
++ * The contents of this file are subject to the terms of either the GNU
++ * General Public License Version 2 only ("GPL") or the Common
++ * Development and Distribution License("CDDL") (collectively, the
++ * "License"). You may not use this file except in compliance with the
++ * License. You can obtain a copy of the License at
++ * http://www.netbeans.org/cddl-gplv2.html
++ * or nbbuild/licenses/CDDL-GPL-2-CP. See the License for the
++ * specific language governing permissions and limitations under the
++ * License.  When distributing the software, include this License Header
++ * Notice in each file and include the License file at
++ * nbbuild/licenses/CDDL-GPL-2-CP.  Oracle designates this
++ * particular file as subject to the "Classpath" exception as provided
++ * by Oracle in the GPL Version 2 section of the License file that
++ * accompanied this code. If applicable, add the following below the
++ * License Header, with the fields enclosed by brackets [] replaced by
++ * your own identifying information:
++ * "Portions Copyrighted [year] [name of copyright owner]"
++ *
++ * Contributor(s):
++ *
++ * The Original Software is NetBeans. The Initial Developer of the Original
++ * Software is Sun Microsystems, Inc. Portions Copyright 1997-2006 Sun
++ * Microsystems, Inc. All Rights Reserved.
++ *
++ * If you wish your version of this file to be governed by only the CDDL
++ * or only the GPL Version 2, indicate your decision by adding
++ * "[Contributor] elects to include this software in this distribution
++ * under the [CDDL or GPL Version 2] license." If you do not indicate a
++ * single choice of license, a recipient has the option to distribute
++ * your version of this file under either the CDDL, the GPL Version 2 or
++ * to extend the choice of license to its licensees as provided above.
++ * However, if you add GPL Version 2 code and therefore, elected the GPL
++ * Version 2 license, then the option applies only if the new code is
++ * made subject to such option by the copyright holder.
+  */
+ 
+ package org.netbeans.modules.java.platform.wizard;
+diff --git a/F:/demo/intellij-community/data/netbeans-9.0-vc3/java.platform.ui/src/org/netbeans/spi/java/platform/CustomPlatformInstall.java b/F:/demo/intellij-community/data/netbeans-jshell_api9/java.platform.ui/src/org/netbeans/spi/java/platform/CustomPlatformInstall.java
+index ae4aecde9707..b33db4c0fe0a 100644
+--- a/F:/demo/intellij-community/data/netbeans-9.0-vc3/java.platform.ui/src/org/netbeans/spi/java/platform/CustomPlatformInstall.java
++++ b/F:/demo/intellij-community/data/netbeans-jshell_api9/java.platform.ui/src/org/netbeans/spi/java/platform/CustomPlatformInstall.java
+@@ -1,20 +1,45 @@
+ /*
+- * Licensed to the Apache Software Foundation (ASF) under one
+- * or more contributor license agreements.  See the NOTICE file
+- * distributed with this work for additional information
+- * regarding copyright ownership.  The ASF licenses this file
+- * to you under the Apache License, Version 2.0 (the
+- * "License"); you may not use this file except in compliance
+- * with the License.  You may obtain a copy of the License at
++ * DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS HEADER.
+  *
+- *   http://www.apache.org/licenses/LICENSE-2.0
++ * Copyright 1997-2010 Oracle and/or its affiliates. All rights reserved.
+  *
+- * Unless required by applicable law or agreed to in writing,
+- * software distributed under the License is distributed on an
+- * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+- * KIND, either express or implied.  See the License for the
+- * specific language governing permissions and limitations
+- * under the License.
++ * Oracle and Java are registered trademarks of Oracle and/or its affiliates.
++ * Other names may be trademarks of their respective owners.
++ *
++ * The contents of this file are subject to the terms of either the GNU
++ * General Public License Version 2 only ("GPL") or the Common
++ * Development and Distribution License("CDDL") (collectively, the
++ * "License"). You may not use this file except in compliance with the
++ * License. You can obtain a copy of the License at
++ * http://www.netbeans.org/cddl-gplv2.html
++ * or nbbuild/licenses/CDDL-GPL-2-CP. See the License for the
++ * specific language governing permissions and limitations under the
++ * License.  When distributing the software, include this License Header
++ * Notice in each file and include the License file at
++ * nbbuild/licenses/CDDL-GPL-2-CP.  Oracle designates this
++ * particular file as subject to the "Classpath" exception as provided
++ * by Oracle in the GPL Version 2 section of the License file that
++ * accompanied this code. If applicable, add the following below the
++ * License Header, with the fields enclosed by brackets [] replaced by
++ * your own identifying information:
++ * "Portions Copyrighted [year] [name of copyright owner]"
++ *
++ * Contributor(s):
++ *
++ * The Original Software is NetBeans. The Initial Developer of the Original
++ * Software is Sun Microsystems, Inc. Portions Copyright 1997-2006 Sun
++ * Microsystems, Inc. All Rights Reserved.
++ *
++ * If you wish your version of this file to be governed by only the CDDL
++ * or only the GPL Version 2, indicate your decision by adding
++ * "[Contributor] elects to include this software in this distribution
++ * under the [CDDL or GPL Version 2] license." If you do not indicate a
++ * single choice of license, a recipient has the option to distribute
++ * your version of this file under either the CDDL, the GPL Version 2 or
++ * to extend the choice of license to its licensees as provided above.
++ * However, if you add GPL Version 2 code and therefore, elected the GPL
++ * Version 2 license, then the option applies only if the new code is
++ * made subject to such option by the copyright holder.
+  */
+ 
+ package org.netbeans.spi.java.platform;
+diff --git a/F:/demo/intellij-community/data/netbeans-9.0-vc3/java.platform.ui/src/org/netbeans/spi/java/platform/GeneralPlatformInstall.java b/F:/demo/intellij-community/data/netbeans-jshell_api9/java.platform.ui/src/org/netbeans/spi/java/platform/GeneralPlatformInstall.java
+index 0666e545d555..39c5954603f7 100644
+--- a/F:/demo/intellij-community/data/netbeans-9.0-vc3/java.platform.ui/src/org/netbeans/spi/java/platform/GeneralPlatformInstall.java
++++ b/F:/demo/intellij-community/data/netbeans-jshell_api9/java.platform.ui/src/org/netbeans/spi/java/platform/GeneralPlatformInstall.java
+@@ -1,20 +1,45 @@
+ /*
+- * Licensed to the Apache Software Foundation (ASF) under one
+- * or more contributor license agreements.  See the NOTICE file
+- * distributed with this work for additional information
+- * regarding copyright ownership.  The ASF licenses this file
+- * to you under the Apache License, Version 2.0 (the
+- * "License"); you may not use this file except in compliance
+- * with the License.  You may obtain a copy of the License at
++ * DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS HEADER.
+  *
+- *   http://www.apache.org/licenses/LICENSE-2.0
++ * Copyright 1997-2010 Oracle and/or its affiliates. All rights reserved.
+  *
+- * Unless required by applicable law or agreed to in writing,
+- * software distributed under the License is distributed on an
+- * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+- * KIND, either express or implied.  See the License for the
+- * specific language governing permissions and limitations
+- * under the License.
++ * Oracle and Java are registered trademarks of Oracle and/or its affiliates.
++ * Other names may be trademarks of their respective owners.
++ *
++ * The contents of this file are subject to the terms of either the GNU
++ * General Public License Version 2 only ("GPL") or the Common
++ * Development and Distribution License("CDDL") (collectively, the
++ * "License"). You may not use this file except in compliance with the
++ * License. You can obtain a copy of the License at
++ * http://www.netbeans.org/cddl-gplv2.html
++ * or nbbuild/licenses/CDDL-GPL-2-CP. See the License for the
++ * specific language governing permissions and limitations under the
++ * License.  When distributing the software, include this License Header
++ * Notice in each file and include the License file at
++ * nbbuild/licenses/CDDL-GPL-2-CP.  Oracle designates this
++ * particular file as subject to the "Classpath" exception as provided
++ * by Oracle in the GPL Version 2 section of the License file that
++ * accompanied this code. If applicable, add the following below the
++ * License Header, with the fields enclosed by brackets [] replaced by
++ * your own identifying information:
++ * "Portions Copyrighted [year] [name of copyright owner]"
++ *
++ * Contributor(s):
++ *
++ * The Original Software is NetBeans. The Initial Developer of the Original
++ * Software is Sun Microsystems, Inc. Portions Copyright 1997-2006 Sun
++ * Microsystems, Inc. All Rights Reserved.
++ *
++ * If you wish your version of this file to be governed by only the CDDL
++ * or only the GPL Version 2, indicate your decision by adding
++ * "[Contributor] elects to include this software in this distribution
++ * under the [CDDL or GPL Version 2] license." If you do not indicate a
++ * single choice of license, a recipient has the option to distribute
++ * your version of this file under either the CDDL, the GPL Version 2 or
++ * to extend the choice of license to its licensees as provided above.
++ * However, if you add GPL Version 2 code and therefore, elected the GPL
++ * Version 2 license, then the option applies only if the new code is
++ * made subject to such option by the copyright holder.
+  */
+ 
+ package org.netbeans.spi.java.platform;
+diff --git a/F:/demo/intellij-community/data/netbeans-9.0-vc3/java.platform.ui/src/org/netbeans/spi/java/platform/PlatformInstall.java b/F:/demo/intellij-community/data/netbeans-jshell_api9/java.platform.ui/src/org/netbeans/spi/java/platform/PlatformInstall.java
+index 9e4cc8d24049..4572d5c21412 100644
+--- a/F:/demo/intellij-community/data/netbeans-9.0-vc3/java.platform.ui/src/org/netbeans/spi/java/platform/PlatformInstall.java
++++ b/F:/demo/intellij-community/data/netbeans-jshell_api9/java.platform.ui/src/org/netbeans/spi/java/platform/PlatformInstall.java
+@@ -1,20 +1,45 @@
+ /*
+- * Licensed to the Apache Software Foundation (ASF) under one
+- * or more contributor license agreements.  See the NOTICE file
+- * distributed with this work for additional information
+- * regarding copyright ownership.  The ASF licenses this file
+- * to you under the Apache License, Version 2.0 (the
+- * "License"); you may not use this file except in compliance
+- * with the License.  You may obtain a copy of the License at
++ * DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS HEADER.
+  *
+- *   http://www.apache.org/licenses/LICENSE-2.0
++ * Copyright 1997-2010 Oracle and/or its affiliates. All rights reserved.
+  *
+- * Unless required by applicable law or agreed to in writing,
+- * software distributed under the License is distributed on an
+- * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+- * KIND, either express or implied.  See the License for the
+- * specific language governing permissions and limitations
+- * under the License.
++ * Oracle and Java are registered trademarks of Oracle and/or its affiliates.
++ * Other names may be trademarks of their respective owners.
++ *
++ * The contents of this file are subject to the terms of either the GNU
++ * General Public License Version 2 only ("GPL") or the Common
++ * Development and Distribution License("CDDL") (collectively, the
++ * "License"). You may not use this file except in compliance with the
++ * License. You can obtain a copy of the License at
++ * http://www.netbeans.org/cddl-gplv2.html
++ * or nbbuild/licenses/CDDL-GPL-2-CP. See the License for the
++ * specific language governing permissions and limitations under the
++ * License.  When distributing the software, include this License Header
++ * Notice in each file and include the License file at
++ * nbbuild/licenses/CDDL-GPL-2-CP.  Oracle designates this
++ * particular file as subject to the "Classpath" exception as provided
++ * by Oracle in the GPL Version 2 section of the License file that
++ * accompanied this code. If applicable, add the following below the
++ * License Header, with the fields enclosed by brackets [] replaced by
++ * your own identifying information:
++ * "Portions Copyrighted [year] [name of copyright owner]"
++ *
++ * Contributor(s):
++ *
++ * The Original Software is NetBeans. The Initial Developer of the Original
++ * Software is Sun Microsystems, Inc. Portions Copyright 1997-2006 Sun
++ * Microsystems, Inc. All Rights Reserved.
++ *
++ * If you wish your version of this file to be governed by only the CDDL
++ * or only the GPL Version 2, indicate your decision by adding
++ * "[Contributor] elects to include this software in this distribution
++ * under the [CDDL or GPL Version 2] license." If you do not indicate a
++ * single choice of license, a recipient has the option to distribute
++ * your version of this file under either the CDDL, the GPL Version 2 or
++ * to extend the choice of license to its licensees as provided above.
++ * However, if you add GPL Version 2 code and therefore, elected the GPL
++ * Version 2 license, then the option applies only if the new code is
++ * made subject to such option by the copyright holder.
+  */
+ 
+ package org.netbeans.spi.java.platform;
+diff --git a/F:/demo/intellij-community/data/netbeans-9.0-vc3/java.platform.ui/src/org/netbeans/spi/java/platform/package.html b/F:/demo/intellij-community/data/netbeans-jshell_api9/java.platform.ui/src/org/netbeans/spi/java/platform/package.html
+index 9302ed9086bf..fd750ef57556 100644
+--- a/F:/demo/intellij-community/data/netbeans-9.0-vc3/java.platform.ui/src/org/netbeans/spi/java/platform/package.html
++++ b/F:/demo/intellij-community/data/netbeans-jshell_api9/java.platform.ui/src/org/netbeans/spi/java/platform/package.html
+@@ -1,22 +1,43 @@
+ <!--
++DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS HEADER.
+ 
+-    Licensed to the Apache Software Foundation (ASF) under one
+-    or more contributor license agreements.  See the NOTICE file
+-    distributed with this work for additional information
+-    regarding copyright ownership.  The ASF licenses this file
+-    to you under the Apache License, Version 2.0 (the
+-    "License"); you may not use this file except in compliance
+-    with the License.  You may obtain a copy of the License at
++Copyright 1997-2009 Sun Microsystems, Inc. All rights reserved.
+ 
+-      http://www.apache.org/licenses/LICENSE-2.0
+ 
+-    Unless required by applicable law or agreed to in writing,
+-    software distributed under the License is distributed on an
+-    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+-    KIND, either express or implied.  See the License for the
+-    specific language governing permissions and limitations
+-    under the License.
++The contents of this file are subject to the terms of either the GNU
++General Public License Version 2 only ("GPL") or the Common
++Development and Distribution License("CDDL") (collectively, the
++"License"). You may not use this file except in compliance with the
++License. You can obtain a copy of the License at
++http://www.netbeans.org/cddl-gplv2.html
++or nbbuild/licenses/CDDL-GPL-2-CP. See the License for the
++specific language governing permissions and limitations under the
++License.  When distributing the software, include this License Header
++Notice in each file and include the License file at
++nbbuild/licenses/CDDL-GPL-2-CP.  Sun designates this
++particular file as subject to the "Classpath" exception as provided
++by Sun in the GPL Version 2 section of the License file that
++accompanied this code. If applicable, add the following below the
++License Header, with the fields enclosed by brackets [] replaced by
++your own identifying information:
++"Portions Copyrighted [year] [name of copyright owner]"
+ 
++Contributor(s):
++
++The Original Software is NetBeans. The Initial Developer of the Original
++Software is Sun Microsystems, Inc. Portions Copyright 1997-2006 Sun
++Microsystems, Inc. All Rights Reserved.
++
++If you wish your version of this file to be governed by only the CDDL
++or only the GPL Version 2, indicate your decision by adding
++"[Contributor] elects to include this software in this distribution
++under the [CDDL or GPL Version 2] license." If you do not indicate a
++single choice of license, a recipient has the option to distribute
++your version of this file under either the CDDL, the GPL Version 2 or
++to extend the choice of license to its licensees as provided above.
++However, if you add GPL Version 2 code and therefore, elected the GPL
++Version 2 license, then the option applies only if the new code is
++made subject to such option by the copyright holder.
+ -->
+ <html>
+ <body>
+diff --git a/F:/demo/intellij-community/data/netbeans-9.0-vc3/java.platform.ui/test/unit/src/org/netbeans/modules/java/platform/ConvertAsJavaBeanPlatformTest.java b/F:/demo/intellij-community/data/netbeans-jshell_api9/java.platform.ui/test/unit/src/org/netbeans/modules/java/platform/ConvertAsJavaBeanPlatformTest.java
+index cdd8c01c8959..c1ba8590114b 100644
+--- a/F:/demo/intellij-community/data/netbeans-9.0-vc3/java.platform.ui/test/unit/src/org/netbeans/modules/java/platform/ConvertAsJavaBeanPlatformTest.java
++++ b/F:/demo/intellij-community/data/netbeans-jshell_api9/java.platform.ui/test/unit/src/org/netbeans/modules/java/platform/ConvertAsJavaBeanPlatformTest.java
+@@ -1,20 +1,43 @@
+ /*
+- * Licensed to the Apache Software Foundation (ASF) under one
+- * or more contributor license agreements.  See the NOTICE file
+- * distributed with this work for additional information
+- * regarding copyright ownership.  The ASF licenses this file
+- * to you under the Apache License, Version 2.0 (the
+- * "License"); you may not use this file except in compliance
+- * with the License.  You may obtain a copy of the License at
++ * DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS HEADER.
+  *
+- *   http://www.apache.org/licenses/LICENSE-2.0
++ * Copyright 2010 Oracle and/or its affiliates. All rights reserved.
+  *
+- * Unless required by applicable law or agreed to in writing,
+- * software distributed under the License is distributed on an
+- * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+- * KIND, either express or implied.  See the License for the
+- * specific language governing permissions and limitations
+- * under the License.
++ * Oracle and Java are registered trademarks of Oracle and/or its affiliates.
++ * Other names may be trademarks of their respective owners.
++ *
++ * The contents of this file are subject to the terms of either the GNU
++ * General Public License Version 2 only ("GPL") or the Common
++ * Development and Distribution License("CDDL") (collectively, the
++ * "License"). You may not use this file except in compliance with the
++ * License. You can obtain a copy of the License at
++ * http://www.netbeans.org/cddl-gplv2.html
++ * or nbbuild/licenses/CDDL-GPL-2-CP. See the License for the
++ * specific language governing permissions and limitations under the
++ * License.  When distributing the software, include this License Header
++ * Notice in each file and include the License file at
++ * nbbuild/licenses/CDDL-GPL-2-CP.  Oracle designates this
++ * particular file as subject to the "Classpath" exception as provided
++ * by Oracle in the GPL Version 2 section of the License file that
++ * accompanied this code. If applicable, add the following below the
++ * License Header, with the fields enclosed by brackets [] replaced by
++ * your own identifying information:
++ * "Portions Copyrighted [year] [name of copyright owner]"
++ *
++ * If you wish your version of this file to be governed by only the CDDL
++ * or only the GPL Version 2, indicate your decision by adding
++ * "[Contributor] elects to include this software in this distribution
++ * under the [CDDL or GPL Version 2] license." If you do not indicate a
++ * single choice of license, a recipient has the option to distribute
++ * your version of this file under either the CDDL, the GPL Version 2 or
++ * to extend the choice of license to its licensees as provided above.
++ * However, if you add GPL Version 2 code and therefore, elected the GPL
++ * Version 2 license, then the option applies only if the new code is
++ * made subject to such option by the copyright holder.
++ *
++ * Contributor(s):
++ *
++ * Portions Copyrighted 2010 Sun Microsystems, Inc.
+  */
+ 
+ package org.netbeans.modules.java.platform;
+diff --git a/F:/demo/intellij-community/data/netbeans-9.0-vc3/java.platform.ui/test/unit/src/org/netbeans/modules/java/platform/DefaultJavaPlatformProviderTest.java b/F:/demo/intellij-community/data/netbeans-jshell_api9/java.platform.ui/test/unit/src/org/netbeans/modules/java/platform/DefaultJavaPlatformProviderTest.java
+index a99f49ef656d..9d209af8026e 100644
+--- a/F:/demo/intellij-community/data/netbeans-9.0-vc3/java.platform.ui/test/unit/src/org/netbeans/modules/java/platform/DefaultJavaPlatformProviderTest.java
++++ b/F:/demo/intellij-community/data/netbeans-jshell_api9/java.platform.ui/test/unit/src/org/netbeans/modules/java/platform/DefaultJavaPlatformProviderTest.java
+@@ -1,20 +1,39 @@
+ /*
+- * Licensed to the Apache Software Foundation (ASF) under one
+- * or more contributor license agreements.  See the NOTICE file
+- * distributed with this work for additional information
+- * regarding copyright ownership.  The ASF licenses this file
+- * to you under the Apache License, Version 2.0 (the
+- * "License"); you may not use this file except in compliance
+- * with the License.  You may obtain a copy of the License at
++ * DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS HEADER.
+  *
+- *   http://www.apache.org/licenses/LICENSE-2.0
++ * Copyright 2011 Oracle and/or its affiliates. All rights reserved.
+  *
+- * Unless required by applicable law or agreed to in writing,
+- * software distributed under the License is distributed on an
+- * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+- * KIND, either express or implied.  See the License for the
+- * specific language governing permissions and limitations
+- * under the License.
++ * Oracle and Java are registered trademarks of Oracle and/or its affiliates.
++ * Other names may be trademarks of their respective owners.
++ *
++ * The contents of this file are subject to the terms of either the GNU General
++ * Public License Version 2 only ("GPL") or the Common Development and
++ * Distribution License("CDDL") (collectively, the "License"). You may not use
++ * this file except in compliance with the License. You can obtain a copy of the
++ * License at http://www.netbeans.org/cddl-gplv2.html or
++ * nbbuild/licenses/CDDL-GPL-2-CP. See the License for the specific language
++ * governing permissions and limitations under the License. When distributing
++ * the software, include this License Header Notice in each file and include the
++ * License file at nbbuild/licenses/CDDL-GPL-2-CP. Oracle designates this
++ * particular file as subject to the "Classpath" exception as provided by Oracle
++ * in the GPL Version 2 section of the License file that accompanied this code.
++ * If applicable, add the following below the License Header, with the fields
++ * enclosed by brackets [] replaced by your own identifying information:
++ * "Portions Copyrighted [year] [name of copyright owner]"
++ *
++ * If you wish your version of this file to be governed by only the CDDL or only
++ * the GPL Version 2, indicate your decision by adding "[Contributor] elects to
++ * include this software in this distribution under the [CDDL or GPL Version 2]
++ * license." If you do not indicate a single choice of license, a recipient has
++ * the option to distribute your version of this file under either the CDDL, the
++ * GPL Version 2 or to extend the choice of license to its licensees as provided
++ * above. However, if you add GPL Version 2 code and therefore, elected the GPL
++ * Version 2 license, then the option applies only if the new code is made
++ * subject to such option by the copyright holder.
++ *
++ * Contributor(s):
++ *
++ * Portions Copyrighted 2011 Sun Microsystems, Inc.
+  */
+ package org.netbeans.modules.java.platform;
+ 
+diff --git a/F:/demo/intellij-community/data/netbeans-9.0-vc3/java.platform.ui/test/unit/src/org/netbeans/modules/java/platform/InstallerRegistryAccessor.java b/F:/demo/intellij-community/data/netbeans-jshell_api9/java.platform.ui/test/unit/src/org/netbeans/modules/java/platform/InstallerRegistryAccessor.java
+index 17375f44521d..1ce402cf55f7 100644
+--- a/F:/demo/intellij-community/data/netbeans-9.0-vc3/java.platform.ui/test/unit/src/org/netbeans/modules/java/platform/InstallerRegistryAccessor.java
++++ b/F:/demo/intellij-community/data/netbeans-jshell_api9/java.platform.ui/test/unit/src/org/netbeans/modules/java/platform/InstallerRegistryAccessor.java
+@@ -1,20 +1,45 @@
+ /*
+- * Licensed to the Apache Software Foundation (ASF) under one
+- * or more contributor license agreements.  See the NOTICE file
+- * distributed with this work for additional information
+- * regarding copyright ownership.  The ASF licenses this file
+- * to you under the Apache License, Version 2.0 (the
+- * "License"); you may not use this file except in compliance
+- * with the License.  You may obtain a copy of the License at
++ * DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS HEADER.
+  *
+- *   http://www.apache.org/licenses/LICENSE-2.0
++ * Copyright 1997-2010 Oracle and/or its affiliates. All rights reserved.
+  *
+- * Unless required by applicable law or agreed to in writing,
+- * software distributed under the License is distributed on an
+- * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+- * KIND, either express or implied.  See the License for the
+- * specific language governing permissions and limitations
+- * under the License.
++ * Oracle and Java are registered trademarks of Oracle and/or its affiliates.
++ * Other names may be trademarks of their respective owners.
++ *
++ * The contents of this file are subject to the terms of either the GNU
++ * General Public License Version 2 only ("GPL") or the Common
++ * Development and Distribution License("CDDL") (collectively, the
++ * "License"). You may not use this file except in compliance with the
++ * License. You can obtain a copy of the License at
++ * http://www.netbeans.org/cddl-gplv2.html
++ * or nbbuild/licenses/CDDL-GPL-2-CP. See the License for the
++ * specific language governing permissions and limitations under the
++ * License.  When distributing the software, include this License Header
++ * Notice in each file and include the License file at
++ * nbbuild/licenses/CDDL-GPL-2-CP.  Oracle designates this
++ * particular file as subject to the "Classpath" exception as provided
++ * by Oracle in the GPL Version 2 section of the License file that
++ * accompanied this code. If applicable, add the following below the
++ * License Header, with the fields enclosed by brackets [] replaced by
++ * your own identifying information:
++ * "Portions Copyrighted [year] [name of copyright owner]"
++ *
++ * Contributor(s):
++ *
++ * The Original Software is NetBeans. The Initial Developer of the Original
++ * Software is Sun Microsystems, Inc. Portions Copyright 1997-2006 Sun
++ * Microsystems, Inc. All Rights Reserved.
++ *
++ * If you wish your version of this file to be governed by only the CDDL
++ * or only the GPL Version 2, indicate your decision by adding
++ * "[Contributor] elects to include this software in this distribution
++ * under the [CDDL or GPL Version 2] license." If you do not indicate a
++ * single choice of license, a recipient has the option to distribute
++ * your version of this file under either the CDDL, the GPL Version 2 or
++ * to extend the choice of license to its licensees as provided above.
++ * However, if you add GPL Version 2 code and therefore, elected the GPL
++ * Version 2 license, then the option applies only if the new code is
++ * made subject to such option by the copyright holder.
+  */
+ 
+ package org.netbeans.modules.java.platform;
+diff --git a/F:/demo/intellij-community/data/netbeans-9.0-vc3/java.platform.ui/test/unit/src/org/netbeans/modules/java/platform/PlatformInstallTest.java b/F:/demo/intellij-community/data/netbeans-jshell_api9/java.platform.ui/test/unit/src/org/netbeans/modules/java/platform/PlatformInstallTest.java
+index f90afc14082b..dc37b40e456b 100644
+--- a/F:/demo/intellij-community/data/netbeans-9.0-vc3/java.platform.ui/test/unit/src/org/netbeans/modules/java/platform/PlatformInstallTest.java
++++ b/F:/demo/intellij-community/data/netbeans-jshell_api9/java.platform.ui/test/unit/src/org/netbeans/modules/java/platform/PlatformInstallTest.java
+@@ -1,20 +1,43 @@
+ /*
+- * Licensed to the Apache Software Foundation (ASF) under one
+- * or more contributor license agreements.  See the NOTICE file
+- * distributed with this work for additional information
+- * regarding copyright ownership.  The ASF licenses this file
+- * to you under the Apache License, Version 2.0 (the
+- * "License"); you may not use this file except in compliance
+- * with the License.  You may obtain a copy of the License at
++ * DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS HEADER.
+  *
+- *   http://www.apache.org/licenses/LICENSE-2.0
++ * Copyright 2010 Oracle and/or its affiliates. All rights reserved.
+  *
+- * Unless required by applicable law or agreed to in writing,
+- * software distributed under the License is distributed on an
+- * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+- * KIND, either express or implied.  See the License for the
+- * specific language governing permissions and limitations
+- * under the License.
++ * Oracle and Java are registered trademarks of Oracle and/or its affiliates.
++ * Other names may be trademarks of their respective owners.
++ *
++ * The contents of this file are subject to the terms of either the GNU
++ * General Public License Version 2 only ("GPL") or the Common
++ * Development and Distribution License("CDDL") (collectively, the
++ * "License"). You may not use this file except in compliance with the
++ * License. You can obtain a copy of the License at
++ * http://www.netbeans.org/cddl-gplv2.html
++ * or nbbuild/licenses/CDDL-GPL-2-CP. See the License for the
++ * specific language governing permissions and limitations under the
++ * License.  When distributing the software, include this License Header
++ * Notice in each file and include the License file at
++ * nbbuild/licenses/CDDL-GPL-2-CP.  Oracle designates this
++ * particular file as subject to the "Classpath" exception as provided
++ * by Oracle in the GPL Version 2 section of the License file that
++ * accompanied this code. If applicable, add the following below the
++ * License Header, with the fields enclosed by brackets [] replaced by
++ * your own identifying information:
++ * "Portions Copyrighted [year] [name of copyright owner]"
++ *
++ * If you wish your version of this file to be governed by only the CDDL
++ * or only the GPL Version 2, indicate your decision by adding
++ * "[Contributor] elects to include this software in this distribution
++ * under the [CDDL or GPL Version 2] license." If you do not indicate a
++ * single choice of license, a recipient has the option to distribute
++ * your version of this file under either the CDDL, the GPL Version 2 or
++ * to extend the choice of license to its licensees as provided above.
++ * However, if you add GPL Version 2 code and therefore, elected the GPL
++ * Version 2 license, then the option applies only if the new code is
++ * made subject to such option by the copyright holder.
++ *
++ * Contributor(s):
++ *
++ * Portions Copyrighted 2009 Sun Microsystems, Inc.
+  */
+ 
+ package org.netbeans.modules.java.platform;
+diff --git a/F:/demo/intellij-community/data/netbeans-9.0-vc3/java.platform.ui/test/unit/src/org/netbeans/modules/java/platform/wizard/PlatformInstallIteratorTest.java b/F:/demo/intellij-community/data/netbeans-jshell_api9/java.platform.ui/test/unit/src/org/netbeans/modules/java/platform/wizard/PlatformInstallIteratorTest.java
+index 620c14c1a894..8c3d753acb27 100644
+--- a/F:/demo/intellij-community/data/netbeans-9.0-vc3/java.platform.ui/test/unit/src/org/netbeans/modules/java/platform/wizard/PlatformInstallIteratorTest.java
++++ b/F:/demo/intellij-community/data/netbeans-jshell_api9/java.platform.ui/test/unit/src/org/netbeans/modules/java/platform/wizard/PlatformInstallIteratorTest.java
+@@ -1,20 +1,45 @@
+ /*
+- * Licensed to the Apache Software Foundation (ASF) under one
+- * or more contributor license agreements.  See the NOTICE file
+- * distributed with this work for additional information
+- * regarding copyright ownership.  The ASF licenses this file
+- * to you under the Apache License, Version 2.0 (the
+- * "License"); you may not use this file except in compliance
+- * with the License.  You may obtain a copy of the License at
++ * DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS HEADER.
+  *
+- *   http://www.apache.org/licenses/LICENSE-2.0
++ * Copyright 1997-2010 Oracle and/or its affiliates. All rights reserved.
+  *
+- * Unless required by applicable law or agreed to in writing,
+- * software distributed under the License is distributed on an
+- * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+- * KIND, either express or implied.  See the License for the
+- * specific language governing permissions and limitations
+- * under the License.
++ * Oracle and Java are registered trademarks of Oracle and/or its affiliates.
++ * Other names may be trademarks of their respective owners.
++ *
++ * The contents of this file are subject to the terms of either the GNU
++ * General Public License Version 2 only ("GPL") or the Common
++ * Development and Distribution License("CDDL") (collectively, the
++ * "License"). You may not use this file except in compliance with the
++ * License. You can obtain a copy of the License at
++ * http://www.netbeans.org/cddl-gplv2.html
++ * or nbbuild/licenses/CDDL-GPL-2-CP. See the License for the
++ * specific language governing permissions and limitations under the
++ * License.  When distributing the software, include this License Header
++ * Notice in each file and include the License file at
++ * nbbuild/licenses/CDDL-GPL-2-CP.  Oracle designates this
++ * particular file as subject to the "Classpath" exception as provided
++ * by Oracle in the GPL Version 2 section of the License file that
++ * accompanied this code. If applicable, add the following below the
++ * License Header, with the fields enclosed by brackets [] replaced by
++ * your own identifying information:
++ * "Portions Copyrighted [year] [name of copyright owner]"
++ *
++ * Contributor(s):
++ *
++ * The Original Software is NetBeans. The Initial Developer of the Original
++ * Software is Sun Microsystems, Inc. Portions Copyright 1997-2006 Sun
++ * Microsystems, Inc. All Rights Reserved.
++ *
++ * If you wish your version of this file to be governed by only the CDDL
++ * or only the GPL Version 2, indicate your decision by adding
++ * "[Contributor] elects to include this software in this distribution
++ * under the [CDDL or GPL Version 2] license." If you do not indicate a
++ * single choice of license, a recipient has the option to distribute
++ * your version of this file under either the CDDL, the GPL Version 2 or
++ * to extend the choice of license to its licensees as provided above.
++ * However, if you add GPL Version 2 code and therefore, elected the GPL
++ * Version 2 license, then the option applies only if the new code is
++ * made subject to such option by the copyright holder.
+  */
+ 
+ package org.netbeans.modules.java.platform.wizard;
